@@ -1,0 +1,26 @@
+##grflangid 0x00
+##plural 0
+# This is the English language file
+
+# GRF name and description
+STR_GRF_NAME        :Galician Houses {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} - Inspired by ITL Houses by 2tallTyler.{}{COPYRIGHT}2023 randomHose (graphics), pvillaverde (NML)
+STR_WEBSITE         :https://mastodon.gal/@galizattd
+
+STR_ERROR_GAME_VERSION					:Improved Town Layouts requires OpenTTD version 1.10.0, JGR version 0.34, or better
+
+STR_PARAM_NAME_EXTRA_BANK				:Use Bank sprites
+STR_PARAM_DESC_EXTRA_BANK				:Adds the Bank sprites as a {SILVER}University{BLACK} (temperate bank sprite) and a {SILVER}Courthouse{BLACK} (sub-arctic bank sprite).{}{}{ORANGE}Not recommended{BLACK} if playing with an industry set that includes banks.
+
+STR_PARAM_NAME_EXTRA_HOTEL				:Use FIRS Hotel sprites
+STR_PARAM_DESC_EXTRA_HOTEL				:Adds the sub-arctic Hotel sprite as a {SILVER}Spa{BLACK}. {}{}{ORANGE}Not recommended{BLACK} if playing with FIRS, which also uses this sprite.
+
+STR_PARAM_NAME_EXTRA_TROPIC				:Use sub-tropical sprites in Temperate
+STR_PARAM_DESC_EXTRA_TROPIC				:Adds the sub-tropical Church sprite as an additional {SILVER}Church{BLACK} type in Temperate. Adds one of the Flats sprites as a random sprite of the {SILVER}Warehouse{BLACK}.
+
+STR_NAME_HISTORIC_CHURCH				:Historic Church
+STR_NAME_SHOP							:Shop
+STR_NAME_UNIVERSITY						:University
+STR_NAME_COURTHOUSE						:Courthouse
+STR_NAME_MUSEUM							:Museum
+STR_NAME_SPA							:Spa

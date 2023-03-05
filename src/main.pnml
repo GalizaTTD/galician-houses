@@ -1,0 +1,49 @@
+/*
+#    OpenTTD Galician Houses -  Copyright (C) 2023  GalizaTTD
+#    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
+*/
+
+grf {
+	grfid: "KF06";
+	name: 						string(STR_GRF_NAME);
+	desc: 						string(STR_GRF_DESCRIPTION);
+	version: 1;
+	min_compatible_version: 1;
+	url: string(STR_WEBSITE);
+
+param 0 {
+  extra_bank {
+   name: string(STR_PARAM_NAME_EXTRA_BANK);
+   desc: string(STR_PARAM_DESC_EXTRA_BANK);
+   type: bool;
+   def_value: 0;
+   }}
+
+param 1 {
+  extra_hotel {
+   name: string(STR_PARAM_NAME_EXTRA_HOTEL);
+   desc: string(STR_PARAM_DESC_EXTRA_HOTEL);
+   def_value: 0;
+   type: bool;
+   }}
+
+param 2 {
+  extra_tropic {
+   name: string(STR_PARAM_NAME_EXTRA_TROPIC);
+   desc: string(STR_PARAM_DESC_EXTRA_TROPIC);
+   def_value: 0;
+   type: bool;
+   }}
+}
+
+// Definicións das cargas, baseado en GALIFIRS, Só fai falla engadir aquelas que se utilicen nas casas.
+cargotable {
+	PASS, MAIL, GOOD, FOOD, BEER, COAL, WOOD, RCYC, WSTE, WATR, VEHI, BDMT,
+	/* IOTC industrial cargos */
+	SGCN, TBCO, OIL_, NKOR, MOLS, RFPR, FUEL, PIPE, ENSP
+}
+
+// Deshabilita as casas actuais por defecto.
+disable_item(FEAT_HOUSES);

@@ -1,0 +1,7 @@
+##grflangid 0x31
+##plural 0
+# This is the Galician language file
+
+# GRF name and description
+STR_GRF_NAME        :Galician Houses {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} - Inspired by ITL Houses by 2tallTyler.{}{COPYRIGHT}2023 randomHose (graphics), pvillaverde (NML)
