@@ -66,7 +66,6 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 
 - Pablo Villaverde Castro - [@fedello](https://mastodon.gal/@fedello)
 - Random Hose - [@randomHose](https://mastodon.gal/@randomHose)
-- Ufiby U&ReRMM2 - High Speed graphics
 
 
 <!-- ACKNOWLEDGEMENTS -->

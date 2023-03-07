@@ -1,0 +1,155 @@
+template tmpl_building() {	
+   [ 84,  10, 64, 170, -31,  -139] // Stage 0
+   [158,  10, 64, 170, -31,  -139] // Stage 1
+   [232,  10, 64, 170, -31,  -139] // Stage 2
+   [306,  10, 64, 170, -31,  -139] // Stage 3 (Finished)
+   [ 10,  10, 64, 170, -31,  -139] // Ground
+}
+spriteset(spriteset_example, 	"src/gfx/BUILDINGS/example.gimp.png") 	{ tmpl_building() }
+spriteset(spriteset_example_snow, 	"src/gfx/BUILDINGS/example_snow.gimp.png") 	{ tmpl_building() }
+spriteset(spriteset_example_ground, 	"src/gfx/BUILDINGS/example.gimp.png") 	{ tmpl_ground() }
+
+
+spriteset(spriteset_example_state0, 	"src/gfx/BUILDINGS/example.gimp.png") 	{ tmpl_state0() }
+spriteset(spriteset_example_state1, 	"src/gfx/BUILDINGS/example.gimp.png") 	{ tmpl_state1() }
+spriteset(spriteset_example_finished, 	"src/gfx/BUILDINGS/example.gimp.png") 	{ tmpl_finished() }
+
+spritelayout spritelayout_example {
+	ground	 	{ sprite: spriteset_example_ground(4);}
+	//building 	{ sprite: (construction_state==0 ? 1434 : construction_state==3 ? 1436 : 1435); }}
+	// building	{ sprite: (construction_state == 0 ? 4420 : (construction_state == 3 ? (terrain_type == TILETYPE_SNOW ? 4423 : 4422) : 4421)); }
+	//building 	{ sprite: (construction_state==3 && terrain_type==TILETYPE_SNOW ? spriteset_example(5) : spriteset_example(construction_state)); }
+	building 	{ sprite: spriteset_example; }
+}
+
+spritelayout spritelayout_example_snow {
+	ground	 	{ sprite: spriteset_example_snow(4);}
+	//building 	{ sprite: (construction_state==0 ? 1434 : construction_state==3 ? 1436 : 1435); }
+	//building	{ sprite: (construction_state == 0 ? 4420 : (construction_state == 3 ? (terrain_type == TILETYPE_SNOW ? 4423 : 4422) : 4421)); }
+	//building 	{ sprite: (construction_state==3 && terrain_type==TILETYPE_SNOW ? spriteset_example(5) : spriteset_example(construction_state)); }
+   building 	{ sprite: spriteset_example_snow; }
+}
+
+switch(FEAT_HOUSES, SELF, switch_example_terrain, terrain_type) {
+   TILETYPE_SNOW: spritelayout_example_snow;
+   spritelayout_example;
+}
+
+item(FEAT_HOUSES, item_test_house, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}
+
+item(FEAT_HOUSES, item_test_house_2, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}
+
+item(FEAT_HOUSES, item_test_house_3, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}
+
+item(FEAT_HOUSES, item_test_house_4, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}
+
+item(FEAT_HOUSES, item_test_house_5, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}
+
+item(FEAT_HOUSES, item_test_house_6, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}
+
+item(FEAT_HOUSES, item_test_house_7, -1, HOUSE_SIZE_1X1){
+	property {
+		substitute: 78;
+        accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 2;
+		availability_mask: [ALL_TOWNZONES, bitmask(CLIMATE_TEMPERATE, CLIMATE_TOYLAND, CLIMATE_ARCTIC, ABOVE_SNOWLINE)];
+		building_class: 0;
+		
+		}
+	graphics {
+		default: switch_example_terrain;
+		//construction_check: switch_house_office_gap;
+	}
+}

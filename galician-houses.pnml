@@ -21,3 +21,4 @@
 #include "src/landmarks.pnml"
 #include "src/tropic.pnml"
 #include "src/arctic.pnml"
+#include "src/test.pnml"
