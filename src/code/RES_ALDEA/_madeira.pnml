@@ -1,0 +1,74 @@
+// Define spritesets (normal & snow)
+spriteset(ss_aldea_madeira_01, 	"src/gfx/RES_ALDEA/madeira_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_01_snow, 	"src/gfx/RES_ALDEA/madeira_01_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_02, 	"src/gfx/RES_ALDEA/madeira_02.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_02_snow, 	"src/gfx/RES_ALDEA/madeira_02_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_03, 	"src/gfx/RES_ALDEA/madeira_03.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_03_snow, 	"src/gfx/RES_ALDEA/madeira_03_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_04, 	"src/gfx/RES_ALDEA/madeira_04.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_04_snow, 	"src/gfx/RES_ALDEA/madeira_04_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_05, 	"src/gfx/RES_ALDEA/madeira_05.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_05_snow, 	"src/gfx/RES_ALDEA/madeira_05_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_06, 	"src/gfx/RES_ALDEA/madeira_06.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_06_snow, 	"src/gfx/RES_ALDEA/madeira_06_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_07, 	"src/gfx/RES_ALDEA/madeira_07.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_07_snow, 	"src/gfx/RES_ALDEA/madeira_07_SNOW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_08, 	"src/gfx/RES_ALDEA/madeira_08.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_madeira_08_snow, 	"src/gfx/RES_ALDEA/madeira_08_SNOW.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_aldea_madeira_01           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_01(4) */;}	building 	{ sprite: ss_aldea_madeira_01; }}
+spritelayout sl_aldea_madeira_01_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_01_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_01_snow; }}
+spritelayout sl_aldea_madeira_02           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_02(4) */;}	building 	{ sprite: ss_aldea_madeira_02; }}
+spritelayout sl_aldea_madeira_02_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_02_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_02_snow; }}
+spritelayout sl_aldea_madeira_03           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_03(4) */;}	building 	{ sprite: ss_aldea_madeira_03; }}
+spritelayout sl_aldea_madeira_03_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_03_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_03_snow; }}
+spritelayout sl_aldea_madeira_04           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_04(4) */;}	building 	{ sprite: ss_aldea_madeira_04; }}
+spritelayout sl_aldea_madeira_04_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_04_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_04_snow; }}
+spritelayout sl_aldea_madeira_05           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_05(4) */;}	building 	{ sprite: ss_aldea_madeira_05; }}
+spritelayout sl_aldea_madeira_05_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_05_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_05_snow; }}
+spritelayout sl_aldea_madeira_06           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_06(4) */;}	building 	{ sprite: ss_aldea_madeira_06; }}
+spritelayout sl_aldea_madeira_06_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_06_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_06_snow; }}
+spritelayout sl_aldea_madeira_07           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_07(4) */;}	building 	{ sprite: ss_aldea_madeira_07; }}
+spritelayout sl_aldea_madeira_07_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_07_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_07_snow; }}
+spritelayout sl_aldea_madeira_08           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_madeira_08(4) */;}	building 	{ sprite: ss_aldea_madeira_08; }}
+spritelayout sl_aldea_madeira_08_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_madeira_08_snow(4) */;}	building 	{ sprite: ss_aldea_madeira_08_snow; }}
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_01_snow;   sl_aldea_madeira_01;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_02_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_02_snow;   sl_aldea_madeira_02;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_03_snow;   sl_aldea_madeira_03;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_04_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_04_snow;   sl_aldea_madeira_04;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_05_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_05_snow;   sl_aldea_madeira_05;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_06_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_06_snow;   sl_aldea_madeira_06;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_07_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_07_snow;   sl_aldea_madeira_07;}
+switch(FEAT_HOUSES, SELF, sw_aldea_madeira_08_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_madeira_08_snow;   sl_aldea_madeira_08;}
+
+random_switch (FEAT_HOUSES, SELF, sw_aldea_madeira_random_sprite) {
+   1: sw_aldea_madeira_01_snow_aware;
+   1: sw_aldea_madeira_02_snow_aware;
+   1: sw_aldea_madeira_03_snow_aware;
+   1: sw_aldea_madeira_04_snow_aware;
+   1: sw_aldea_madeira_05_snow_aware;
+   1: sw_aldea_madeira_06_snow_aware;
+   1: sw_aldea_madeira_07_snow_aware;
+   1: sw_aldea_madeira_08_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+
+item(FEAT_HOUSES, res_aldea_madeira, BUILDING_ID_RES_ALDEA_MADEIRA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 06;
+		population: 50;
+      accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,1950];
+		minimum_lifetime: 20;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+		building_class: 0;
+	}
+	graphics {
+		default: sw_aldea_madeira_random_sprite;
+		//construction_check: switch_house_office_gap;
+	}
+}

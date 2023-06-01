@@ -1,0 +1,58 @@
+/* Building Classes
+*
+*  An arbitrary number. You can check for the presence of buildings of the same class when building new buildings or using animation.
+*  Only the north tile of a multi-tile building is assigned a class.
+*
+*/
+
+#define BUILDING_CLASS_RES_ALDEA               0   // Aldeas e Caseríos (conxunto de casas)
+   #define BUILDING_ID_RES_ALDEA_PALLOZA                   0
+   #define BUILDING_ID_RES_ALDEA_MADEIRA                   1
+   #define BUILDING_ID_RES_ALDEA_PESCADORES                2
+   #define BUILDING_ID_RES_ALDEA_PEDRAS                    3
+   #define BUILDING_ID_RES_ALDEA_PORTUGAL                  4
+   #define BUILDING_ID_RES_ALDEA_CHABOLAS                  5
+
+#define BUILDING_CLASS_RES_CASAS              10   // Casas unifamiliares ou de baixa densidade poboacional
+   #define BUILDING_ID_RES_CASAS                       10
+
+#define BUILDING_CLASS_RES_ADOSADOS           20   // Urbanizacións. Casas "Modulares" que se poden unir unhas con outras e forman barrios residenciais.
+
+#define BUILDING_CLASS_RES_EDIFICOS           30   // Apartamentos e outros edificios con baixos comerciais.
+
+#define BUILDING_CLASS_IGREXAS                40   // Igrexas
+   #define BUILDING_ID_IGREXAS_ROMANICA                      40
+   #define BUILDING_ID_IGREXAS_GOTICA                        41
+   #define BUILDING_ID_IGREXAS_RENACENTISTA                  42
+   #define BUILDING_ID_IGREXAS_BARROCA                       43
+   #define BUILDING_ID_IGREXAS_MODERNA                       44
+   #define BUILDING_ID_IGREXAS_MEZQUITA                      45
+
+#define BUILDING_CLASS_SANIDADE      50   // Hospitais, Ambulatorios, comisarias, escolas...
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_OLD     50
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_NEW     51
+   #define BUILDING_ID_SANIDADE_HOSPITAL_OLD        52
+   #define BUILDING_ID_SANIDADE_HOSPITAL_NEW        56
+
+#define BUILDING_CLASS_DEPORTES               60   // Estadios, Piscinas, pistas de atletismo, tenis, baloncesto...
+   #define BUILDING_ID_DEPORTES_BASKET                    60 // Multitiles ocupan varios huecos
+   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD          64
+   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW          68
+   #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL            72
+
+#define BUILDING_CLASS_SQUARES_AND_PARKS      80  // Fountain, Statues and Squares
+   #define BUILDING_ID_SQUARES_PRAZA                      80
+   #define BUILDING_ID_SQUARES_PARQUE                     81
+   #define BUILDING_ID_SQUARES_PRAZA_GRANDE               82
+   #define BUILDING_ID_SQUARES_PARQUE_GRANDE              86
+
+#define BUILDING_CLASS_MARKETS                90  // Mercados, Supermercados, Grandes Almacéns e tendas en xeral
+   #define BUILDING_ID_MARKETS_SUPERMARKET                90
+
+#define BUILDING_CLASS_SKYSCRAPERS        9  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
+#define BUILDING_CLASS_COLLEGE            10 // Universidades: Colexios maiores, facultades, pistas deportivas, parques...??
+#define BUILDING_CLASS_COMMERCIAL         11 // Auditorios, cines, museos, hoteis
+#define BUILDING_CLASS_LANDMARKS          12 // Monumentos
+#define BUILDING_CLASS_HISTORIC           14 // Edificios que se van preservar si ou si
+
+

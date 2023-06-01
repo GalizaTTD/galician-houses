@@ -1,0 +1,42 @@
+// Define spritesets (normal & snow)
+spriteset(ss_deporte_campo_futbol_old_N, 	"src/gfx/DEPORTES/campo_futbol_old_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_deporte_campo_futbol_old_S, 	"src/gfx/DEPORTES/campo_futbol_old_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_deporte_campo_futbol_old_E, 	"src/gfx/DEPORTES/campo_futbol_old_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_deporte_campo_futbol_old_W, 	"src/gfx/DEPORTES/campo_futbol_old_W.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_deporte_campo_futbol_old_N 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_deporte_campo_futbol_old_N; }}
+spritelayout sl_deporte_campo_futbol_old_S 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_deporte_campo_futbol_old_S; }}
+spritelayout sl_deporte_campo_futbol_old_E 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_deporte_campo_futbol_old_E; }}
+spritelayout sl_deporte_campo_futbol_old_W 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_deporte_campo_futbol_old_W; }}
+
+// Define Switches
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, deportes_campo_futbol_old, BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD, HOUSE_SIZE_2X2){
+	property {
+		substitute: 20;
+		name: TTD_STR_TOWN_BUILDING_NAME_STADIUM_1;
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,1940];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_DEPORTES;
+	}
+	graphics {
+		graphics_north: sl_deporte_campo_futbol_old_N;
+		graphics_east: sl_deporte_campo_futbol_old_E;
+		graphics_west: sl_deporte_campo_futbol_old_W;
+		graphics_south: sl_deporte_campo_futbol_old_S;
+		construction_check: sw_population_500() && sw_unique_house();
+	}
+}

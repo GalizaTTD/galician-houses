@@ -1,0 +1,28 @@
+// Define spritesets (normal & snow)
+spriteset(ss_aldea_palloza, 	"src/gfx/RES_ALDEA/palloza.gimp.png") 	{ tmpl_building() }
+spriteset(ss_aldea_palloza_snow, 	"src/gfx/RES_ALDEA/palloza_SNOW.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_aldea_palloza           {	ground	 	{ sprite: GROUNDSPRITE_CLEARED /* ss_aldea_palloza(4) */;}	building 	{ sprite: ss_aldea_palloza; }}
+spritelayout sl_aldea_palloza_snow      {	ground	 	{ sprite: GROUNDSPRITE_SNOW /* ss_aldea_palloza_snow(4) */;}	building 	{ sprite: ss_aldea_palloza_snow; }}
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_aldea_palloza_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_aldea_palloza_snow;   sl_aldea_palloza;}
+// Define construction checks
+
+// Define Item
+
+item(FEAT_HOUSES, res_aldea_palloza, BUILDING_ID_RES_ALDEA_PALLOZA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 06;
+		population: 15;
+      accepted_cargos: [[PASS, 8], [MAIL, 8]];
+		probability: 4;
+		years_available: [0,1950];
+		minimum_lifetime: 20;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+		building_class: 0;
+	}
+	graphics {
+		default: sw_aldea_palloza_snow_aware;
+		//construction_check: switch_house_office_gap;
+	}
+}

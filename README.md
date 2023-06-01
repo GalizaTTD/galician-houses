@@ -6,7 +6,7 @@
 Table of Contents
 =================
 
-* [Galician Railways](#galician-railways)
+* [Galician Houses](#galician-houses)
 * [Table of Contents](#table-of-contents)
    * [About The Project](#about-the-project)
    * [Getting Started](#getting-started)

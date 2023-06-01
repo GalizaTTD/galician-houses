@@ -23,3 +23,21 @@ cargotable {
 
 // Deshabilita as casas actuais por defecto.
 disable_item(FEAT_HOUSES);
+
+// Modelo base de todas as construcións
+template tmpl_building() {
+   [ 84,  10, 64, 170, -31,  -139] // Stage 0
+   [158,  10, 64, 170, -31,  -139] // Stage 1
+   [232,  10, 64, 170, -31,  -139] // Stage 2
+   [306,  10, 64, 170, -31,  -139] // Stage 3 (Finished)
+   [ 10,  10, 64, 170, -31,  -139] // Ground
+}
+
+
+#include "_house_definitions.pnml"
+#include "_functions.pnml"
+#include "_switches.pnml"
+#include "_waste.pnml"
+
+#include "RES_ALDEA/main.pnml"
+#include "DEPORTES/main.pnml"

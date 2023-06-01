@@ -5,20 +5,4 @@
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
 
-/* Newgrf parameters */
-
-#include "src/main.pnml"
-
-
-/* Common definitions */
-
-
-#include "src/graphics.pnml"
-#include "src/functions.pnml"
-#include "src/switches.pnml"
-#include "src/residential.pnml"
-#include "src/commercial.pnml"
-#include "src/landmarks.pnml"
-#include "src/tropic.pnml"
-#include "src/arctic.pnml"
-#include "src/test.pnml"
+#include "src/code/main.pnml"
