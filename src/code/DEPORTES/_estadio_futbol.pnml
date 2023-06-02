@@ -86,7 +86,7 @@ item(FEAT_HOUSES, deportes_estadio_futbol, BUILDING_ID_DEPORTES_ESTADIO_FUTBOL, 
 		probability: 4;
 		years_available: [1970,0xFFFF];
 		minimum_lifetime: 20;
-		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_DEPORTES;
 	}
 	graphics {
@@ -95,5 +95,6 @@ item(FEAT_HOUSES, deportes_estadio_futbol, BUILDING_ID_DEPORTES_ESTADIO_FUTBOL, 
 		graphics_west: sw_deporte_estadio_futbol_random_sprite_W;
 		graphics_south: sw_deporte_estadio_futbol_random_sprite_S;
 		construction_check: sw_population_10000() && sw_unique_house();
+ 		cargo_production: func_produce(19,0,9);
 	}
 }

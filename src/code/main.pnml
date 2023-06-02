@@ -16,9 +16,7 @@ grf {
 
 // Definicións das cargas, baseado en GALIFIRS, Só fai falla engadir aquelas que se utilicen nas casas.
 cargotable {
-	PASS, MAIL, GOOD, FOOD, BEER, COAL, WOOD, RCYC, WSTE, WATR, VEHI, BDMT,
-	/* IOTC industrial cargos */
-	SGCN, TBCO, OIL_, NKOR, MOLS, RFPR, FUEL, PIPE, ENSP
+	PASS, MAIL, GOOD, FOOD, BEER, WSTE
 }
 
 // Deshabilita as casas actuais por defecto.

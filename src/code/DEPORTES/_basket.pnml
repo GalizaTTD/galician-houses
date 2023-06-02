@@ -73,15 +73,15 @@ item(FEAT_HOUSES, deportes_basket, BUILDING_ID_DEPORTES_BASKET, HOUSE_SIZE_2X2){
 		substitute: 20;
 		name: TTD_STR_TOWN_BUILDING_NAME_STADIUM_1;
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 65;
+		population: 20;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		accepted_cargos: [[PASS, 8]];
 		local_authority_impact: 300;
 		removal_cost_multiplier: 250;
 		probability: 4;
 		years_available: [1980,0xFFFF];
-		minimum_lifetime: 10;
-		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+		minimum_lifetime: 5;
+		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_DEPORTES;
 	}
 	graphics {
@@ -89,6 +89,7 @@ item(FEAT_HOUSES, deportes_basket, BUILDING_ID_DEPORTES_BASKET, HOUSE_SIZE_2X2){
 		graphics_east: sw_deporte_basket_random_sprite_E;
 		graphics_west: sw_deporte_basket_random_sprite_W;
 		graphics_south: sw_deporte_basket_random_sprite_S;
-		construction_check: switch_population_500;
+		construction_check: sw_population_10000() && sw_unique_house();
+ 		cargo_production: func_produce(5,0,1);
 	}
 }

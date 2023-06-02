@@ -12,13 +12,16 @@
    #define BUILDING_ID_RES_ALDEA_PEDRAS                    3
    #define BUILDING_ID_RES_ALDEA_PORTUGAL                  4
    #define BUILDING_ID_RES_ALDEA_CHABOLAS                  5
+   // Libres 6-9
 
 #define BUILDING_CLASS_RES_CASAS              10   // Casas unifamiliares ou de baixa densidade poboacional
-   #define BUILDING_ID_RES_CASAS                       10
+   // Libres 10-19
 
 #define BUILDING_CLASS_RES_ADOSADOS           20   // Urbanizacións. Casas "Modulares" que se poden unir unhas con outras e forman barrios residenciais.
+   // Libres 20-29
 
 #define BUILDING_CLASS_RES_EDIFICOS           30   // Apartamentos e outros edificios con baixos comerciais.
+   // Libres 30-39
 
 #define BUILDING_CLASS_IGREXAS                40   // Igrexas
    #define BUILDING_ID_IGREXAS_ROMANICA                      40
@@ -27,6 +30,7 @@
    #define BUILDING_ID_IGREXAS_BARROCA                       43
    #define BUILDING_ID_IGREXAS_MODERNA                       44
    #define BUILDING_ID_IGREXAS_MEZQUITA                      45
+   // Libres 46-49
 
 #define BUILDING_CLASS_SANIDADE      50   // Hospitais, Ambulatorios, comisarias, escolas...
    #define BUILDING_ID_SANIDADE_AMBULATORIO_OLD     50
@@ -39,6 +43,7 @@
    #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD          64
    #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW          68
    #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL            72
+   // Libres 76,77,78,79
 
 #define BUILDING_CLASS_SQUARES_AND_PARKS      80  // Fountain, Statues and Squares
    #define BUILDING_ID_SQUARES_PRAZA                      80
@@ -48,6 +53,7 @@
 
 #define BUILDING_CLASS_MARKETS                90  // Mercados, Supermercados, Grandes Almacéns e tendas en xeral
    #define BUILDING_ID_MARKETS_SUPERMARKET                90
+   // Libres 94-99
 
 #define BUILDING_CLASS_SKYSCRAPERS        9  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
 #define BUILDING_CLASS_COLLEGE            10 // Universidades: Colexios maiores, facultades, pistas deportivas, parques...??

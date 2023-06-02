@@ -68,26 +68,26 @@ switch (FEAT_HOUSES, SELF, IsFirstHouseOfClass, same_class_count_town == 0) {ret
 /* Comproba se se están entregando diversas mercadorías */
 
 /* Industries of the Caribbean - TT20 */
-switch (FEAT_HOUSES, SELF, IsDeliveredSGCN, cargo_accepted_nearby_last_month(SGCN) || cargo_accepted_nearby_this_month(SGCN)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredTBCO, cargo_accepted_nearby_last_month(TBCO) || cargo_accepted_nearby_this_month(TBCO)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredOIL_, cargo_accepted_nearby_last_month(OIL_) || cargo_accepted_nearby_this_month(OIL_)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredNKOR, cargo_accepted_nearby_last_month(NKOR) || cargo_accepted_nearby_this_month(NKOR)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredMOLS, cargo_accepted_nearby_last_month(MOLS) || cargo_accepted_nearby_this_month(MOLS)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredRFPR, cargo_accepted_nearby_last_month(RFPR) || cargo_accepted_nearby_this_month(RFPR)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredFUEL, cargo_accepted_nearby_last_month(FUEL) || cargo_accepted_nearby_this_month(FUEL)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredPIPE, cargo_accepted_nearby_last_month(PIPE) || cargo_accepted_nearby_this_month(PIPE)) {return;}
-switch (FEAT_HOUSES, SELF, IsDeliveredENSP, cargo_accepted_nearby_last_month(ENSP) || cargo_accepted_nearby_this_month(ENSP)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredSGCN, cargo_accepted_nearby_last_month(SGCN) || cargo_accepted_nearby_this_month(SGCN)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredTBCO, cargo_accepted_nearby_last_month(TBCO) || cargo_accepted_nearby_this_month(TBCO)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredOIL_, cargo_accepted_nearby_last_month(OIL_) || cargo_accepted_nearby_this_month(OIL_)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredNKOR, cargo_accepted_nearby_last_month(NKOR) || cargo_accepted_nearby_this_month(NKOR)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredMOLS, cargo_accepted_nearby_last_month(MOLS) || cargo_accepted_nearby_this_month(MOLS)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredRFPR, cargo_accepted_nearby_last_month(RFPR) || cargo_accepted_nearby_this_month(RFPR)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredFUEL, cargo_accepted_nearby_last_month(FUEL) || cargo_accepted_nearby_this_month(FUEL)) {return;}
+// switch (FEAT_HOUSES, SELF, IsDeliveredPIPE, cargo_accepted_nearby_last_month(PIPE) || cargo_accepted_nearby_this_month(PIPE)) {return;}
+switch (FEAT_HOUSES, SELF, IsDeliveredBEER, cargo_accepted_nearby_last_month(BEER) || cargo_accepted_nearby_this_month(BEER)) {return;}
 
 switch (FEAT_HOUSES, SELF, CheckIOTCIndustrialCargos,
-	!IsDeliveredSGCN() *
-	!IsDeliveredTBCO() *
-	!IsDeliveredOIL_() *
-	!IsDeliveredNKOR() *
-	!IsDeliveredMOLS() *
-	!IsDeliveredRFPR() *
-	!IsDeliveredFUEL() *
-	!IsDeliveredPIPE() *
-	!IsDeliveredENSP()
+	// !IsDeliveredSGCN() *
+	// !IsDeliveredTBCO() *
+	// !IsDeliveredOIL_() *
+	// !IsDeliveredNKOR() *
+	// !IsDeliveredMOLS() *
+	// !IsDeliveredRFPR() *
+	// !IsDeliveredFUEL() *
+	// !IsDeliveredPIPE() *
+	!IsDeliveredBEER()
 ) {return;}
 
 switch (FEAT_HOUSES, SELF, CheckIndustrialCargos, grf_future_status("TT20")) {1: return CheckIOTCIndustrialCargos; return 1;}

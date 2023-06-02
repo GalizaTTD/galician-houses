@@ -38,5 +38,6 @@ item(FEAT_HOUSES, deportes_campo_futbol_old, BUILDING_ID_DEPORTES_CAMPO_FUTBOL_O
 		graphics_west: sl_deporte_campo_futbol_old_W;
 		graphics_south: sl_deporte_campo_futbol_old_S;
 		construction_check: sw_population_500() && sw_unique_house();
+ 		cargo_production: func_produce(4,0,3);
 	}
 }
