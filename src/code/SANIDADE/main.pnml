@@ -1,0 +1,6 @@
+// Casas tradicionais, casas de aldea...
+
+#include "_ambulatorio_pequeno.pnml"
+#include "_ambulatorio_grande.pnml"
+#include "_hospital_old.pnml"
+#include "_hospital_new.pnml"

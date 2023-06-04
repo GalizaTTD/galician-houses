@@ -19,6 +19,7 @@
 
 #define BUILDING_CLASS_RES_ADOSADOS           20   // Urbanizacións. Casas "Modulares" que se poden unir unhas con outras e forman barrios residenciais.
    // Libres 20-29
+   // O edifico de pedra pode ser unha skin de Asturias (estilo industrial)
 
 #define BUILDING_CLASS_RES_EDIFICOS           30   // Apartamentos e outros edificios con baixos comerciais.
    // Libres 30-39
@@ -33,8 +34,8 @@
    // Libres 46-49
 
 #define BUILDING_CLASS_SANIDADE      50   // Hospitais, Ambulatorios, comisarias, escolas...
-   #define BUILDING_ID_SANIDADE_AMBULATORIO_OLD     50
-   #define BUILDING_ID_SANIDADE_AMBULATORIO_NEW     51
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO 50
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE  51
    #define BUILDING_ID_SANIDADE_HOSPITAL_OLD        52
    #define BUILDING_ID_SANIDADE_HOSPITAL_NEW        56
 

@@ -8,7 +8,54 @@ switch (FEAT_HOUSES, PARENT, sw_population_1000, population >= 1000) {1: 1; retu
 switch (FEAT_HOUSES, PARENT, sw_population_5000, population >= 5000) {1: 1; return 0;}
 switch (FEAT_HOUSES, PARENT, sw_population_10000, population >= 10000) {1: 1; return 0;}
 switch (FEAT_HOUSES, PARENT, sw_population_30000, population >= 30000) {1: 1; return 0;}
+// Localización
+#define COORDS_MIN_X 500
+#define COORDS_MIN_Y 1300
+#define COORDS_MAX_X 2400
+#define COORDS_MAX_Y 2300
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Lugo, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Lugo, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_Lugo, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Lugo; 0: sw_location_percentage_Lugo;}
+#undef COORDS_MIN_X
+#undef COORDS_MIN_Y
+#undef COORDS_MAX_X
+#undef COORDS_MAX_Y
 
+#define COORDS_MIN_X 2204
+#define COORDS_MIN_Y 696
+#define COORDS_MAX_X 4095
+#define COORDS_MAX_Y 1607
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Asturias, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Asturias, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_Asturias, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Asturias; 0: sw_location_percentage_Asturias;}
+#undef COORDS_MIN_X
+#undef COORDS_MIN_Y
+#undef COORDS_MAX_X
+#undef COORDS_MAX_Y
+
+#define COORDS_MIN_X 2350
+#define COORDS_MIN_Y 1600
+#define COORDS_MAX_X 4095
+#define COORDS_MAX_Y 4095
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Castela, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Castela, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_Castela, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Castela; 0: sw_location_percentage_Castela;}
+#undef COORDS_MIN_X
+#undef COORDS_MIN_Y
+#undef COORDS_MAX_X
+#undef COORDS_MAX_Y
+
+#define COORDS_MIN_X 485
+#define COORDS_MIN_Y 2875
+#define COORDS_MAX_X 2378
+#define COORDS_MAX_Y 4095
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Portugal, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Portugal, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_Portugal, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Portugal; 0: sw_location_percentage_Portugal;}
+#undef COORDS_MIN_X
+#undef COORDS_MIN_Y
+#undef COORDS_MAX_X
+#undef COORDS_MAX_Y
 
 // random_switch (FEAT_HOUSES, SELF, random_colour_offices) {
 // 	1:	return PALETTE_CC_DARK_BLUE;

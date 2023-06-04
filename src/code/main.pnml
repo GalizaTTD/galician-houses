@@ -30,6 +30,13 @@ template tmpl_building() {
    [306,  10, 64, 170, -31,  -139] // Stage 3 (Finished)
    [ 10,  10, 64, 170, -31,  -139] // Ground
 }
+template tmpl_building_animated() {
+   [ 84,  10, 64, 170, -31,  -139, ANIM] // Stage 0
+   [158,  10, 64, 170, -31,  -139, ANIM] // Stage 1
+   [232,  10, 64, 170, -31,  -139, ANIM] // Stage 2
+   [306,  10, 64, 170, -31,  -139, ANIM] // Stage 3 (Finished)
+   [ 10,  10, 64, 170, -31,  -139, ANIM] // Ground
+}
 
 
 #include "_house_definitions.pnml"
@@ -39,3 +46,4 @@ template tmpl_building() {
 
 #include "RES_ALDEA/main.pnml"
 #include "DEPORTES/main.pnml"
+#include "SANIDADE/main.pnml"

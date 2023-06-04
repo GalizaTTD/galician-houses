@@ -17,12 +17,13 @@ item(FEAT_HOUSES, res_aldea_palloza, BUILDING_ID_RES_ALDEA_PALLOZA, HOUSE_SIZE_1
       accepted_cargos: [[PASS, 8], [MAIL, 8]];
 		probability: 4;
 		years_available: [0,1950];
-		minimum_lifetime: 20;
+		minimum_lifetime: 10;
 		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
-		building_class: 0;
+		building_class: BUILDING_CLASS_RES_ALDEA;
 	}
 	graphics {
 		default: sw_aldea_palloza_snow_aware;
-		//construction_check: switch_house_office_gap;
+ 		cargo_production: func_produce(2,1,1);
+		construction_check: sw_location_Lugo;
 	}
 }

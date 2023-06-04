@@ -1,0 +1,58 @@
+// Define spritesets (normal & snow)
+
+spriteset(ss_sanidade_hospital_old_N, 	"src/gfx/SANIDADE/hospital_old_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_hospital_old_S, 	"src/gfx/SANIDADE/hospital_old_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_hospital_old_E, 	"src/gfx/SANIDADE/hospital_old_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_hospital_old_W, 	"src/gfx/SANIDADE/hospital_old_W.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_sanidade_hospital_old_N_SNOW, 	"src/gfx/SANIDADE/hospital_old_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_hospital_old_S_SNOW, 	"src/gfx/SANIDADE/hospital_old_S_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_hospital_old_E_SNOW, 	"src/gfx/SANIDADE/hospital_old_E_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_hospital_old_W_SNOW, 	"src/gfx/SANIDADE/hospital_old_W_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_sanidade_hospital_old_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_old_N; }}
+spritelayout sl_sanidade_hospital_old_S 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_old_S; }}
+spritelayout sl_sanidade_hospital_old_E 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_old_E; }}
+spritelayout sl_sanidade_hospital_old_W 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_old_W; }}
+
+spritelayout sl_sanidade_hospital_old_N_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_old_N_SNOW; }}
+spritelayout sl_sanidade_hospital_old_S_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_old_S_SNOW; }}
+spritelayout sl_sanidade_hospital_old_E_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_old_E_SNOW; }}
+spritelayout sl_sanidade_hospital_old_W_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_old_W_SNOW; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_sanidade_hospital_old_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_sanidade_hospital_old_N_SNOW;   sl_sanidade_hospital_old_N;}
+switch(FEAT_HOUSES, SELF, sw_sanidade_hospital_old_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_sanidade_hospital_old_S_SNOW;   sl_sanidade_hospital_old_S;}
+switch(FEAT_HOUSES, SELF, sw_sanidade_hospital_old_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_sanidade_hospital_old_E_SNOW;   sl_sanidade_hospital_old_E;}
+switch(FEAT_HOUSES, SELF, sw_sanidade_hospital_old_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_sanidade_hospital_old_W_SNOW;   sl_sanidade_hospital_old_W;}
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, sanidade_hospital_old, BUILDING_ID_SANIDADE_HOSPITAL_OLD, HOUSE_SIZE_2X2){
+	property {
+		substitute: 40;
+		name: string(STR_SANIDADE_HOSPITAL);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 150;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,0xFFFF];
+		minimum_lifetime: 20;
+		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_SANIDADE;
+	}
+	graphics {
+		graphics_north: sw_sanidade_hospital_old_N_snow_aware;
+		graphics_east: sw_sanidade_hospital_old_E_snow_aware;
+		graphics_west: sw_sanidade_hospital_old_W_snow_aware;
+		graphics_south: sw_sanidade_hospital_old_S_snow_aware;
+		construction_check: sw_population_5000() && sw_unique_house();
+ 		cargo_production: func_produce(19,0,9);
+	}
+}

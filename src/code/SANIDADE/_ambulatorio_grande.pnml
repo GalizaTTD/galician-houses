@@ -1,0 +1,37 @@
+// Define spritesets (normal & snow)
+spriteset(ss_sanidade_ambulatorio_grande, 	"src/gfx/SANIDADE/ambulatorio_grande.gimp.png") 	{ tmpl_building() }
+spriteset(ss_sanidade_ambulatorio_grande_snow, 	"src/gfx/SANIDADE/ambulatorio_grande_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_sanidade_ambulatorio_grande 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_ambulatorio_grande; }}
+spritelayout sl_sanidade_ambulatorio_grande_snow 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_ambulatorio_grande_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_sanidade_ambulatorio_grande_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_sanidade_ambulatorio_grande_snow;   sl_sanidade_ambulatorio_grande;}
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, sanidade_ambulatorio_grande, BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_SANIDADE_AMBULATORIO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,1940];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_DEPORTES;
+	}
+	graphics {
+		default:sw_sanidade_ambulatorio_grande_snow_aware;
+		construction_check: sw_population_500() && sw_unique_house();
+ 		cargo_production: func_produce(4,0,3);
+	}
+}
