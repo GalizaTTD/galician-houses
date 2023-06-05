@@ -47,3 +47,4 @@ template tmpl_building_animated() {
 #include "RES_ALDEA/main.pnml"
 #include "DEPORTES/main.pnml"
 #include "SANIDADE/main.pnml"
+#include "EEPP/main.pnml"

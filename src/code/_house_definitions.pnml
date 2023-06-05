@@ -33,7 +33,7 @@
    #define BUILDING_ID_IGREXAS_MEZQUITA                      45
    // Libres 46-49
 
-#define BUILDING_CLASS_SANIDADE      50   // Hospitais, Ambulatorios, comisarias, escolas...
+#define BUILDING_CLASS_SANIDADE               50   // Hospitais, Ambulatorios, comisarias, escolas...
    #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO 50
    #define BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE  51
    #define BUILDING_ID_SANIDADE_HOSPITAL_OLD        52
@@ -46,20 +46,18 @@
    #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL            72
    // Libres 76,77,78,79
 
-#define BUILDING_CLASS_SQUARES_AND_PARKS      80  // Fountain, Statues and Squares
-   #define BUILDING_ID_SQUARES_PRAZA                      80
-   #define BUILDING_ID_SQUARES_PARQUE                     81
-   #define BUILDING_ID_SQUARES_PRAZA_GRANDE               82
-   #define BUILDING_ID_SQUARES_PARQUE_GRANDE              86
+#define BUILDING_CLASS_EEPP                   80  // Espazos públicos: Estatuas, fontes, prazas, parques...
+   #define BUILDING_ID_EEPP_PRAZA_PEQUENA              80
+   #define BUILDING_ID_EEPP_PARQUE_PEQUENO             81
+   #define BUILDING_ID_EEPP_PRAZA_GRANDE               82
+   #define BUILDING_ID_EEPP_PARQUE_GRANDE              86
 
-#define BUILDING_CLASS_MARKETS                90  // Mercados, Supermercados, Grandes Almacéns e tendas en xeral
-   #define BUILDING_ID_MARKETS_SUPERMARKET                90
+#define BUILDING_CLASS_COMMERCIAL             90  // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
+   #define BUILDING_ID_MARKETS_HYPERMARKET                90
    // Libres 94-99
 
-#define BUILDING_CLASS_SKYSCRAPERS        9  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
-#define BUILDING_CLASS_COLLEGE            10 // Universidades: Colexios maiores, facultades, pistas deportivas, parques...??
-#define BUILDING_CLASS_COMMERCIAL         11 // Auditorios, cines, museos, hoteis
-#define BUILDING_CLASS_LANDMARKS          12 // Monumentos
-#define BUILDING_CLASS_HISTORIC           14 // Edificios que se van preservar si ou si
+#define BUILDING_CLASS_RANHACEUS        9  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
+#define BUILDING_CLASS_EDUCACION            10 // Colexios, universidades, etc..
+#define BUILDING_CLASS_LANDMARKS          12 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
 
 
