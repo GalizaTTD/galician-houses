@@ -48,3 +48,4 @@ template tmpl_building_animated() {
 #include "DEPORTES/main.pnml"
 #include "SANIDADE/main.pnml"
 #include "EEPP/main.pnml"
+#include "IGREXAS/main.pnml"

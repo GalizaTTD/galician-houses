@@ -1,20 +1,46 @@
 
 /* *** Begin Switches *** */
-// Estrutura única na vila
-switch(FEAT_HOUSES, SELF, sw_unique_house, same_house_count_town == 0) {1: return 1; return 0;}
+// Estrutura única
+switch(FEAT_HOUSES, SELF, sw_unique_house, same_house_count_town == 0) {return;}
+switch(FEAT_HOUSES, SELF, sw_unique_class, same_class_count_town == 0) {return;}
+switch(FEAT_HOUSES, SELF, sw_unique_worldwide, same_house_count_map == 0) {return;}
 // Poboación
-switch (FEAT_HOUSES, PARENT, sw_population_500, population >= 500) {1: 1; return 0;}
-switch (FEAT_HOUSES, PARENT, sw_population_1000, population >= 1000) {1: 1; return 0;}
-switch (FEAT_HOUSES, PARENT, sw_population_5000, population >= 5000) {1: 1; return 0;}
-switch (FEAT_HOUSES, PARENT, sw_population_10000, population >= 10000) {1: 1; return 0;}
-switch (FEAT_HOUSES, PARENT, sw_population_30000, population >= 30000) {1: 1; return 0;}
+switch (FEAT_HOUSES, PARENT, sw_population_500, population >= 500) {return;}
+switch (FEAT_HOUSES, PARENT, sw_population_1000, population >= 1000) {return;}
+switch (FEAT_HOUSES, PARENT, sw_population_5000, population >= 5000) {return;}
+switch (FEAT_HOUSES, PARENT, sw_population_10000, population >= 10000) {return;}
+switch (FEAT_HOUSES, PARENT, sw_population_30000, population >= 30000) {return;}
+// Comproba se ten unha estrada na dirección indicada.
+switch(FEAT_HOUSES,SELF, sw_road_SE, nearby_tile_class(0,1) == TILE_CLASS_ROAD || nearby_tile_class(0,1) == TILE_CLASS_STATION) {return;}
+switch(FEAT_HOUSES,SELF, sw_road_SW, nearby_tile_class(1,0) == TILE_CLASS_ROAD || nearby_tile_class(1,0) == TILE_CLASS_STATION) {return;}
+switch(FEAT_HOUSES,SELF, sw_road_NE, nearby_tile_class(0,-1) == TILE_CLASS_ROAD || nearby_tile_class(0,-1) == TILE_CLASS_STATION) {return;}
+switch(FEAT_HOUSES,SELF, sw_road_NW, nearby_tile_class(-1,0) == TILE_CLASS_ROAD || nearby_tile_class(-1,0) == TILE_CLASS_STATION) {return;}
+// Comproba se ten Auga na dirección indicada
+switch(FEAT_HOUSES,SELF, sw_water_SE, nearby_tile_is_water(0,1)) {return;}
+switch(FEAT_HOUSES,SELF, sw_water_SW, nearby_tile_is_water(1,0)) {return;}
+switch(FEAT_HOUSES,SELF, sw_water_NE, nearby_tile_is_water(0,-1)) {return;}
+switch(FEAT_HOUSES,SELF, sw_water_NW, nearby_tile_is_water(-1,0)) {return;}
+// Comproba se hai un determinado edificio na dirección indicada
+switch(FEAT_HOUSES,SELF, sw_build_id_SE, build_id, nearby_tile_house_id(0,1) == (256 + build_id)) {return;}
+switch(FEAT_HOUSES,SELF, sw_build_id_SW, build_id, nearby_tile_house_id(1,0) == (256 + build_id)) {return;}
+switch(FEAT_HOUSES,SELF, sw_build_id_NE, build_id, nearby_tile_house_id(0,-1) == (256 + build_id)) {return;}
+switch(FEAT_HOUSES,SELF, sw_build_id_NW, build_id, nearby_tile_house_id(-1,0) == (256 + build_id)) {return;}
+// Comproba se hai unha estrutura dunha clase determinada na dirección indicada
+switch(FEAT_HOUSES,SELF, sw_build_class_SE, build_class, nearby_tile_house_class(0,1) == (256 + build_class)) {return;}
+switch(FEAT_HOUSES,SELF, sw_build_class_SW, build_class, nearby_tile_house_class(1,0) == (256 + build_class)) {return;}
+switch(FEAT_HOUSES,SELF, sw_build_class_NE, build_class, nearby_tile_house_class(0,-1) == (256 + build_class)) {return;}
+switch(FEAT_HOUSES,SELF, sw_build_class_NW, build_class, nearby_tile_house_class(-1,0) == (256 + build_class)) {return;}
+
+/* Searchs for houses of the same class within distance 2. I.e. Offices (new and modern) must build within distance 2 of same class (high-rises). No need to cluster if first in town. */
+switch(FEAT_HOUSES,SELF, sw_same_class_near_count, nearest_house_matching_criterion(2, SEARCH_HOUSE_BY_CLASS)) {return;}
+
 // Localización
 #define COORDS_MIN_X 500
 #define COORDS_MIN_Y 1300
 #define COORDS_MAX_X 2400
 #define COORDS_MAX_Y 2300
-switch (FEAT_HOUSES, SELF, sw_location_absolute_Lugo, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
-switch (FEAT_HOUSES, SELF, sw_location_percentage_Lugo, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Lugo, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {return;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Lugo, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {return;}
 switch (FEAT_HOUSES, SELF, sw_location_Lugo, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Lugo; 0: sw_location_percentage_Lugo;}
 #undef COORDS_MIN_X
 #undef COORDS_MIN_Y
@@ -25,8 +51,8 @@ switch (FEAT_HOUSES, SELF, sw_location_Lugo, map_x_edge==4096 && map_y_edge==409
 #define COORDS_MIN_Y 696
 #define COORDS_MAX_X 4095
 #define COORDS_MAX_Y 1607
-switch (FEAT_HOUSES, SELF, sw_location_absolute_Asturias, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
-switch (FEAT_HOUSES, SELF, sw_location_percentage_Asturias, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Asturias, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {return;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Asturias, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {return;}
 switch (FEAT_HOUSES, SELF, sw_location_Asturias, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Asturias; 0: sw_location_percentage_Asturias;}
 #undef COORDS_MIN_X
 #undef COORDS_MIN_Y
@@ -37,8 +63,8 @@ switch (FEAT_HOUSES, SELF, sw_location_Asturias, map_x_edge==4096 && map_y_edge=
 #define COORDS_MIN_Y 1600
 #define COORDS_MAX_X 4095
 #define COORDS_MAX_Y 4095
-switch (FEAT_HOUSES, SELF, sw_location_absolute_Castela, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
-switch (FEAT_HOUSES, SELF, sw_location_percentage_Castela, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Castela, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {return;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Castela, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {return;}
 switch (FEAT_HOUSES, SELF, sw_location_Castela, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Castela; 0: sw_location_percentage_Castela;}
 #undef COORDS_MIN_X
 #undef COORDS_MIN_Y
@@ -49,8 +75,8 @@ switch (FEAT_HOUSES, SELF, sw_location_Castela, map_x_edge==4096 && map_y_edge==
 #define COORDS_MIN_Y 2875
 #define COORDS_MAX_X 2378
 #define COORDS_MAX_Y 4095
-switch (FEAT_HOUSES, SELF, sw_location_absolute_Portugal, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {1: 1; return 0;}
-switch (FEAT_HOUSES, SELF, sw_location_percentage_Portugal, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {1: 1; return 0;}
+switch (FEAT_HOUSES, SELF, sw_location_absolute_Portugal, x_coordinate >= COORDS_MIN_X && x_coordinate <= COORDS_MAX_X && y_coordinate >= COORDS_MIN_Y && y_coordinate <= COORDS_MAX_Y) {return;}
+switch (FEAT_HOUSES, SELF, sw_location_percentage_Portugal, x_coordinate >= (COORDS_MIN_X*map_x_edge)/4096 && x_coordinate <= (COORDS_MAX_X*map_x_edge)/4096 && y_coordinate >= (COORDS_MIN_Y*map_y_edge)/4096 && y_coordinate <= (COORDS_MAX_Y*map_y_edge)/4096) {return;}
 switch (FEAT_HOUSES, SELF, sw_location_Portugal, map_x_edge==4096 && map_y_edge==4096) {1: sw_location_absolute_Portugal; 0: sw_location_percentage_Portugal;}
 #undef COORDS_MIN_X
 #undef COORDS_MIN_Y
@@ -78,21 +104,11 @@ switch (FEAT_HOUSES, SELF, sw_location_Portugal, map_x_edge==4096 && map_y_edge=
 // switch(FEAT_HOUSES, SELF, house_sprite_orientation_SW, nearby_tile_class(1,0)) {TILE_CLASS_ROAD: random_sprite_houses_SW; house_sprite_orientation_SE;}
 // switch(FEAT_HOUSES, SELF, house_sprite_sloped, nearby_tile_slope(0,0)) {0: house_sprite_orientation_SW; random_sprite_houses_any;}
 
-/* Unique buildings require population and no duplicates */
 
-switch (FEAT_HOUSES, PARENT, switch_population_500, population >= 500) {1: sw_unique_house; return 0;} // Old stadium
-switch (FEAT_HOUSES, PARENT, switch_population_10k, population >= 10000) {1: sw_unique_house; return 0;} // New stadium
-
-/* Coast check for Museum */
-switch(FEAT_HOUSES, SELF, switch_museum_shore_SE, nearby_tile_is_water(0,1)) {1: switch_population_10k; return 0;}
-
-/* Road check for University and Courthouse */
-switch(FEAT_HOUSES, SELF, switch_university_check, nearby_tile_class(0,1)) {TILE_CLASS_ROAD: switch_population_10k; return 0;}
 
 /* Distance check: Hotel cannot build within 30 tiles of another Hotel and must have a road to SW */
 switch(FEAT_HOUSES, PARENT, switch_hotel_check_2, is_city == 1) {1: return 1; return 0;}
 switch(FEAT_HOUSES, SELF, switch_hotel_check_1, nearest_house_matching_criterion(30, SEARCH_HOUSE_BY_TYPE) == 0 && nearby_tile_class(1,0) == TILE_CLASS_ROAD) {1: switch_hotel_check_2; return 0;}
-
 
 /* Houses and Town Houses cannot build within 2 tiles of a modern office building*/
 switch(FEAT_HOUSES, SELF, switch_house_office_gap,
@@ -139,32 +155,21 @@ switch(FEAT_HOUSES, SELF, switch_small_flats_check_1,
 		{1: switch_small_flats_check_2a; switch_small_flats_check_2b;}
 
 
-/* Offices (new and modern) must build within distance 2 of same class (high-rises). No need to cluster if first in town. */
-switch(FEAT_HOUSES,SELF, switch_office_cluster_3, same_class_count_town) {0: return 1; return 0;}
-switch(FEAT_HOUSES,SELF, switch_office_cluster_2, nearest_house_matching_criterion(2, SEARCH_HOUSE_BY_CLASS)) {0: switch_office_cluster_3; return 1;}
 
 /* Office clusters (both old and new) require passenger service */
-switch(FEAT_HOUSES, SELF, switch_office_cluster_1, func_pass_service())
-	{1: switch_office_cluster_2; return 0;}
+// switch(FEAT_HOUSES, SELF, switch_office_cluster_1, func_pass_service())
+// 	{1: switch_office_cluster_2; return 0;}
 
 
-/* Modern office buildings need residential population */
-switch(FEAT_HOUSES, SELF, switch_modern_office_pop_check, (func_population_adder() > ( (other_class_count_town(3) * 30) + ((1 + same_class_count_town) * 60) ) ) )
-	{1: switch_office_cluster_1; return 0;}
+// /* Modern office buildings need residential population */
+// switch(FEAT_HOUSES, SELF, switch_modern_office_pop_check, (func_population_adder() > ( (other_class_count_town(3) * 30) + ((1 + same_class_count_town) * 60) ) ) )
+// 	{1: switch_office_cluster_1; return 0;}
 
 
-/* Old office buildings need residential population */
-switch(FEAT_HOUSES, SELF, switch_old_office_pop_check, (func_population_adder() > (1 + same_class_count_town) * 30) )
-	{1: switch_office_cluster_1; return 0;}
+// /* Old office buildings need residential population */
+// switch(FEAT_HOUSES, SELF, switch_old_office_pop_check, (func_population_adder() > (1 + same_class_count_town) * 30) )
+// 	{1: switch_office_cluster_1; return 0;}
 
-
-/* One office building requires a road in the SE tile */
-switch(FEAT_HOUSES,SELF, switch_office_road_SE, nearby_tile_class(0,1) == TILE_CLASS_ROAD) {1: switch_modern_office_pop_check; return 0;}
-
-
-/* Unique office building (capsule tower) only allows one on the map in a city with population >= 30k */
-switch(FEAT_HOUSES,PARENT, pop_over_30k, population) {0 .. 30000: return 0; switch_office_cluster_1;}
-switch(FEAT_HOUSES,SELF, unique_worldwide, same_house_count_map) {0: pop_over_30k; return 0;}
 
 /* 	Historic buildings are preserved if they are in a town with a Historic Church (acting as a random toggle for a town's attitude toward preservation)
 *	and are within 2 tiles of another historic building.

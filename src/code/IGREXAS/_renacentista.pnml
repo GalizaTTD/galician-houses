@@ -1,0 +1,52 @@
+// Define spritesets (normal & snow)
+spriteset(ss_igrexas_renacentista_01_SW, 	"src/gfx/IGREXAS/renacentista_01_SW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_renacentista_01_SW_snow, 	"src/gfx/IGREXAS/renacentista_01_SW_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_renacentista_01_SE, 	"src/gfx/IGREXAS/renacentista_01_SE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_renacentista_01_SE_snow, 	"src/gfx/IGREXAS/renacentista_01_SE_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_renacentista_02_SW, 	"src/gfx/IGREXAS/renacentista_02_SW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_renacentista_02_SW_snow, 	"src/gfx/IGREXAS/renacentista_02_SW_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_igrexas_renacentista_01_SW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_igrexas_renacentista_01_SW; }}
+spritelayout sl_igrexas_renacentista_01_SW_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_igrexas_renacentista_01_SW_snow; }}
+spritelayout sl_igrexas_renacentista_01_SE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_igrexas_renacentista_01_SE; }}
+spritelayout sl_igrexas_renacentista_01_SE_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_igrexas_renacentista_01_SE_snow; }}
+spritelayout sl_igrexas_renacentista_02_SW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_igrexas_renacentista_02_SW; }}
+spritelayout sl_igrexas_renacentista_02_SW_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_igrexas_renacentista_02_SW_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_igrexas_renacentista_01_SW_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_igrexas_renacentista_01_SW_snow;   sl_igrexas_renacentista_01_SW;}
+switch(FEAT_HOUSES, SELF, sw_igrexas_renacentista_01_SE_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_igrexas_renacentista_01_SE_snow;   sl_igrexas_renacentista_01_SE;}
+switch(FEAT_HOUSES, SELF, sw_igrexas_renacentista_02_SW_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_igrexas_renacentista_02_SW_snow;   sl_igrexas_renacentista_02_SW;}
+
+random_switch (FEAT_HOUSES, SELF, sw_igrexas_renacentista_SW_random_sprite) {
+   1: sw_igrexas_renacentista_01_SW_snow_aware;
+   1: sw_igrexas_renacentista_02_SW_snow_aware;
+}
+
+switch(FEAT_HOUSES, SELF, sw_igrexas_renacentista, sw_road_SE()) {   1: sw_igrexas_renacentista_01_SE_snow_aware;   sw_igrexas_renacentista_SW_random_sprite;}
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, igrexas_renacentista, BUILDING_ID_IGREXAS_RENACENTISTA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_IGREXAS_IGREXA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_IGREXAS;
+	}
+	graphics {
+		default:sw_igrexas_renacentista;
+      construction_check: sw_road_SW() || sw_road_SE();
+	}
+}

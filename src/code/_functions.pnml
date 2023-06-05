@@ -51,11 +51,6 @@ switch (FEAT_HOUSES, PARENT, HasPopulation, required, population >= required) {r
 
 switch (FEAT_HOUSES, SELF, IsNotDesertTile, terrain_type != TILETYPE_DESERT) {return;}
 
-// Comproba se ten unha estrada na dirección indicada.
-switch (FEAT_HOUSES, SELF, HasRoadAdjacentSW, nearby_tile_class(1,0) == TILE_CLASS_ROAD || nearby_tile_class(1,0) == TILE_CLASS_STATION) {return;}
-switch (FEAT_HOUSES, SELF, HasRoadAdjacentNE, nearby_tile_class(-1,0) == TILE_CLASS_ROAD || nearby_tile_class(-1,0) == TILE_CLASS_STATION) {return;}
-switch (FEAT_HOUSES, SELF, HasRoadAdjacentSE, nearby_tile_class(0,1) == TILE_CLASS_ROAD || nearby_tile_class(0,1) == TILE_CLASS_STATION) {return;}
-switch (FEAT_HOUSES, SELF, HasRoadAdjacentNW, nearby_tile_class(0,-1) == TILE_CLASS_ROAD || nearby_tile_class(0,-1) == TILE_CLASS_STATION) {return;}
 
 // Comproba se é unha casa única, única no seu radio, se é a primera da súa clase na vila ou se hai algunha desa clase preto.
 switch (FEAT_HOUSES, SELF, IsUniqueHouse, same_house_count_town == 0) {return;}

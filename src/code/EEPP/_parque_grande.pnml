@@ -1,13 +1,13 @@
 // Define spritesets (normal & snow)
-spriteset(ss_eepp_parque_grande_01_N, 	"src/gfx/EEPP/parque_grande_01_N.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_grande_01_S, 	"src/gfx/EEPP/parque_grande_01_S.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_grande_01_E, 	"src/gfx/EEPP/parque_grande_01_E.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_grande_01_W, 	"src/gfx/EEPP/parque_grande_01_W.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_grande_01_N, 	"src/gfx/EEPP/parque_grande_01_N.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_grande_01_S, 	"src/gfx/EEPP/parque_grande_01_S.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_grande_01_E, 	"src/gfx/EEPP/parque_grande_01_E.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_grande_01_W, 	"src/gfx/EEPP/parque_grande_01_W.gimp.png") 	{ tmpl_building_animated() }
 
-spriteset(ss_eepp_parque_grande_01_N_snow, 	"src/gfx/EEPP/parque_grande_01_N_snow.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_grande_01_S_snow, 	"src/gfx/EEPP/parque_grande_01_S_snow.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_grande_01_E_snow, 	"src/gfx/EEPP/parque_grande_01_E_snow.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_grande_01_W_snow, 	"src/gfx/EEPP/parque_grande_01_W_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_grande_01_N_snow, 	"src/gfx/EEPP/parque_grande_01_N_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_grande_01_S_snow, 	"src/gfx/EEPP/parque_grande_01_S_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_grande_01_E_snow, 	"src/gfx/EEPP/parque_grande_01_E_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_grande_01_W_snow, 	"src/gfx/EEPP/parque_grande_01_W_snow.gimp.png") 	{ tmpl_building_animated() }
 
 // Define spritelayouts (normal & snow)
 spritelayout sl_eepp_parque_grande_01_N 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_grande_01_N; }}

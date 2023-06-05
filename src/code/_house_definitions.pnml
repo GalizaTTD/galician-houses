@@ -30,8 +30,8 @@
    #define BUILDING_ID_IGREXAS_RENACENTISTA                  42
    #define BUILDING_ID_IGREXAS_BARROCA                       43
    #define BUILDING_ID_IGREXAS_MODERNA                       44
-   #define BUILDING_ID_IGREXAS_MEZQUITA                      45
-   // Libres 46-49
+   #define BUILDING_ID_IGREXAS_MESQUITA                      45
+   #define BUILDING_ID_IGREXAS_CATEDRAL                      46
 
 #define BUILDING_CLASS_SANIDADE               50   // Hospitais, Ambulatorios, comisarias, escolas...
    #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO 50

@@ -1,0 +1,9 @@
+// Casas tradicionais, casas de aldea...
+
+#include "_romanica.pnml"
+#include "_gotica.pnml"
+#include "_moderna.pnml"
+#include "_mesquita.pnml"
+#include "_barroca.pnml"
+#include "_renacentista.pnml"
+#include "_catedral.pnml"

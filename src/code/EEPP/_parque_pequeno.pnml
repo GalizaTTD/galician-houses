@@ -1,6 +1,6 @@
 // Define spritesets (normal & snow)
-spriteset(ss_eepp_parque_pequeno_01, 	"src/gfx/EEPP/parque_pequeno_01.gimp.png") 	{ tmpl_building() }
-spriteset(ss_eepp_parque_pequeno_01_snow, 	"src/gfx/EEPP/parque_pequeno_01_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_pequeno_01, 	"src/gfx/EEPP/parque_pequeno_01.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_pequeno_01_snow, 	"src/gfx/EEPP/parque_pequeno_01_snow.gimp.png") 	{ tmpl_building_animated() }
 // Define spritelayouts (normal & snow)
 spritelayout sl_eepp_parque_pequeno_01 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_pequeno_01; }}
 spritelayout sl_eepp_parque_pequeno_01_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_parque_pequeno_01_snow; }}
@@ -8,9 +8,9 @@ spritelayout sl_eepp_parque_pequeno_01_snow 	{	ground	 	{ sprite: GROUNDSPRITE_S
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_parque_pequeno_01_snow;   sl_eepp_parque_pequeno_01;}
 
-random_switch (FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_random_sprite) {
-   1: sw_eepp_parque_pequeno_01_snow_aware;
-}
+// random_switch (FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_random_sprite) {
+//    1: sw_eepp_parque_pequeno_01_snow_aware;
+// }
 // Define construction checks
 
 // Define Item
@@ -33,6 +33,6 @@ item(FEAT_HOUSES, eepp_parque_pequeno, BUILDING_ID_EEPP_PARQUE_PEQUENO, HOUSE_SI
       building_class: BUILDING_CLASS_EEPP;
 	}
 	graphics {
-		default:sw_eepp_parque_pequeno_random_sprite;
+		default:sw_eepp_parque_pequeno_01_snow_aware;
 	}
 }
