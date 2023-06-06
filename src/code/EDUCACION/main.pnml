@@ -1,0 +1,3 @@
+#include "_escola.pnml"
+#include "_instituto.pnml"
+#include "_universidade.pnml"

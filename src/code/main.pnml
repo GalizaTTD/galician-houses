@@ -49,3 +49,4 @@ template tmpl_building_animated() {
 #include "SANIDADE/main.pnml"
 #include "EEPP/main.pnml"
 #include "IGREXAS/main.pnml"
+#include "EDUCACION/main.pnml"

@@ -1,5 +1,3 @@
-// Casas tradicionais, casas de aldea...
-
 #include "_basket.pnml"
 #include "_campo_futbol_old.pnml"
 #include "_campo_futbol_new.pnml"

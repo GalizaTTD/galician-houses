@@ -46,18 +46,20 @@
    #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL            72
    // Libres 76,77,78,79
 
-#define BUILDING_CLASS_EEPP                   80  // Espazos públicos: Estatuas, fontes, prazas, parques...
+#define BUILDING_CLASS_EEPP                   80   // Espazos públicos: Estatuas, fontes, prazas, parques...
    #define BUILDING_ID_EEPP_PRAZA_PEQUENA              80
    #define BUILDING_ID_EEPP_PARQUE_PEQUENO             81
    #define BUILDING_ID_EEPP_PRAZA_GRANDE               82
    #define BUILDING_ID_EEPP_PARQUE_GRANDE              86
-
-#define BUILDING_CLASS_COMMERCIAL             90  // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
+#define BUILDING_CLASS_EDUCACION              90   // Colexios, universidades, etc..
+   #define BUILDING_ID_EDUCACION_ESCOLA                90
+   #define BUILDING_ID_EDUCACION_INSTITUTO             94
+   #define BUILDING_ID_EDUCACION_UNIVERSIDADE          96
+#define BUILDING_CLASS_COMMERCIAL             90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
    #define BUILDING_ID_MARKETS_HYPERMARKET                90
    // Libres 94-99
 
 #define BUILDING_CLASS_RANHACEUS        9  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
-#define BUILDING_CLASS_EDUCACION            10 // Colexios, universidades, etc..
 #define BUILDING_CLASS_LANDMARKS          12 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
 
 

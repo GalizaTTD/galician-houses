@@ -1,0 +1,47 @@
+// Define spritesets (normal & snow)
+spriteset(ss_educacion_instituto_01_N, 	"src/gfx/EDUCACION/instituto_01_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_instituto_01_E, 	"src/gfx/EDUCACION/instituto_01_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_instituto_01_N_snow, 	"src/gfx/EDUCACION/instituto_01_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_instituto_01_E_snow, 	"src/gfx/EDUCACION/instituto_01_E_snow.gimp.png") 	{ tmpl_building() }
+
+// Define spritelayouts (normal & snow)
+spritelayout sl_educacion_instituto_01_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_educacion_instituto_01_N; }}
+spritelayout sl_educacion_instituto_01_E 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_educacion_instituto_01_E; }}
+spritelayout sl_educacion_instituto_01_N_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_educacion_instituto_01_N_snow; }}
+spritelayout sl_educacion_instituto_01_E_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_educacion_instituto_01_E_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_educacion_instituto_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_instituto_01_N_snow;   sl_educacion_instituto_01_N;}
+switch(FEAT_HOUSES, SELF, sw_educacion_instituto_01_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_instituto_01_E_snow;   sl_educacion_instituto_01_E;}
+
+
+// random_switch (FEAT_HOUSES, SELF, sw_educacion_instituto_01_random_sprite) {
+//    1: sw_educacion_instituto_01_01_snow_aware;
+// }
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, educacion_instituto, BUILDING_ID_EDUCACION_INSTITUTO, HOUSE_SIZE_1X2){
+	property {
+		substitute: 7;
+		name: string(STR_EDUCACION_INSTITUTO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_EDUCACION;
+	}
+	graphics {
+		graphics_north: sw_educacion_instituto_01_N_snow_aware;
+		graphics_east: sw_educacion_instituto_01_E_snow_aware;
+      construction_check: sw_road_SW();
+	}
+}

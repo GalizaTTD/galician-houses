@@ -54,7 +54,7 @@ random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_pequena_random_sprite) {
 /* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
 item(FEAT_HOUSES, eepp_praza_pequena, BUILDING_ID_EEPP_PRAZA_PEQUENA, HOUSE_SIZE_1X1){
 	property {
-		substitute: 13;
+		substitute: 09;
 		name: string(STR_EEPP_PRAZA);
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 30;

@@ -1,5 +1,3 @@
-// Casas tradicionais, casas de aldea...
-
 #include "_praza_pequena.pnml"
 #include "_praza_grande.pnml"
 #include "_parque_pequeno.pnml"

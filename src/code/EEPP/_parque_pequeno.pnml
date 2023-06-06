@@ -18,7 +18,7 @@ switch(FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_01_snow_aware, terrain_type) { 
 /* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
 item(FEAT_HOUSES, eepp_parque_pequeno, BUILDING_ID_EEPP_PARQUE_PEQUENO, HOUSE_SIZE_1X1){
 	property {
-		substitute: 13;
+		substitute: 10;
 		name: string(STR_EEPP_PARQUE);
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 30;
