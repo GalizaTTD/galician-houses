@@ -1,8 +1,8 @@
 // Define spritesets (normal & snow)
-spriteset(ss_igrexas_catedral_N, 	"src/gfx/IGREXAS/catedral_romanica_N.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_catedral_S, 	"src/gfx/IGREXAS/catedral_romanica_S.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_catedral_E, 	"src/gfx/IGREXAS/catedral_romanica_E.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_catedral_W, 	"src/gfx/IGREXAS/catedral_romanica_W.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_catedral_N, 	"src/gfx/IGREXAS/catedral_romanica_N.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_catedral_S, 	"src/gfx/IGREXAS/catedral_romanica_S.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_catedral_E, 	"src/gfx/IGREXAS/catedral_romanica_E.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_catedral_W, 	"src/gfx/IGREXAS/catedral_romanica_W.gimp.png") 	{ tmpl_building_only_finished() }
 
 // Define spritelayouts (normal & snow)
 spritelayout sl_igrexas_catedral_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_igrexas_catedral_N; }}

@@ -37,6 +37,13 @@ template tmpl_building_animated() {
    [306,  10, 64, 170, -31,  -139, ANIM] // Stage 3 (Finished)
    [ 10,  10, 64, 170, -31,  -139, ANIM] // Ground
 }
+template tmpl_building_only_finished() {
+   [306,  10, 64, 170, -31,  -139] // Stage 0
+   [306,  10, 64, 170, -31,  -139] // Stage 1
+   [306,  10, 64, 170, -31,  -139] // Stage 2
+   [306,  10, 64, 170, -31,  -139] // Stage 3 (Finished)
+   [ 10,  10, 64, 170, -31,  -139] // Ground
+}
 
 
 #include "_house_definitions.pnml"
@@ -50,3 +57,4 @@ template tmpl_building_animated() {
 #include "EEPP/main.pnml"
 #include "IGREXAS/main.pnml"
 #include "EDUCACION/main.pnml"
+#include "SSPP/main.pnml"

@@ -55,6 +55,12 @@
    #define BUILDING_ID_EDUCACION_ESCOLA                90
    #define BUILDING_ID_EDUCACION_INSTITUTO             94
    #define BUILDING_ID_EDUCACION_UNIVERSIDADE          96
+#define BUILDING_CLASS_SSPP                  100   // Policía, bombeiros, auga...
+   #define BUILDING_ID_SSPP_CONCELLO                     100
+   #define BUILDING_ID_SSPP_BOMBEIROS                    101
+   #define BUILDING_ID_SSPP_COMISARIA                    102
+   #define BUILDING_ID_SSPP_TORREAUGA                    103
+   // Libres 104-109
 #define BUILDING_CLASS_COMMERCIAL             90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
    #define BUILDING_ID_MARKETS_HYPERMARKET                90
    // Libres 94-99

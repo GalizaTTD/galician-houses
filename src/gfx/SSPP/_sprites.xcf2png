@@ -1,0 +1,8 @@
+src/gfx/SSPP/comisaria_01.gimp.png            src/xcf/SSPP/comisaria.xcf            BACKGROUND POLICIA BANDEIRAS
+src/gfx/SSPP/comisaria_01_snow.gimp.png       src/xcf/SSPP/comisaria.xcf            BACKGROUND POLICIA_SNOW BANDEIRAS
+src/gfx/SSPP/bombeiros_01.gimp.png            src/xcf/SSPP/bombeiros.xcf            BACKGROUND BOMBEIROS
+src/gfx/SSPP/bombeiros_01_snow.gimp.png       src/xcf/SSPP/bombeiros.xcf            BACKGROUND BOMBEIROS_SNOW
+src/gfx/SSPP/torreauga_01.gimp.png            src/xcf/SSPP/torreauga.xcf            BACKGROUND WATER_TOWER
+src/gfx/SSPP/torreauga_01_snow.gimp.png       src/xcf/SSPP/torreauga.xcf            BACKGROUND WATER_TOWER_SNOW
+src/gfx/SSPP/concello_01.gimp.png            src/xcf/SSPP/concello.xcf            BACKGROUND CONCELLO
+src/gfx/SSPP/concello_01_snow.gimp.png       src/xcf/SSPP/concello.xcf            BACKGROUND CONCELLO_SNOW

@@ -9,11 +9,19 @@ STR_WEBSITE         :https://mastodon.gal/@galizattd
 
 STR_SANIDADE_AMBULATORIO             :Medical Clinic
 STR_SANIDADE_HOSPITAL                :Hospital
+
 STR_EEPP_PRAZA                       :Square
 STR_EEPP_PARQUE                      :Park
+
 STR_IGREXAS_IGREXA                   :Church
 STR_IGREXAS_CATEDRAL                 :Cathedral
 STR_IGREXAS_MESQUITA                 :Mesquita
+
 STR_EDUCACION_ESCOLA                 :School
 STR_EDUCACION_INSTITUTO              :High School
 STR_EDUCACION_UNIVERSIDADE           :College
+
+STR_SSPP_CONCELLO                 :School
+STR_SSPP_COMISARIA                :Police Station
+STR_SSPP_BOMBEIROS                :Fire Station
+STR_SSPP_TORREAUGA                :Water Tower

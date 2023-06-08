@@ -27,7 +27,7 @@ item(FEAT_HOUSES, sanidade_ambulatorio_pequeno, BUILDING_ID_SANIDADE_AMBULATORIO
 		years_available: [1800,1940];
 		minimum_lifetime: 10;
 		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
-      building_class: BUILDING_CLASS_DEPORTES;
+      building_class: BUILDING_CLASS_SANIDADE;
 	}
 	graphics {
 		default:sw_sanidade_ambulatorio_pequeno_snow_aware;

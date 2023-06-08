@@ -1,12 +1,12 @@
 // Define spritesets (normal & snow)
-spriteset(ss_igrexas_barroca_01_SW, 	"src/gfx/IGREXAS/barroca_01_SW.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_01_SW_snow, 	"src/gfx/IGREXAS/barroca_01_SW_snow.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_01_SE, 	"src/gfx/IGREXAS/barroca_01_SE.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_01_SE_snow, 	"src/gfx/IGREXAS/barroca_01_SE_snow.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_02_SW, 	"src/gfx/IGREXAS/barroca_02_SW.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_02_SW_snow, 	"src/gfx/IGREXAS/barroca_02_SW_snow.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_02_SE, 	"src/gfx/IGREXAS/barroca_02_SE.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_barroca_02_SE_snow, 	"src/gfx/IGREXAS/barroca_02_SE_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_barroca_01_SW, 	"src/gfx/IGREXAS/barroca_01_SW.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_01_SW_snow, 	"src/gfx/IGREXAS/barroca_01_SW_snow.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_01_SE, 	"src/gfx/IGREXAS/barroca_01_SE.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_01_SE_snow, 	"src/gfx/IGREXAS/barroca_01_SE_snow.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_02_SW, 	"src/gfx/IGREXAS/barroca_02_SW.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_02_SW_snow, 	"src/gfx/IGREXAS/barroca_02_SW_snow.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_02_SE, 	"src/gfx/IGREXAS/barroca_02_SE.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_barroca_02_SE_snow, 	"src/gfx/IGREXAS/barroca_02_SE_snow.gimp.png") 	{ tmpl_building_only_finished() }
 // Define spritelayouts (normal & snow)
 spritelayout sl_igrexas_barroca_01_SW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_igrexas_barroca_01_SW; }}
 spritelayout sl_igrexas_barroca_01_SW_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_igrexas_barroca_01_SW_snow; }}

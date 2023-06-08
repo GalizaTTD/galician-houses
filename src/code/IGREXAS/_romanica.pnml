@@ -1,6 +1,6 @@
 // Define spritesets (normal & snow)
-spriteset(ss_igrexas_romanica_01, 	"src/gfx/IGREXAS/romanica_01.gimp.png") 	{ tmpl_building() }
-spriteset(ss_igrexas_romanica_01_snow, 	"src/gfx/IGREXAS/romanica_01_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_igrexas_romanica_01, 	"src/gfx/IGREXAS/romanica_01.gimp.png") 	{ tmpl_building_only_finished() }
+spriteset(ss_igrexas_romanica_01_snow, 	"src/gfx/IGREXAS/romanica_01_snow.gimp.png") 	{ tmpl_building_only_finished() }
 // Define spritelayouts (normal & snow)
 spritelayout sl_igrexas_romanica_01 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_igrexas_romanica_01; }}
 spritelayout sl_igrexas_romanica_01_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_igrexas_romanica_01_snow; }}

@@ -1,0 +1,37 @@
+// Define spritesets (normal & snow)
+spriteset(ss_SSPP_torreauga, 	"src/gfx/SSPP/torreauga_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_SSPP_torreauga_snow, 	"src/gfx/SSPP/torreauga_01_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_SSPP_torreauga 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_SSPP_torreauga; }}
+spritelayout sl_SSPP_torreauga_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_SSPP_torreauga_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_SSPP_torreauga_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_SSPP_torreauga_snow;   sl_SSPP_torreauga;}
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, SSPP_torreauga, BUILDING_ID_SSPP_TORREAUGA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_SSPP_TORREAUGA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,1940];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_SSPP;
+	}
+	graphics {
+		default:sw_SSPP_torreauga_snow_aware;
+		construction_check: sw_population_500() && sw_unique_house();
+ 		cargo_production: func_produce(4,0,3);
+	}
+}
