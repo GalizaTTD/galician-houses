@@ -1,0 +1,47 @@
+// Define spritesets (normal & snow)
+spriteset(ss_ranhaceus_torres_ifer_N, 	"src/gfx/RANHACEUS/torres_ifer_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_ranhaceus_torres_ifer_E, 	"src/gfx/RANHACEUS/torres_ifer_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_ranhaceus_torres_ifer_N_snow, 	"src/gfx/RANHACEUS/torres_ifer_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_ranhaceus_torres_ifer_E_snow, 	"src/gfx/RANHACEUS/torres_ifer_E_snow.gimp.png") 	{ tmpl_building() }
+
+// Define spritelayouts (normal & snow)
+spritelayout sl_ranhaceus_torres_ifer_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_ranhaceus_torres_ifer_N; }}
+spritelayout sl_ranhaceus_torres_ifer_E 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_ranhaceus_torres_ifer_E; }}
+spritelayout sl_ranhaceus_torres_ifer_N_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_ranhaceus_torres_ifer_N_snow; }}
+spritelayout sl_ranhaceus_torres_ifer_E_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_ranhaceus_torres_ifer_E_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_ranhaceus_torres_ifer_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_ranhaceus_torres_ifer_N_snow;   sl_ranhaceus_torres_ifer_N;}
+switch(FEAT_HOUSES, SELF, sw_ranhaceus_torres_ifer_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_ranhaceus_torres_ifer_E_snow;   sl_ranhaceus_torres_ifer_E;}
+
+
+// random_switch (FEAT_HOUSES, SELF, sw_ranhaceus_torres_ifer_random_sprite) {
+//    1: sw_ranhaceus_torres_ifer_01_snow_aware;
+// }
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, ranhaceus_instituto, BUILDING_ID_RANHACEUS_TORRES_IFER, HOUSE_SIZE_1X2){
+	property {
+		substitute: 7;
+		name: string(STR_RANHACEUS_TORRES_IFER);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RANHACEUS;
+	}
+	graphics {
+		graphics_north: sw_ranhaceus_torres_ifer_N_snow_aware;
+		graphics_east: sw_ranhaceus_torres_ifer_E_snow_aware;
+      construction_check: sw_unique_house();
+	}
+}

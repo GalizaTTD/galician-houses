@@ -1,0 +1,37 @@
+// Define spritesets (normal & snow)
+spriteset(ss_ranhaceus_cidade_xustiza, 	"src/gfx/RANHACEUS/cidade_xustiza.gimp.png") 	{ tmpl_building() }
+spriteset(ss_ranhaceus_cidade_xustiza_snow, 	"src/gfx/RANHACEUS/cidade_xustiza_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_ranhaceus_cidade_xustiza 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_ranhaceus_cidade_xustiza; }}
+spritelayout sl_ranhaceus_cidade_xustiza_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_ranhaceus_cidade_xustiza_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_ranhaceus_cidade_xustiza_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_ranhaceus_cidade_xustiza_snow;   sl_ranhaceus_cidade_xustiza;}
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, ranhaceus_cidade_xustiza, BUILDING_ID_RANHACEUS_CIDADE_XUSTIZA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_RANHACEUS_XENERICO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,1940];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RANHACEUS;
+	}
+	graphics {
+		default:sw_ranhaceus_cidade_xustiza_snow_aware;
+		construction_check: sw_population_500() && sw_unique_house();
+ 		cargo_production: func_produce(4,0,3);
+	}
+}

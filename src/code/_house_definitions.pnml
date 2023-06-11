@@ -5,13 +5,60 @@
 *
 */
 
-#define BUILDING_CLASS_RES_ALDEA               0   // Aldeas e Caseríos (conxunto de casas)
-   #define BUILDING_ID_RES_ALDEA_PALLOZA                   0
-   #define BUILDING_ID_RES_ALDEA_MADEIRA                   1
-   #define BUILDING_ID_RES_ALDEA_PESCADORES                2
-   #define BUILDING_ID_RES_ALDEA_PEDRAS                    3
-   #define BUILDING_ID_RES_ALDEA_PORTUGAL                  4
-   #define BUILDING_ID_RES_ALDEA_CHABOLAS                  5
+#define BUILDING_CLASS_IGREXAS                 0   // Igrexas
+   #define BUILDING_ID_IGREXAS_ROMANICA                 0
+   #define BUILDING_ID_IGREXAS_GOTICA                   1
+   #define BUILDING_ID_IGREXAS_RENACENTISTA             2
+   #define BUILDING_ID_IGREXAS_BARROCA                  3
+   #define BUILDING_ID_IGREXAS_MODERNA                  4
+   #define BUILDING_ID_IGREXAS_MESQUITA                 5
+   #define BUILDING_ID_IGREXAS_CATEDRAL                 6
+#define BUILDING_CLASS_SSPP                   10   // Policía, bombeiros, auga...
+   #define BUILDING_ID_SSPP_CONCELLO                   10
+   #define BUILDING_ID_SSPP_BOMBEIROS                  11
+   #define BUILDING_ID_SSPP_COMISARIA                  12
+   #define BUILDING_ID_SSPP_TORREAUGA                  13
+   // Libres 14-19
+#define BUILDING_CLASS_EEPP                   20   // Espazos públicos: Estatuas, fontes, prazas, parques...
+   #define BUILDING_ID_EEPP_PRAZA_PEQUENA              20
+   #define BUILDING_ID_EEPP_PARQUE_PEQUENO             21
+   #define BUILDING_ID_EEPP_PRAZA_GRANDE               22
+   #define BUILDING_ID_EEPP_PARQUE_GRANDE              26
+#define BUILDING_CLASS_SANIDADE               30   // Hospitais, Ambulatorios, comisarias, escolas...
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO    30
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE     31
+   #define BUILDING_ID_SANIDADE_HOSPITAL_OLD           32
+   #define BUILDING_ID_SANIDADE_HOSPITAL_NEW           36
+#define BUILDING_CLASS_EDUCACION              40   // Colexios, universidades, etc..
+   #define BUILDING_ID_EDUCACION_ESCOLA                40
+   #define BUILDING_ID_EDUCACION_INSTITUTO             44
+   #define BUILDING_ID_EDUCACION_UNIVERSIDADE          46
+#define BUILDING_CLASS_RANHACEUS              50  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
+   #define BUILDING_ID_RANHACEUS_TORRE_HERCON          50
+   #define BUILDING_ID_RANHACEUS_TORRE_TREBOL          51
+   #define BUILDING_ID_RANHACEUS_TORRE_GALIZA          52
+   #define BUILDING_ID_RANHACEUS_TORRE_SAEZ            53
+   #define BUILDING_ID_RANHACEUS_ATORRE                54
+   #define BUILDING_ID_RANHACEUS_CIDADE_XUSTIZA        55
+   #define BUILDING_ID_RANHACEUS_TORRE_GOLPE           56
+   #define BUILDING_ID_RANHACEUS_TORRE_DORADA          57
+   #define BUILDING_ID_RANHACEUS_TORRES_IFER           58
+#define BUILDING_CLASS_DEPORTES               60   // Estadios, Piscinas, pistas de atletismo, tenis, baloncesto...
+   #define BUILDING_ID_DEPORTES_BASKET                 60 // Multitiles ocupan varios huecos
+   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD       64
+   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW       68
+   #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL         72
+   // Libres 76,77,78,79
+
+
+
+#define BUILDING_CLASS_RES_ALDEA               100   // Aldeas e Caseríos (conxunto de casas)
+   #define BUILDING_ID_RES_ALDEA_PALLOZA                   100
+   #define BUILDING_ID_RES_ALDEA_MADEIRA                   101
+   #define BUILDING_ID_RES_ALDEA_PESCADORES                102
+   #define BUILDING_ID_RES_ALDEA_PEDRAS                    103
+   #define BUILDING_ID_RES_ALDEA_PORTUGAL                  104
+   #define BUILDING_ID_RES_ALDEA_CHABOLAS                  105
    // Libres 6-9
 
 #define BUILDING_CLASS_RES_CASAS              10   // Casas unifamiliares ou de baixa densidade poboacional
@@ -24,48 +71,12 @@
 #define BUILDING_CLASS_RES_EDIFICOS           30   // Apartamentos e outros edificios con baixos comerciais.
    // Libres 30-39
 
-#define BUILDING_CLASS_IGREXAS                40   // Igrexas
-   #define BUILDING_ID_IGREXAS_ROMANICA                      40
-   #define BUILDING_ID_IGREXAS_GOTICA                        41
-   #define BUILDING_ID_IGREXAS_RENACENTISTA                  42
-   #define BUILDING_ID_IGREXAS_BARROCA                       43
-   #define BUILDING_ID_IGREXAS_MODERNA                       44
-   #define BUILDING_ID_IGREXAS_MESQUITA                      45
-   #define BUILDING_ID_IGREXAS_CATEDRAL                      46
 
-#define BUILDING_CLASS_SANIDADE               50   // Hospitais, Ambulatorios, comisarias, escolas...
-   #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO 50
-   #define BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE  51
-   #define BUILDING_ID_SANIDADE_HOSPITAL_OLD        52
-   #define BUILDING_ID_SANIDADE_HOSPITAL_NEW        56
 
-#define BUILDING_CLASS_DEPORTES               60   // Estadios, Piscinas, pistas de atletismo, tenis, baloncesto...
-   #define BUILDING_ID_DEPORTES_BASKET                    60 // Multitiles ocupan varios huecos
-   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD          64
-   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW          68
-   #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL            72
-   // Libres 76,77,78,79
-
-#define BUILDING_CLASS_EEPP                   80   // Espazos públicos: Estatuas, fontes, prazas, parques...
-   #define BUILDING_ID_EEPP_PRAZA_PEQUENA              80
-   #define BUILDING_ID_EEPP_PARQUE_PEQUENO             81
-   #define BUILDING_ID_EEPP_PRAZA_GRANDE               82
-   #define BUILDING_ID_EEPP_PARQUE_GRANDE              86
-#define BUILDING_CLASS_EDUCACION              90   // Colexios, universidades, etc..
-   #define BUILDING_ID_EDUCACION_ESCOLA                90
-   #define BUILDING_ID_EDUCACION_INSTITUTO             94
-   #define BUILDING_ID_EDUCACION_UNIVERSIDADE          96
-#define BUILDING_CLASS_SSPP                  100   // Policía, bombeiros, auga...
-   #define BUILDING_ID_SSPP_CONCELLO                     100
-   #define BUILDING_ID_SSPP_BOMBEIROS                    101
-   #define BUILDING_ID_SSPP_COMISARIA                    102
-   #define BUILDING_ID_SSPP_TORREAUGA                    103
-   // Libres 104-109
 #define BUILDING_CLASS_COMMERCIAL             90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
    #define BUILDING_ID_MARKETS_HYPERMARKET                90
    // Libres 94-99
 
-#define BUILDING_CLASS_RANHACEUS        9  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
 #define BUILDING_CLASS_LANDMARKS          12 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
 
 
