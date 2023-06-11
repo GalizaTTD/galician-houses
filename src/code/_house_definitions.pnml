@@ -49,7 +49,9 @@
    #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW       68
    #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL         72
    // Libres 76,77,78,79
-
+#define BUILDING_CLASS_HISTORICOS              80 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
+   #define BUILDING_ID_HISTORICOS_TORRE_RELOXO         80
+   // Libres 81-89
 
 
 #define BUILDING_CLASS_RES_ALDEA               100   // Aldeas e Caseríos (conxunto de casas)
@@ -77,6 +79,5 @@
    #define BUILDING_ID_MARKETS_HYPERMARKET                90
    // Libres 94-99
 
-#define BUILDING_CLASS_LANDMARKS          12 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
 
 

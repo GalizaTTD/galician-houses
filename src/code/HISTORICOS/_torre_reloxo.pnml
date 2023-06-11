@@ -1,0 +1,46 @@
+// Define spritesets (normal & snow)
+spriteset(ss_historicos_torre_reloxo_E_STONE, 	"src/gfx/HISTORICOS/torre_reloxo_E_STONE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_historicos_torre_reloxo_S_STONE, 	"src/gfx/HISTORICOS/torre_reloxo_S_STONE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_historicos_torre_reloxo_E_FLOWERS, 	"src/gfx/HISTORICOS/torre_reloxo_E_FLOWERS.gimp.png") 	{ tmpl_building() }
+spriteset(ss_historicos_torre_reloxo_S_FLOWERS, 	"src/gfx/HISTORICOS/torre_reloxo_S_FLOWERS.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_historicos_torre_reloxo_E_STONE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_historicos_torre_reloxo_E_STONE; }}
+spritelayout sl_historicos_torre_reloxo_S_STONE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_historicos_torre_reloxo_S_STONE; }}
+spritelayout sl_historicos_torre_reloxo_E_FLOWERS 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_historicos_torre_reloxo_E_FLOWERS; }}
+spritelayout sl_historicos_torre_reloxo_S_FLOWERS 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_historicos_torre_reloxo_S_FLOWERS; }}
+
+// Define Switches
+random_switch (FEAT_HOUSES, SELF, sw_historicos_torre_reloxo_random_sprite) {
+   1: sl_historicos_torre_reloxo_E_STONE;
+   1: sl_historicos_torre_reloxo_S_STONE;
+   1: sl_historicos_torre_reloxo_E_FLOWERS;
+   1: sl_historicos_torre_reloxo_S_FLOWERS;
+}
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, historicos_torre_reloxo, BUILDING_ID_HISTORICOS_TORRE_RELOXO, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_HISTORICOS_XENERICO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,1940];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_HISTORICOS;
+	}
+	graphics {
+		default:sw_historicos_torre_reloxo_random_sprite;
+		construction_check: sw_population_500() && sw_unique_house();
+ 		cargo_production: func_produce(4,0,3);
+	}
+}
