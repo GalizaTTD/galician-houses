@@ -49,10 +49,13 @@
    #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW       68
    #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL         72
    // Libres 76,77,78,79
-#define BUILDING_CLASS_HISTORICOS              80 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
+#define BUILDING_CLASS_HISTORICOS             80 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
    #define BUILDING_ID_HISTORICOS_TORRE_RELOXO         80
    // Libres 81-89
-
+#define BUILDING_CLASS_COMERCIOS              90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
+   #define BUILDING_ID_COMERCIOS_HIPERMERCADO               90
+   #define BUILDING_ID_COMERCIOS_SUPERMERCADO               94
+   // Libres 94-99
 
 #define BUILDING_CLASS_RES_ALDEA               100   // Aldeas e Caseríos (conxunto de casas)
    #define BUILDING_ID_RES_ALDEA_PALLOZA                   100
@@ -75,9 +78,6 @@
 
 
 
-#define BUILDING_CLASS_COMMERCIAL             90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
-   #define BUILDING_ID_MARKETS_HYPERMARKET                90
-   // Libres 94-99
 
 
 

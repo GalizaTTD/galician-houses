@@ -1,0 +1,103 @@
+// Define spritesets (normal & snow)
+
+spriteset(ss_comercios_hipermercado_GADIS_N, 	"src/gfx/COMERCIOS/hipermercado_GADIS_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_GADIS_S, 	"src/gfx/COMERCIOS/hipermercado_GADIS_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_GADIS_E, 	"src/gfx/COMERCIOS/hipermercado_GADIS_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_GADIS_W, 	"src/gfx/COMERCIOS/hipermercado_GADIS_W.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_comercios_hipermercado_GADIS_N_SNOW, 	"src/gfx/COMERCIOS/hipermercado_GADIS_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_GADIS_S_SNOW, 	"src/gfx/COMERCIOS/hipermercado_GADIS_S_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_GADIS_E_SNOW, 	"src/gfx/COMERCIOS/hipermercado_GADIS_E_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_GADIS_W_SNOW, 	"src/gfx/COMERCIOS/hipermercado_GADIS_W_snow.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_comercios_hipermercado_LIDL_N, 	"src/gfx/COMERCIOS/hipermercado_LIDL_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_LIDL_S, 	"src/gfx/COMERCIOS/hipermercado_LIDL_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_LIDL_E, 	"src/gfx/COMERCIOS/hipermercado_LIDL_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_LIDL_W, 	"src/gfx/COMERCIOS/hipermercado_LIDL_W.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_comercios_hipermercado_LIDL_N_SNOW, 	"src/gfx/COMERCIOS/hipermercado_LIDL_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_LIDL_S_SNOW, 	"src/gfx/COMERCIOS/hipermercado_LIDL_S_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_LIDL_E_SNOW, 	"src/gfx/COMERCIOS/hipermercado_LIDL_E_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hipermercado_LIDL_W_SNOW, 	"src/gfx/COMERCIOS/hipermercado_LIDL_W_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_comercios_hipermercado_GADIS_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_N; }}
+spritelayout sl_comercios_hipermercado_GADIS_S 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_S; }}
+spritelayout sl_comercios_hipermercado_GADIS_E 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_E; }}
+spritelayout sl_comercios_hipermercado_GADIS_W 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_W; }}
+
+spritelayout sl_comercios_hipermercado_GADIS_N_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_N_SNOW; }}
+spritelayout sl_comercios_hipermercado_GADIS_S_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_S_SNOW; }}
+spritelayout sl_comercios_hipermercado_GADIS_E_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_E_SNOW; }}
+spritelayout sl_comercios_hipermercado_GADIS_W_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_GADIS_W_SNOW; }}
+
+spritelayout sl_comercios_hipermercado_LIDL_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_N; }}
+spritelayout sl_comercios_hipermercado_LIDL_S 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_S; }}
+spritelayout sl_comercios_hipermercado_LIDL_E 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_E; }}
+spritelayout sl_comercios_hipermercado_LIDL_W 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_W; }}
+
+spritelayout sl_comercios_hipermercado_LIDL_N_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_N_SNOW; }}
+spritelayout sl_comercios_hipermercado_LIDL_S_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_S_SNOW; }}
+spritelayout sl_comercios_hipermercado_LIDL_E_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_E_SNOW; }}
+spritelayout sl_comercios_hipermercado_LIDL_W_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_hipermercado_LIDL_W_SNOW; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_GADIS_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_GADIS_N_SNOW;   sl_comercios_hipermercado_GADIS_N;}
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_GADIS_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_GADIS_S_SNOW;   sl_comercios_hipermercado_GADIS_S;}
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_GADIS_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_GADIS_E_SNOW;   sl_comercios_hipermercado_GADIS_E;}
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_GADIS_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_GADIS_W_SNOW;   sl_comercios_hipermercado_GADIS_W;}
+
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_LIDL_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_LIDL_N_SNOW;   sl_comercios_hipermercado_LIDL_N;}
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_LIDL_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_LIDL_S_SNOW;   sl_comercios_hipermercado_LIDL_S;}
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_LIDL_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_LIDL_E_SNOW;   sl_comercios_hipermercado_LIDL_E;}
+switch(FEAT_HOUSES, SELF, sw_comercios_hipermercado_LIDL_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_hipermercado_LIDL_W_SNOW;   sl_comercios_hipermercado_LIDL_W;}
+
+// Define Switches
+random_switch (FEAT_HOUSES, SELF, sw_comercios_hipermercado_random_sprite_N) {
+   1: sw_comercios_hipermercado_GADIS_N_snow_aware;
+   1: sw_comercios_hipermercado_LIDL_N_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_comercios_hipermercado_random_sprite_S) {
+   dependent: sw_comercios_hipermercado_random_sprite_N;
+   1: sw_comercios_hipermercado_GADIS_S_snow_aware;
+   1: sw_comercios_hipermercado_LIDL_S_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_comercios_hipermercado_random_sprite_E) {
+   dependent: sw_comercios_hipermercado_random_sprite_N;
+   1: sw_comercios_hipermercado_GADIS_E_snow_aware;
+   1: sw_comercios_hipermercado_LIDL_E_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_comercios_hipermercado_random_sprite_W) {
+   dependent: sw_comercios_hipermercado_random_sprite_N;
+   1: sw_comercios_hipermercado_GADIS_W_snow_aware;
+   1: sw_comercios_hipermercado_LIDL_W_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, comercios_hipermercado, BUILDING_ID_COMERCIOS_HIPERMERCADO, HOUSE_SIZE_2X2){
+	property {
+		substitute: 40;
+		name: string(STR_COMERCIOS_HIPERMERCADO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 150;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 4;
+		years_available: [1800,0xFFFF];
+		minimum_lifetime: 20;
+		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_COMERCIOS;
+	}
+	graphics {
+		graphics_north: sw_comercios_hipermercado_random_sprite_N;
+		graphics_south: sw_comercios_hipermercado_random_sprite_S;
+		graphics_east: sw_comercios_hipermercado_random_sprite_E;
+		graphics_west: sw_comercios_hipermercado_random_sprite_W;
+		construction_check: sw_population_5000();
+ 		cargo_production: func_produce(19,0,9);
+	}
+}

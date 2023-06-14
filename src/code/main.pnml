@@ -59,4 +59,5 @@ template tmpl_building_only_finished() {
 #include "RANHACEUS/main.pnml"
 #include "DEPORTES/main.pnml"
 #include "HISTORICOS/main.pnml"
+#include "COMERCIOS/main.pnml"
 #include "RES_ALDEA/main.pnml"
