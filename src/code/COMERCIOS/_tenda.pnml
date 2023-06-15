@@ -1,0 +1,55 @@
+// Define spritesets (normal & snow)
+spriteset(ss_comercios_tenda_01, 	"src/gfx/COMERCIOS/tenda_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_tenda_02, 	"src/gfx/COMERCIOS/tenda_02.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_tenda_03, 	"src/gfx/COMERCIOS/tenda_03.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_tenda_03_snow, 	"src/gfx/COMERCIOS/tenda_03_snow.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_comercios_tenda_04, 	"src/gfx/COMERCIOS/tenda_04.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_tenda_04_snow, 	"src/gfx/COMERCIOS/tenda_04_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_comercios_tenda_01 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_01; }}
+spritelayout sl_comercios_tenda_02 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_02; }}
+
+spritelayout sl_comercios_tenda_03 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_03; }}
+spritelayout sl_comercios_tenda_03_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_tenda_03_snow; }}
+
+spritelayout sl_comercios_tenda_04 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_04; }}
+spritelayout sl_comercios_tenda_04_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_tenda_04_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_tenda_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_tenda_03_snow;   sl_comercios_tenda_03;}
+switch(FEAT_HOUSES, SELF, sw_tenda_04_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_tenda_04_snow;   sl_comercios_tenda_04;}
+
+random_switch (FEAT_HOUSES, SELF, sw_comercios_tenda_random_sprite) {
+   1: sl_comercios_tenda_01;
+   1: sl_comercios_tenda_02;
+   1: sw_tenda_03_snow_aware;
+   1: sw_tenda_04_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, comercios_tenda, BUILDING_ID_COMERCIOS_TENDA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_COMERCIOS_TENDA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 15;
+		years_available: [1900,0xFFFF];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_COMERCIOS;
+	}
+	graphics {
+		default:sw_comercios_tenda_random_sprite;
+		//construction_check: (sw_road_SE() && sw_road_NW()) || (sw_road_SW() && sw_road_NE());
+ 		cargo_production: func_produce(4,0,3);
+	}
+}

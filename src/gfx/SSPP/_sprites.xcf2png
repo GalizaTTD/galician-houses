@@ -6,3 +6,5 @@ src/gfx/SSPP/torreauga_01.gimp.png            src/xcf/SSPP/torreauga.xcf        
 src/gfx/SSPP/torreauga_01_snow.gimp.png       src/xcf/SSPP/torreauga.xcf            BACKGROUND WATER_TOWER_SNOW
 src/gfx/SSPP/concello_01.gimp.png            src/xcf/SSPP/concello.xcf            BACKGROUND CONCELLO
 src/gfx/SSPP/concello_01_snow.gimp.png       src/xcf/SSPP/concello.xcf            BACKGROUND CONCELLO_SNOW
+src/gfx/SSPP/correos_01.gimp.png            src/xcf/SSPP/correos.xcf            BACKGROUND CORREOS
+src/gfx/SSPP/correos_01_snow.gimp.png       src/xcf/SSPP/correos.xcf            BACKGROUND CORREOS_SNOW

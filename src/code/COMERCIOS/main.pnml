@@ -1,2 +1,6 @@
 #include "_supermercado.pnml"
 #include "_hipermercado.pnml"
+#include "_cine.pnml"
+#include "_gasolinheira.pnml"
+#include "_tenda.pnml"
+#include "_hostaleria.pnml"

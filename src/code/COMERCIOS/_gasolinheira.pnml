@@ -1,0 +1,45 @@
+// Define spritesets (normal & snow)
+spriteset(ss_comercios_gasolinheira_SW_NE, 	"src/gfx/COMERCIOS/gasolinheira_SW_NE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_gasolinheira_SW_NE_snow, 	"src/gfx/COMERCIOS/gasolinheira_SW_NE_snow.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_comercios_gasolinheira_SE_NW, 	"src/gfx/COMERCIOS/gasolinheira_SE_NW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_gasolinheira_SE_NW_snow, 	"src/gfx/COMERCIOS/gasolinheira_SE_NW_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_comercios_gasolinheira_SW_NE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_gasolinheira_SW_NE; }}
+spritelayout sl_comercios_gasolinheira_SW_NE_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_gasolinheira_SW_NE_snow; }}
+
+spritelayout sl_comercios_gasolinheira_SE_NW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_gasolinheira_SE_NW; }}
+spritelayout sl_comercios_gasolinheira_SE_NW_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_gasolinheira_SE_NW_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_gasolinheira_SW_NE_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_gasolinheira_SW_NE_snow;   sl_comercios_gasolinheira_SW_NE;}
+switch(FEAT_HOUSES, SELF, sw_gasolinheira_SE_NW_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_gasolinheira_SE_NW_snow;   sl_comercios_gasolinheira_SE_NW;}
+
+// Define construction checks
+switch(FEAT_HOUSES, SELF, sw_gasolinheira_road_aware, sw_road_SE() ||  sw_road_NW()) {   1: sw_gasolinheira_SE_NW_snow_aware;   sw_gasolinheira_SW_NE_snow_aware;}
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, comercios_gasolinheira, BUILDING_ID_COMERCIOS_GASOLINHEIRA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_COMERCIOS_GASOLINHEIRA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 15;
+		years_available: [1900,0xFFFF];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_COMERCIOS;
+	}
+	graphics {
+		default:sw_gasolinheira_road_aware;
+		construction_check: (sw_road_SE() && sw_road_NW()) || (sw_road_SW() && sw_road_NE());
+ 		cargo_production: func_produce(4,0,3);
+	}
+}

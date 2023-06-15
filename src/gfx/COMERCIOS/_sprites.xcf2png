@@ -22,3 +22,25 @@ src/gfx/COMERCIOS/supermercado_GADIS.gimp.png            src/xcf/COMERCIOS/super
 src/gfx/COMERCIOS/supermercado_GADIS_snow.gimp.png            src/xcf/COMERCIOS/supermercado.xcf            BACKGROUND GADIS SNOW
 src/gfx/COMERCIOS/supermercado_MERCADONA.gimp.png            src/xcf/COMERCIOS/supermercado.xcf            BACKGROUND MERCADONA
 src/gfx/COMERCIOS/supermercado_MERCADONA_snow.gimp.png            src/xcf/COMERCIOS/supermercado.xcf            BACKGROUND MERCADONA SNOW
+src/gfx/COMERCIOS/cine.gimp.png            src/xcf/COMERCIOS/cine.xcf            BACKGROUND CINE
+src/gfx/COMERCIOS/cine_snow.gimp.png            src/xcf/COMERCIOS/cine.xcf            BACKGROUND CINE_SNOW
+src/gfx/COMERCIOS/tenda_01.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 01
+src/gfx/COMERCIOS/tenda_02.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 02
+src/gfx/COMERCIOS/tenda_03.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 03
+src/gfx/COMERCIOS/tenda_03_snow.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 03_SNOW
+src/gfx/COMERCIOS/tenda_04.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 04
+src/gfx/COMERCIOS/tenda_04_snow.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 04_SNOW
+src/gfx/COMERCIOS/hostaleria_CAFE_01_SW_NE.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_01_SW_NE
+src/gfx/COMERCIOS/hostaleria_CAFE_01_SE_NW.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_01_SE_NW
+src/gfx/COMERCIOS/hostaleria_CAFE_02_SW_NE.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_02_SW_NE
+src/gfx/COMERCIOS/hostaleria_CAFE_02_SE_NW.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_02_SE_NW
+src/gfx/COMERCIOS/hostaleria_KFC_SE.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND KFC_SE
+src/gfx/COMERCIOS/hostaleria_KFC_SW.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND KFC_SW
+src/gfx/COMERCIOS/hostaleria_RES.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND RES
+src/gfx/COMERCIOS/hostaleria_MCDONALDS_SW_NW.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND MCDONALDS_SW_NW
+src/gfx/COMERCIOS/hostaleria_MCDONALDS_SE_SW.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND MCDONALDS_SE_SW
+src/gfx/COMERCIOS/hostaleria_MCDONALDS_NE_SE.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND MCDONALDS_NE_SE
+src/gfx/COMERCIOS/gasolinheira_SW_NE.gimp.png            src/xcf/COMERCIOS/gasolinheira.xcf            BACKGROUND SW_NE
+src/gfx/COMERCIOS/gasolinheira_SW_NE_snow.gimp.png            src/xcf/COMERCIOS/gasolinheira.xcf            BACKGROUND SW_NE_SNOW
+src/gfx/COMERCIOS/gasolinheira_SE_NW.gimp.png            src/xcf/COMERCIOS/gasolinheira.xcf            BACKGROUND SE_NW
+src/gfx/COMERCIOS/gasolinheira_SE_NW_snow.gimp.png            src/xcf/COMERCIOS/gasolinheira.xcf            BACKGROUND SE_NW_SNOW

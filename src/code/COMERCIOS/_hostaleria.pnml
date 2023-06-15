@@ -1,0 +1,64 @@
+// Define spritesets (normal & snow)
+spriteset(ss_comercios_hostaleria_CAFE_01_SW_NE, 	"src/gfx/COMERCIOS/hostaleria_CAFE_01_SW_NE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_CAFE_01_SE_NW, 	"src/gfx/COMERCIOS/hostaleria_CAFE_01_SE_NW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_CAFE_02_SW_NE, 	"src/gfx/COMERCIOS/hostaleria_CAFE_02_SW_NE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_CAFE_02_SE_NW, 	"src/gfx/COMERCIOS/hostaleria_CAFE_02_SE_NW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_KFC_SE, 	"src/gfx/COMERCIOS/hostaleria_KFC_SE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_KFC_SW, 	"src/gfx/COMERCIOS/hostaleria_KFC_SW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_RES, 	"src/gfx/COMERCIOS/hostaleria_RES.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_MCDONALDS_SW_NW, 	"src/gfx/COMERCIOS/hostaleria_MCDONALDS_SW_NW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_MCDONALDS_SE_SW, 	"src/gfx/COMERCIOS/hostaleria_MCDONALDS_SE_SW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_hostaleria_MCDONALDS_NE_SE, 	"src/gfx/COMERCIOS/hostaleria_MCDONALDS_NE_SE.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_comercios_hostaleria_CAFE_01_SW_NE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_CAFE_01_SW_NE; }}
+spritelayout sl_comercios_hostaleria_CAFE_01_SE_NW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_CAFE_01_SE_NW; }}
+spritelayout sl_comercios_hostaleria_CAFE_02_SW_NE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_CAFE_02_SW_NE; }}
+spritelayout sl_comercios_hostaleria_CAFE_02_SE_NW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_CAFE_02_SE_NW; }}
+spritelayout sl_comercios_hostaleria_KFC_SE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_KFC_SE; }}
+spritelayout sl_comercios_hostaleria_KFC_SW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_KFC_SW; }}
+spritelayout sl_comercios_hostaleria_RES 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_RES; }}
+spritelayout sl_comercios_hostaleria_MCDONALDS_SW_NW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_MCDONALDS_SW_NW; }}
+spritelayout sl_comercios_hostaleria_MCDONALDS_SE_SW 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_MCDONALDS_SE_SW; }}
+spritelayout sl_comercios_hostaleria_MCDONALDS_NE_SE 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_comercios_hostaleria_MCDONALDS_NE_SE; }}
+
+// Define Switches
+
+random_switch (FEAT_HOUSES, SELF, sw_comercios_hostaleria_random_sprite) {
+   1: sl_comercios_hostaleria_CAFE_01_SW_NE;
+   1: sl_comercios_hostaleria_CAFE_01_SE_NW;
+   1: sl_comercios_hostaleria_CAFE_02_SW_NE;
+   1: sl_comercios_hostaleria_CAFE_02_SE_NW;
+   1: sl_comercios_hostaleria_KFC_SE;
+   1: sl_comercios_hostaleria_KFC_SW;
+   1: sl_comercios_hostaleria_RES;
+   1: sl_comercios_hostaleria_MCDONALDS_SW_NW;
+   1: sl_comercios_hostaleria_MCDONALDS_SE_SW;
+   1: sl_comercios_hostaleria_MCDONALDS_NE_SE;
+}
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, comercios_hostaleria, BUILDING_ID_COMERCIOS_HOSTALERIA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_COMERCIOS_HOSTALERIA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 250;
+		probability: 15;
+		years_available: [1800,1940];
+		minimum_lifetime: 10;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_COMERCIOS;
+	}
+	graphics {
+		default:sw_comercios_hostaleria_random_sprite;
+		construction_check: sw_road_SE() && sw_road_SW();
+ 		cargo_production: func_produce(4,0,3);
+	}
+}

@@ -18,6 +18,7 @@
    #define BUILDING_ID_SSPP_BOMBEIROS                  11
    #define BUILDING_ID_SSPP_COMISARIA                  12
    #define BUILDING_ID_SSPP_TORREAUGA                  13
+   #define BUILDING_ID_SSPP_CORREOS                    14
    // Libres 14-19
 #define BUILDING_CLASS_EEPP                   20   // Espazos públicos: Estatuas, fontes, prazas, parques...
    #define BUILDING_ID_EEPP_PRAZA_PEQUENA              20
@@ -55,7 +56,11 @@
 #define BUILDING_CLASS_COMERCIOS              90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
    #define BUILDING_ID_COMERCIOS_HIPERMERCADO               90
    #define BUILDING_ID_COMERCIOS_SUPERMERCADO               94
-   // Libres 94-99
+   #define BUILDING_ID_COMERCIOS_HOSTALERIA                 95
+   #define BUILDING_ID_COMERCIOS_CINE                       96
+   #define BUILDING_ID_COMERCIOS_TENDA                      97
+   #define BUILDING_ID_COMERCIOS_GASOLINHEIRA               98
+   // Libres 99
 
 #define BUILDING_CLASS_RES_ALDEA               100   // Aldeas e Caseríos (conxunto de casas)
    #define BUILDING_ID_RES_ALDEA_PALLOZA                   100

@@ -25,12 +25,17 @@ STR_SSPP_CONCELLO                    :School
 STR_SSPP_COMISARIA                   :Police Station
 STR_SSPP_BOMBEIROS                   :Fire Station
 STR_SSPP_TORREAUGA                   :Water Tower
+STR_SSPP_CORREOS                     :Post Office
 
 STR_RANHACEUS_XENERICO               :Skyscrapper
 STR_RANHACEUS_TORRES_IFER            :Ifer Towers
 
-STR_HISTORICOS_XENERICO               :Historical Building
+STR_HISTORICOS_XENERICO              :Historical Building
 
 STR_COMERCIOS_XENERICO               :Commercial Building
 STR_COMERCIOS_SUPERMERCADO           :Supermarket
 STR_COMERCIOS_HIPERMERCADO           :Hypermarket
+STR_COMERCIOS_HOSTALERIA             :Bars & Restaurants
+STR_COMERCIOS_CINE                   :Cinema
+STR_COMERCIOS_TENDA                  :Shop
+STR_COMERCIOS_GASOLINHEIRA           :Gas Station
