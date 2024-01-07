@@ -25,7 +25,7 @@ switch(FEAT_HOUSES, SELF, sw_ranhaceus_torres_ifer_E_snow_aware, terrain_type) {
 /* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
 item(FEAT_HOUSES, ranhaceus_instituto, BUILDING_ID_RANHACEUS_TORRES_IFER, HOUSE_SIZE_1X2){
 	property {
-		substitute: 7;
+		substitute: 74;
 		name: string(STR_RANHACEUS_TORRES_IFER);
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 30;

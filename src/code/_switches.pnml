@@ -7,6 +7,7 @@ switch(FEAT_HOUSES, SELF, sw_unique_worldwide, same_house_count_map == 0) {retur
 // Poboación
 switch (FEAT_HOUSES, PARENT, sw_population_500, population >= 500) {return;}
 switch (FEAT_HOUSES, PARENT, sw_population_1000, population >= 1000) {return;}
+switch (FEAT_HOUSES, PARENT, sw_population_2000, population >= 2000) {return;}
 switch (FEAT_HOUSES, PARENT, sw_population_5000, population >= 5000) {return;}
 switch (FEAT_HOUSES, PARENT, sw_population_10000, population >= 10000) {return;}
 switch (FEAT_HOUSES, PARENT, sw_population_30000, population >= 30000) {return;}
@@ -31,6 +32,9 @@ switch(FEAT_HOUSES,SELF, sw_build_class_SW, build_class, nearby_tile_house_class
 switch(FEAT_HOUSES,SELF, sw_build_class_NE, build_class, nearby_tile_house_class(0,-1) == (256 + build_class)) {return;}
 switch(FEAT_HOUSES,SELF, sw_build_class_NW, build_class, nearby_tile_house_class(-1,0) == (256 + build_class)) {return;}
 
+// Busca a casa da ID e clase mais cercanas
+switch(FEAT_HOUSES,SELF, sw_same_type_distance, nearest_house_matching_criterion(63, SEARCH_HOUSE_BY_TYPE)) {0: return 63;return;}
+switch(FEAT_HOUSES,SELF, sw_same_class_distance, nearest_house_matching_criterion(63, SEARCH_HOUSE_BY_CLASS)) {0: return 63;return;}
 /* Searchs for houses of the same class within distance 2. I.e. Offices (new and modern) must build within distance 2 of same class (high-rises). No need to cluster if first in town. */
 switch(FEAT_HOUSES,SELF, sw_same_class_near_count, nearest_house_matching_criterion(2, SEARCH_HOUSE_BY_CLASS)) {return;}
 

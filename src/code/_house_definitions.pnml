@@ -5,84 +5,141 @@
 *
 */
 
-#define BUILDING_CLASS_IGREXAS                 0   // Igrexas
-   #define BUILDING_ID_IGREXAS_ROMANICA                 0
-   #define BUILDING_ID_IGREXAS_GOTICA                   1
-   #define BUILDING_ID_IGREXAS_RENACENTISTA             2
-   #define BUILDING_ID_IGREXAS_BARROCA                  3
-   #define BUILDING_ID_IGREXAS_MODERNA                  4
-   #define BUILDING_ID_IGREXAS_MESQUITA                 5
-   #define BUILDING_ID_IGREXAS_CATEDRAL                 6
-#define BUILDING_CLASS_SSPP                   10   // Policía, bombeiros, auga...
-   #define BUILDING_ID_SSPP_CONCELLO                   10
-   #define BUILDING_ID_SSPP_BOMBEIROS                  11
-   #define BUILDING_ID_SSPP_COMISARIA                  12
-   #define BUILDING_ID_SSPP_TORREAUGA                  13
-   #define BUILDING_ID_SSPP_CORREOS                    14
-   // Libres 14-19
-#define BUILDING_CLASS_EEPP                   20   // Espazos públicos: Estatuas, fontes, prazas, parques...
-   #define BUILDING_ID_EEPP_PRAZA_PEQUENA              20
-   #define BUILDING_ID_EEPP_PARQUE_PEQUENO             21
-   #define BUILDING_ID_EEPP_PRAZA_GRANDE               22
-   #define BUILDING_ID_EEPP_PARQUE_GRANDE              26
-#define BUILDING_CLASS_SANIDADE               30   // Hospitais, Ambulatorios, comisarias, escolas...
-   #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO    30
-   #define BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE     31
-   #define BUILDING_ID_SANIDADE_HOSPITAL_OLD           32
-   #define BUILDING_ID_SANIDADE_HOSPITAL_NEW           36
-#define BUILDING_CLASS_EDUCACION              40   // Colexios, universidades, etc..
-   #define BUILDING_ID_EDUCACION_ESCOLA                40
-   #define BUILDING_ID_EDUCACION_INSTITUTO             44
-   #define BUILDING_ID_EDUCACION_UNIVERSIDADE          46
-#define BUILDING_CLASS_RANHACEUS              50  // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
-   #define BUILDING_ID_RANHACEUS_TORRE_HERCON          50
-   #define BUILDING_ID_RANHACEUS_TORRE_TREBOL          51
-   #define BUILDING_ID_RANHACEUS_TORRE_GALIZA          52
-   #define BUILDING_ID_RANHACEUS_TORRE_SAEZ            53
-   #define BUILDING_ID_RANHACEUS_ATORRE                54
-   #define BUILDING_ID_RANHACEUS_CIDADE_XUSTIZA        55
-   #define BUILDING_ID_RANHACEUS_TORRE_GOLPE           56
-   #define BUILDING_ID_RANHACEUS_TORRE_DORADA          57
-   #define BUILDING_ID_RANHACEUS_TORRES_IFER           58
-#define BUILDING_CLASS_DEPORTES               60   // Estadios, Piscinas, pistas de atletismo, tenis, baloncesto...
-   #define BUILDING_ID_DEPORTES_BASKET                 60 // Multitiles ocupan varios huecos
-   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD       64
-   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW       68
-   #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL         72
-   // Libres 76,77,78,79
-#define BUILDING_CLASS_HISTORICOS             80 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
-   #define BUILDING_ID_HISTORICOS_TORRE_RELOXO         80
-   // Libres 81-89
-#define BUILDING_CLASS_COMERCIOS              90   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
-   #define BUILDING_ID_COMERCIOS_HIPERMERCADO               90
-   #define BUILDING_ID_COMERCIOS_SUPERMERCADO               94
-   #define BUILDING_ID_COMERCIOS_HOSTALERIA                 95
-   #define BUILDING_ID_COMERCIOS_CINE                       96
-   #define BUILDING_ID_COMERCIOS_TENDA                      97
-   #define BUILDING_ID_COMERCIOS_GASOLINHEIRA               98
-   // Libres 99
+#define BUILDING_CLASS_RELIXION                0   // Edificios relixiosos
+   #define BUILDING_ID_RELIXION_CRUCEIRO                 0
+   #define BUILDING_ID_RELIXION_CAPELA                   1
+   #define BUILDING_ID_RELIXION_ERMIDA                   2
+   #define BUILDING_ID_RELIXION_IGREXA                   3
+   #define BUILDING_ID_RELIXION_BASILICA_NE              4 // 4-5
+   #define BUILDING_ID_RELIXION_BASILICA_NW              6 // 6-7
+   #define BUILDING_ID_RELIXION_CATEDRAL                 8 // 8-9-10-11
+   #define BUILDING_ID_RELIXION_MOSTEIRO                 12 // 12-13-14-15
+   #define BUILDING_ID_RELIXION_MESQUITA                 16
+   #define BUILDING_ID_RELIXION_SINAGOGA                 17
+   // Libres 8-19
+#define BUILDING_CLASS_SSPP                   20   // Concello, Policía, bombeiros, auga...
+   #define BUILDING_ID_SSPP_CONCELLO                   20
+   #define BUILDING_ID_SSPP_BOMBEIROS                  21
+   #define BUILDING_ID_SSPP_COMISARIA                  22
+   #define BUILDING_ID_SSPP_TORREAUGA                  23
+   #define BUILDING_ID_SSPP_CORREOS                    24
+   #define BUILDING_ID_SSPP_PARKING                    25
+   #define BUILDING_ID_SSPP_CONCELLO_GRANDE            26 // 26-27-28-29
+#define BUILDING_CLASS_EEPP                   30   // Espazos públicos: Estatuas, fontes, prazas, parques...
+   #define BUILDING_ID_EEPP_PRAZA_PEQUENA              30
+   #define BUILDING_ID_EEPP_PARQUE_PEQUENO             31
+   #define BUILDING_ID_EEPP_PRAZA_GRANDE               32 // 32-33-34-35
+   #define BUILDING_ID_EEPP_PARQUE_GRANDE              36 // 36-37-38-39
+#define BUILDING_CLASS_SANIDADE               40   // Hospitais, Ambulatorios, comisarias, escolas...
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_PEQUENO    40
+   #define BUILDING_ID_SANIDADE_AMBULATORIO_GRANDE     41
+   #define BUILDING_ID_SANIDADE_HOSPITAL_OLD           42 // 42-43-44-45
+   #define BUILDING_ID_SANIDADE_HOSPITAL_NEW           46 // 46-47-48-49
+#define BUILDING_CLASS_EDUCACION              50   // Colexios, universidades, etc..
+   #define BUILDING_ID_EDUCACION_ESCOLA_PEQUENA        50
+   #define BUILDING_ID_EDUCACION_ESCOLA_GRANDE         51 // 51-52-53-54
+   #define BUILDING_ID_EDUCACION_INSTITUTO             55 // 55-56
+   #define BUILDING_ID_EDUCACION_BIBLIOTECA_PEQUENA    57
+   #define BUILDING_ID_EDUCACION_BIBLIOTECA_GRANDE     59 // 58-59
+#define BUILDING_CLASS_RANHACEUS              60   // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
+   #define BUILDING_ID_RANHACEUS_TORRE_HERCON          60
+   #define BUILDING_ID_RANHACEUS_TORRE_TREBOL          61
+   #define BUILDING_ID_RANHACEUS_TORRE_GALIZA          62
+   #define BUILDING_ID_RANHACEUS_TORRE_SAEZ            63
+   #define BUILDING_ID_RANHACEUS_ATORRE                64
+   #define BUILDING_ID_RANHACEUS_CIDADE_XUSTIZA        65
+   #define BUILDING_ID_RANHACEUS_TORRE_GOLPE           66
+   #define BUILDING_ID_RANHACEUS_TORRE_DORADA          67
+   #define BUILDING_ID_RANHACEUS_TORRES_IFER           68 // 68-69
+#define BUILDING_CLASS_DEPORTES               70   // Estadios, Piscinas, pistas de atletismo, tenis, baloncesto...
+   #define BUILDING_ID_DEPORTES_BASKET                 70 // 70-71-72-73
+   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_OLD       74 // 74-75-76-77
+   #define BUILDING_ID_DEPORTES_CAMPO_FUTBOL_NEW       78 // 78-79-80-81
+   #define BUILDING_ID_DEPORTES_ESTADIO_FUTBOL         82 // 82-83-84-85
+   #define BUILDING_ID_DEPORTES_PAVILLON               86 // 86-87-88-89
+#define BUILDING_CLASS_HISTORICOS             90 // Monumentos, Museos e outras estruturas que se preserven SEMPRE.
+   #define BUILDING_ID_HISTORICOS_MONUMENTO            90
+   #define BUILDING_ID_HISTORICOS_PAZO_PEQUENO         91
+   #define BUILDING_ID_HISTORICOS_PAZO_GRANDE          92 // 92-93-94-95
+   #define BUILDING_ID_HISTORICOS_CASTRO               96 // 96-97-98-99
+#define BUILDING_CLASS_COMERCIOS             100   // Mercados, Supermercados, Grandes Almacéns, cines, restaurantes, museos ...
+   #define BUILDING_ID_COMERCIOS_HIPERMERCADO              100 // 100-101-102-103
+   #define BUILDING_ID_COMERCIOS_SUPERMERCADO              104
+   #define BUILDING_ID_COMERCIOS_HOSTALERIA                105
+   #define BUILDING_ID_COMERCIOS_TEATRO                    106
+   #define BUILDING_ID_COMERCIOS_CINE                      107
+   #define BUILDING_ID_COMERCIOS_TENDA                     108
+   #define BUILDING_ID_COMERCIOS_GASOLINHEIRA              109
+   #define BUILDING_ID_COMERCIOS_CENTRO_COMERCIAL          110 // 110-111-112-113
+   #define BUILDING_ID_COMERCIOS_GRANDES_ALMACENS          114 // 114-115
+   // Libres 116-119
+#define BUILDING_CLASS_RES_UNIFAMILIAR       120
+   #define BUILDING_ID_RES_UNIFAMILIAR_1800_ASTURIAS       121
+   #define BUILDING_ID_RES_UNIFAMILIAR_1800_PORTUGAL       122
+   #define BUILDING_ID_RES_UNIFAMILIAR_1800_CASTELA        123
+   #define BUILDING_ID_RES_UNIFAMILIAR_1800_LUGO           124
+   #define BUILDING_ID_RES_UNIFAMILIAR_1800_XERAL          125
 
-#define BUILDING_CLASS_RES_ALDEA               100   // Aldeas e Caseríos (conxunto de casas)
-   #define BUILDING_ID_RES_ALDEA_PALLOZA                   100
-   #define BUILDING_ID_RES_ALDEA_MADEIRA                   101
-   #define BUILDING_ID_RES_ALDEA_PESCADORES                102
-   #define BUILDING_ID_RES_ALDEA_PEDRAS                    103
-   #define BUILDING_ID_RES_ALDEA_PORTUGAL                  104
-   #define BUILDING_ID_RES_ALDEA_CHABOLAS                  105
-   // Libres 6-9
+   #define BUILDING_ID_RES_UNIFAMILIAR_1930_ASTURIAS       126
+   #define BUILDING_ID_RES_UNIFAMILIAR_1930_PORTUGAL       127
+   #define BUILDING_ID_RES_UNIFAMILIAR_1930_CASTELA        128
+   #define BUILDING_ID_RES_UNIFAMILIAR_1930_LUGO           129
+   #define BUILDING_ID_RES_UNIFAMILIAR_1930_XERAL          130
 
-#define BUILDING_CLASS_RES_CASAS              10   // Casas unifamiliares ou de baixa densidade poboacional
-   // Libres 10-19
+   #define BUILDING_ID_RES_UNIFAMILIAR_1970_ASTURIAS       131
+   #define BUILDING_ID_RES_UNIFAMILIAR_1970_PORTUGAL       132
+   #define BUILDING_ID_RES_UNIFAMILIAR_1970_CASTELA        133
+   #define BUILDING_ID_RES_UNIFAMILIAR_1970_LUGO           134
+   #define BUILDING_ID_RES_UNIFAMILIAR_1970_XERAL          135
 
-#define BUILDING_CLASS_RES_ADOSADOS           20   // Urbanizacións. Casas "Modulares" que se poden unir unhas con outras e forman barrios residenciais.
-   // Libres 20-29
-   // O edifico de pedra pode ser unha skin de Asturias (estilo industrial)
+   #define BUILDING_ID_RES_UNIFAMILIAR_2020_ASTURIAS       136
+   #define BUILDING_ID_RES_UNIFAMILIAR_2020_PORTUGAL       137
+   #define BUILDING_ID_RES_UNIFAMILIAR_2020_CASTELA        138
+   #define BUILDING_ID_RES_UNIFAMILIAR_2020_LUGO           139
+   #define BUILDING_ID_RES_UNIFAMILIAR_2020_XERAL          140
+   // Libres 141-149
 
-#define BUILDING_CLASS_RES_EDIFICOS           30   // Apartamentos e outros edificios con baixos comerciais.
-   // Libres 30-39
+#define BUILDING_CLASS_RES_MULTIFAMILIAR     150
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1800_ASTURIAS       151
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1800_PORTUGAL       152
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1800_CASTELA        153
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1800_LUGO           154
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1800_XERAL          155
 
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1930_ASTURIAS       156
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1930_PORTUGAL       157
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1930_CASTELA        158
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1930_LUGO           159
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1930_XERAL          160
 
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1970_ASTURIAS       161
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1970_PORTUGAL       162
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1970_CASTELA        163
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1970_LUGO           164
+   #define BUILDING_ID_RES_MULTIFAMILIAR_1970_XERAL          165
 
+   #define BUILDING_ID_RES_MULTIFAMILIAR_2020_ASTURIAS       166
+   #define BUILDING_ID_RES_MULTIFAMILIAR_2020_PORTUGAL       167
+   #define BUILDING_ID_RES_MULTIFAMILIAR_2020_CASTELA        168
+   #define BUILDING_ID_RES_MULTIFAMILIAR_2020_LUGO           169
+   #define BUILDING_ID_RES_MULTIFAMILIAR_2020_XERAL          170
+   // Libres 171-179
 
+#define BUILDING_CLASS_RES_EDIFICIOS         180
+   #define BUILDING_ID_RES_EDIFICIOS_1950_ASTURIAS       181
+   #define BUILDING_ID_RES_EDIFICIOS_1950_PORTUGAL       182
+   #define BUILDING_ID_RES_EDIFICIOS_1950_CASTELA        183
+   #define BUILDING_ID_RES_EDIFICIOS_1950_LUGO           184
+   #define BUILDING_ID_RES_EDIFICIOS_1950_XERAL          185
 
-
+   #define BUILDING_ID_RES_EDIFICIOS_2000_ASTURIAS       186
+   #define BUILDING_ID_RES_EDIFICIOS_2000_PORTUGAL       187
+   #define BUILDING_ID_RES_EDIFICIOS_2000_CASTELA        188
+   #define BUILDING_ID_RES_EDIFICIOS_2000_LUGO           189
+   #define BUILDING_ID_RES_EDIFICIOS_2000_XERAL          190
+   // Libres 191-199
+#define BUILDING_CLASS_RES_GRANXAS           200
+   #define BUILDING_CLASS_RES_GRANXAS_HORREO             200
+   #define BUILDING_CLASS_RES_GRANXAS_HORREO_ASTUR       201
+   #define BUILDING_CLASS_RES_GRANXAS_CELEIRO            202
+   #define BUILDING_CLASS_RES_GRANXAS_HORREO             200

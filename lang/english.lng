@@ -4,8 +4,18 @@
 
 # GRF name and description
 STR_GRF_NAME        :Galician Houses {VERSION}
-STR_GRF_DESCRIPTION :{TITLE} - Inspired by ITL Houses by 2tallTyler.{}{COPYRIGHT}2023 randomHose (graphics), pvillaverde (NML)
+STR_GRF_DESCRIPTION :{TITLE} - Inspired by ITL Houses by 2tallTyler.{}{COPYRIGHT}2024 randomHose (graphics), pvillaverde (NML)
 STR_WEBSITE         :https://mastodon.gal/@galizattd
+
+STR_RELIXION_CRUCEIRO                              :Calvary
+STR_RELIXION_CAPELA                                :Chapel
+STR_RELIXION_ERMIDA                                :Shrine
+STR_RELIXION_IGREXA                                :Church
+STR_RELIXION_BASILICA                              :Basilica
+STR_RELIXION_CATEDRAL                              :Cathedral
+STR_RELIXION_MOSTEIRO                              :Monastery
+STR_RELIXION_MESQUITA                              :Mosque
+STR_RELIXION_SINAGOGA                              :Synagogue
 
 STR_SANIDADE_AMBULATORIO             :Medical Clinic
 STR_SANIDADE_HOSPITAL                :Hospital

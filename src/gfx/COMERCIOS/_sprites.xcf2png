@@ -30,6 +30,8 @@ src/gfx/COMERCIOS/tenda_03.gimp.png            src/xcf/COMERCIOS/tenda.xcf      
 src/gfx/COMERCIOS/tenda_03_snow.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 03_SNOW
 src/gfx/COMERCIOS/tenda_04.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 04
 src/gfx/COMERCIOS/tenda_04_snow.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 04_SNOW
+src/gfx/COMERCIOS/tenda_05.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 05
+src/gfx/COMERCIOS/tenda_05_snow.gimp.png            src/xcf/COMERCIOS/tenda.xcf            BACKGROUND 05_SNOW
 src/gfx/COMERCIOS/hostaleria_CAFE_01_SW_NE.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_01_SW_NE
 src/gfx/COMERCIOS/hostaleria_CAFE_01_SE_NW.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_01_SE_NW
 src/gfx/COMERCIOS/hostaleria_CAFE_02_SW_NE.gimp.png            src/xcf/COMERCIOS/hostaleria.xcf            BACKGROUND CAFE_02_SW_NE

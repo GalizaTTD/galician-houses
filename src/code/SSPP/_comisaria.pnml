@@ -15,7 +15,7 @@ switch(FEAT_HOUSES, SELF, sw_SSPP_comisaria_snow_aware, terrain_type) {   TILETY
 /* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
 item(FEAT_HOUSES, SSPP_comisaria, BUILDING_ID_SSPP_COMISARIA, HOUSE_SIZE_1X1){
 	property {
-		substitute: 13;
+		substitute: 14;
 		name: string(STR_SSPP_COMISARIA);
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 30;

@@ -1,0 +1,45 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_sinagoga_01, 	"src/gfx/RELIXION/sinagoga_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_sinagoga_01_snow, 	"src/gfx/RELIXION/sinagoga_01_SNOW.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_sinagoga_01 	{	ground	 	{ sprite: ss_relixion_sinagoga_01(4) ;}	building 	{ sprite: ss_relixion_sinagoga_01; }}
+spritelayout sl_relixion_sinagoga_01_snow 	{	ground	 	{ sprite: ss_relixion_sinagoga_01_snow(4) ;}	building 	{ sprite: ss_relixion_sinagoga_01_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_sinagoga_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_sinagoga_01_snow;   sl_relixion_sinagoga_01;}
+
+// random_switch (FEAT_HOUSES, SELF, sw_relixion_sinagoga_SE_random_sprite) {
+//    1: sw_relixion_sinagoga_01_SE_snow_aware;
+//    1: sw_relixion_sinagoga_02_SE_snow_aware;
+// }
+// random_switch (FEAT_HOUSES, SELF, sw_relixion_sinagoga_SW_random_sprite) {
+//    1: sw_relixion_sinagoga_01_snow_aware;
+//    1: sw_relixion_sinagoga_02_SW_snow_aware;
+// }
+
+// switch(FEAT_HOUSES, SELF, sw_relixion_sinagoga, sw_road_SE()) {   1: sw_relixion_sinagoga_01_SE_snow_aware;   sw_relixion_sinagoga_01_snow_aware;}
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_sinagoga, BUILDING_ID_RELIXION_SINAGOGA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_RELIXION_SINAGOGA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 40;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 6]];
+		local_authority_impact: 150;
+		removal_cost_multiplier: 125;
+		probability: 1;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		default:sw_relixion_sinagoga_01_snow_aware;
+      construction_check: sw_population_2000() && sw_unique_house() && (sw_location_Castela() || sw_location_Portugal()) &&  sw_same_class_distance() > 10;
+ 		cargo_production: func_produce(8,0,0);
+	}
+}

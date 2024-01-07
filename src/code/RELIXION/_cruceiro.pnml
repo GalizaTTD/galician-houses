@@ -1,0 +1,50 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_cruceiro_01, 	"src/gfx/RELIXION/cruceiro_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_cruceiro_01_snow, 	"src/gfx/RELIXION/cruceiro_01_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_cruceiro_02, 	"src/gfx/RELIXION/cruceiro_02.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_cruceiro_02_snow, 	"src/gfx/RELIXION/cruceiro_02_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_cruceiro_03, 	"src/gfx/RELIXION/cruceiro_03.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_cruceiro_03_snow, 	"src/gfx/RELIXION/cruceiro_03_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_cruceiro_01 	      {	ground	 	{ sprite: ss_relixion_cruceiro_01(4) ;}	building 	{ sprite: ss_relixion_cruceiro_01; }}
+spritelayout sl_relixion_cruceiro_01_snow 	{	ground	 	{ sprite: ss_relixion_cruceiro_01_snow(4) ;}	building 	{ sprite: ss_relixion_cruceiro_01_snow; }}
+spritelayout sl_relixion_cruceiro_02 	      {	ground	 	{ sprite: ss_relixion_cruceiro_02(4) ;}	building 	{ sprite: ss_relixion_cruceiro_02; }}
+spritelayout sl_relixion_cruceiro_02_snow 	{	ground	 	{ sprite: ss_relixion_cruceiro_02_snow(4) ;}	building 	{ sprite: ss_relixion_cruceiro_02_snow; }}
+spritelayout sl_relixion_cruceiro_03 	      {	ground	 	{ sprite: ss_relixion_cruceiro_03(4) ;}	building 	{ sprite: ss_relixion_cruceiro_03; }}
+spritelayout sl_relixion_cruceiro_03_snow 	{	ground	 	{ sprite: ss_relixion_cruceiro_03_snow(4) ;}	building 	{ sprite: ss_relixion_cruceiro_03_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_cruceiro_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_cruceiro_01_snow;   sl_relixion_cruceiro_01;}
+switch(FEAT_HOUSES, SELF, sw_relixion_cruceiro_02_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_cruceiro_02_snow;   sl_relixion_cruceiro_02;}
+switch(FEAT_HOUSES, SELF, sw_relixion_cruceiro_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_cruceiro_03_snow;   sl_relixion_cruceiro_03;}
+
+random_switch (FEAT_HOUSES, SELF, sw_relixion_cruceiro_random_sprite) {
+   1: sw_relixion_cruceiro_01_snow_aware;
+   1: sw_relixion_cruceiro_02_snow_aware;
+   1: sw_relixion_cruceiro_03_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_cruceiro, BUILDING_ID_RELIXION_CRUCEIRO, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_RELIXION_CRUCEIRO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 5;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 1]];
+		local_authority_impact: 100;
+		removal_cost_multiplier: 100;
+		probability: 1;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 100;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		default:sw_relixion_cruceiro_random_sprite;
+		construction_check: ! sw_location_Castela() && sw_same_type_distance() > 20 && ! sw_population_2000();
+ 		cargo_production: func_produce(1,0,0);
+	}
+}

@@ -15,7 +15,7 @@ switch(FEAT_HOUSES, SELF, sw_ranhaceus_torre_trebol_snow_aware, terrain_type) { 
 /* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
 item(FEAT_HOUSES, ranhaceus_torre_trebol, BUILDING_ID_RANHACEUS_TORRE_TREBOL, HOUSE_SIZE_1X1){
 	property {
-		substitute: 13;
+		substitute: 28;
 		name: string(STR_RANHACEUS_XENERICO);
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 30;

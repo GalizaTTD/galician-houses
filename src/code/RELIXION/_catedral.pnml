@@ -1,0 +1,121 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_catedral_01_N, 	         "src/gfx/RELIXION/catedral_01_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_01_N_snow, 	   "src/gfx/RELIXION/catedral_01_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_01_S, 	         "src/gfx/RELIXION/catedral_01_S.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_01_S_snow, 	   "src/gfx/RELIXION/catedral_01_S_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_01_E, 	         "src/gfx/RELIXION/catedral_01_E.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_01_E_snow, 	   "src/gfx/RELIXION/catedral_01_E_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_01_W, 	         "src/gfx/RELIXION/catedral_01_W.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_01_W_snow, 	   "src/gfx/RELIXION/catedral_01_W_SNOW.gimp.png") 	      { tmpl_building() }
+
+spriteset(ss_relixion_catedral_02_N, 	         "src/gfx/RELIXION/catedral_02_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_02_N_snow, 	   "src/gfx/RELIXION/catedral_02_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_02_S, 	         "src/gfx/RELIXION/catedral_02_S.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_02_S_snow, 	   "src/gfx/RELIXION/catedral_02_S_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_02_E, 	         "src/gfx/RELIXION/catedral_02_E.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_02_E_snow, 	   "src/gfx/RELIXION/catedral_02_E_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_02_W, 	         "src/gfx/RELIXION/catedral_02_W.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_02_W_snow, 	   "src/gfx/RELIXION/catedral_02_W_SNOW.gimp.png") 	      { tmpl_building() }
+
+spriteset(ss_relixion_catedral_03_N, 	         "src/gfx/RELIXION/catedral_03_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_03_N_snow, 	   "src/gfx/RELIXION/catedral_03_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_03_S, 	         "src/gfx/RELIXION/catedral_03_S.gimp.png") 	            { tmpl_building_animated() }
+spriteset(ss_relixion_catedral_03_S_snow, 	   "src/gfx/RELIXION/catedral_03_S_SNOW.gimp.png") 	      { tmpl_building_animated() }
+spriteset(ss_relixion_catedral_03_E, 	         "src/gfx/RELIXION/catedral_03_E.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_03_E_snow, 	   "src/gfx/RELIXION/catedral_03_E_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_catedral_03_W, 	         "src/gfx/RELIXION/catedral_03_W.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_catedral_03_W_snow, 	   "src/gfx/RELIXION/catedral_03_W_SNOW.gimp.png") 	      { tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_catedral_01_N 	   {	ground	{ sprite: ss_relixion_catedral_01_N(4) ;}	      building 	{ sprite: ss_relixion_catedral_01_N; }}
+spritelayout sl_relixion_catedral_01_N_snow 	{	ground	{ sprite: ss_relixion_catedral_01_N_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_01_N_snow; }}
+spritelayout sl_relixion_catedral_01_S 	   {	ground	{ sprite: ss_relixion_catedral_01_S(4) ;}	      building 	{ sprite: ss_relixion_catedral_01_S; }}
+spritelayout sl_relixion_catedral_01_S_snow 	{	ground	{ sprite: ss_relixion_catedral_01_S_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_01_S_snow; }}
+spritelayout sl_relixion_catedral_01_E 	   {	ground	{ sprite: ss_relixion_catedral_01_E(4) ;}	      building 	{ sprite: ss_relixion_catedral_01_E; }}
+spritelayout sl_relixion_catedral_01_E_snow 	{	ground	{ sprite: ss_relixion_catedral_01_E_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_01_E_snow; }}
+spritelayout sl_relixion_catedral_01_W 	   {	ground	{ sprite: ss_relixion_catedral_01_W(4) ;}	      building 	{ sprite: ss_relixion_catedral_01_W; }}
+spritelayout sl_relixion_catedral_01_W_snow 	{	ground	{ sprite: ss_relixion_catedral_01_W_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_01_W_snow; }}
+
+spritelayout sl_relixion_catedral_02_N 	   {	ground	{ sprite: ss_relixion_catedral_02_N(4) ;}	      building 	{ sprite: ss_relixion_catedral_02_N; }}
+spritelayout sl_relixion_catedral_02_N_snow 	{	ground	{ sprite: ss_relixion_catedral_02_N_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_02_N_snow; }}
+spritelayout sl_relixion_catedral_02_S 	   {	ground	{ sprite: ss_relixion_catedral_02_S(4) ;}	      building 	{ sprite: ss_relixion_catedral_02_S; }}
+spritelayout sl_relixion_catedral_02_S_snow 	{	ground	{ sprite: ss_relixion_catedral_02_S_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_02_S_snow; }}
+spritelayout sl_relixion_catedral_02_E 	   {	ground	{ sprite: ss_relixion_catedral_02_E(4) ;}	      building 	{ sprite: ss_relixion_catedral_02_E; }}
+spritelayout sl_relixion_catedral_02_E_snow 	{	ground	{ sprite: ss_relixion_catedral_02_E_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_02_E_snow; }}
+spritelayout sl_relixion_catedral_02_W 	   {	ground	{ sprite: ss_relixion_catedral_02_W(4) ;}	      building 	{ sprite: ss_relixion_catedral_02_W; }}
+spritelayout sl_relixion_catedral_02_W_snow 	{	ground	{ sprite: ss_relixion_catedral_02_W_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_02_W_snow; }}
+
+spritelayout sl_relixion_catedral_03_N 	   {	ground	{ sprite: ss_relixion_catedral_03_N(4) ;}	      building 	{ sprite: ss_relixion_catedral_03_N; }}
+spritelayout sl_relixion_catedral_03_N_snow 	{	ground	{ sprite: ss_relixion_catedral_03_N_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_03_N_snow; }}
+spritelayout sl_relixion_catedral_03_S 	   {	ground	{ sprite: ss_relixion_catedral_03_S(4) ;}	      building 	{ sprite: ss_relixion_catedral_03_S; }}
+spritelayout sl_relixion_catedral_03_S_snow 	{	ground	{ sprite: ss_relixion_catedral_03_S_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_03_S_snow; }}
+spritelayout sl_relixion_catedral_03_E 	   {	ground	{ sprite: ss_relixion_catedral_03_E(4) ;}	      building 	{ sprite: ss_relixion_catedral_03_E; }}
+spritelayout sl_relixion_catedral_03_E_snow 	{	ground	{ sprite: ss_relixion_catedral_03_E_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_03_E_snow; }}
+spritelayout sl_relixion_catedral_03_W 	   {	ground	{ sprite: ss_relixion_catedral_03_W(4) ;}	      building 	{ sprite: ss_relixion_catedral_03_W; }}
+spritelayout sl_relixion_catedral_03_W_snow 	{	ground	{ sprite: ss_relixion_catedral_03_W_snow(4) ;}	building 	{ sprite: ss_relixion_catedral_03_W_snow; }}
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_01_N_snow;   sl_relixion_catedral_01_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_01_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_01_S_snow;   sl_relixion_catedral_01_S;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_01_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_01_E_snow;   sl_relixion_catedral_01_E;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_01_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_01_W_snow;   sl_relixion_catedral_01_W;}
+
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_02_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_02_N_snow;   sl_relixion_catedral_02_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_02_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_02_S_snow;   sl_relixion_catedral_02_S;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_02_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_02_E_snow;   sl_relixion_catedral_02_E;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_02_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_02_W_snow;   sl_relixion_catedral_02_W;}
+
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_03_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_03_N_snow;   sl_relixion_catedral_03_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_03_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_03_S_snow;   sl_relixion_catedral_03_S;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_03_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_03_E_snow;   sl_relixion_catedral_03_E;}
+switch(FEAT_HOUSES, SELF, sw_relixion_catedral_03_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_catedral_03_W_snow;   sl_relixion_catedral_03_W;}
+
+random_switch (FEAT_HOUSES, SELF, sw_relixion_catedral_random_sprite_N) {
+   1: sw_relixion_catedral_01_N_snow_aware;
+   1: sw_relixion_catedral_02_N_snow_aware;
+   1: sw_relixion_catedral_03_N_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_relixion_catedral_random_sprite_S) {
+   dependent: sw_relixion_catedral_random_sprite_N;
+   1: sw_relixion_catedral_01_S_snow_aware;
+   1: sw_relixion_catedral_02_S_snow_aware;
+   1: sw_relixion_catedral_03_S_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_relixion_catedral_random_sprite_E) {
+   dependent: sw_relixion_catedral_random_sprite_N;
+   1: sw_relixion_catedral_01_E_snow_aware;
+   1: sw_relixion_catedral_02_E_snow_aware;
+   1: sw_relixion_catedral_03_E_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_relixion_catedral_random_sprite_W) {
+   dependent: sw_relixion_catedral_random_sprite_N;
+   1: sw_relixion_catedral_01_W_snow_aware;
+   1: sw_relixion_catedral_02_W_snow_aware;
+   1: sw_relixion_catedral_03_W_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_catedral, BUILDING_ID_RELIXION_CATEDRAL, HOUSE_SIZE_2X2){
+	property {
+		substitute: 20;
+		name: string(STR_RELIXION_CATEDRAL);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 250;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8], [BEER, 8]];
+		local_authority_impact: 600;
+		removal_cost_multiplier: 250;
+		probability: 8;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		graphics_north: sw_relixion_catedral_random_sprite_N;
+		graphics_south: sw_relixion_catedral_random_sprite_S;
+		graphics_east:  sw_relixion_catedral_random_sprite_E;
+		graphics_west:  sw_relixion_catedral_random_sprite_W;
+      construction_check: sw_population_5000() && sw_unique_house() && other_house_count_map(BUILDING_ID_RELIXION_CATEDRAL) < 10;
+ 		cargo_production: func_produce(40,0,0);
+	}
+}

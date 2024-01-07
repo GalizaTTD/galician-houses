@@ -1,0 +1,50 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_capela_01_SW, 	"src/gfx/RELIXION/capela_01_SW.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_capela_01_SW_snow, 	"src/gfx/RELIXION/capela_01_SW_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_capela_01_SE, 	"src/gfx/RELIXION/capela_01_SE.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_capela_01_SE_snow, 	"src/gfx/RELIXION/capela_01_SE_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_capela_01_SW 	{	ground	 	{ sprite: ss_relixion_capela_01_SW(4) ;}	building 	{ sprite: ss_relixion_capela_01_SW; }}
+spritelayout sl_relixion_capela_01_SW_snow 	{	ground	 	{ sprite: ss_relixion_capela_01_SW_snow(4) ;}	building 	{ sprite: ss_relixion_capela_01_SW_snow; }}
+spritelayout sl_relixion_capela_01_SE 	{	ground	 	{ sprite: ss_relixion_capela_01_SE(4) ;}	building 	{ sprite: ss_relixion_capela_01_SE; }}
+spritelayout sl_relixion_capela_01_SE_snow 	{	ground	 	{ sprite: ss_relixion_capela_01_SE_snow(4) ;}	building 	{ sprite: ss_relixion_capela_01_SE_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_capela_01_SW_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_capela_01_SW_snow;   sl_relixion_capela_01_SW;}
+switch(FEAT_HOUSES, SELF, sw_relixion_capela_01_SE_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_capela_01_SE_snow;   sl_relixion_capela_01_SE;}
+
+// random_switch (FEAT_HOUSES, SELF, sw_relixion_capela_SE_random_sprite) {
+//    1: sw_relixion_capela_01_SE_snow_aware;
+//    1: sw_relixion_capela_02_SE_snow_aware;
+// }
+// random_switch (FEAT_HOUSES, SELF, sw_relixion_capela_SW_random_sprite) {
+//    1: sw_relixion_capela_01_SW_snow_aware;
+//    1: sw_relixion_capela_02_SW_snow_aware;
+// }
+
+switch(FEAT_HOUSES, SELF, sw_relixion_capela, sw_road_SE()) {   1: sw_relixion_capela_01_SE_snow_aware;   sw_relixion_capela_01_SW_snow_aware;}
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_capela, BUILDING_ID_RELIXION_CAPELA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_RELIXION_CAPELA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED, HOUSE_FLAG_CHURCH); // Co FLAG_CHURCH asegurase que só haxa unha entre esta e a ERMIDA
+		population: 15;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 3]];
+		local_authority_impact: 150;
+		removal_cost_multiplier: 125;
+		probability: 8;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		default:sw_relixion_capela;
+      // construction_check: sw_road_SW() || sw_road_SE();
+ 		cargo_production: func_produce(3,0,0);
+	}
+}

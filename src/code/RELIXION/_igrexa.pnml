@@ -1,0 +1,110 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_igrexa_01, 	   "src/gfx/RELIXION/igrexa_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_01_snow, 	"src/gfx/RELIXION/igrexa_01_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_02, 	   "src/gfx/RELIXION/igrexa_02.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_02_snow, 	"src/gfx/RELIXION/igrexa_02_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_03, 	   "src/gfx/RELIXION/igrexa_03.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_03_snow, 	"src/gfx/RELIXION/igrexa_03_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_04, 	   "src/gfx/RELIXION/igrexa_04.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_04_snow, 	"src/gfx/RELIXION/igrexa_04_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_05, 	   "src/gfx/RELIXION/igrexa_05.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_05_snow, 	"src/gfx/RELIXION/igrexa_05_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_06, 	   "src/gfx/RELIXION/igrexa_06.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_06_snow, 	"src/gfx/RELIXION/igrexa_06_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_07, 	   "src/gfx/RELIXION/igrexa_07.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_07_snow, 	"src/gfx/RELIXION/igrexa_07_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_08, 	   "src/gfx/RELIXION/igrexa_08.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_08_snow, 	"src/gfx/RELIXION/igrexa_08_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_09, 	   "src/gfx/RELIXION/igrexa_09.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_09_snow, 	"src/gfx/RELIXION/igrexa_09_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_10, 	   "src/gfx/RELIXION/igrexa_10.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_10_snow, 	"src/gfx/RELIXION/igrexa_10_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_11, 	   "src/gfx/RELIXION/igrexa_11.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_11_snow, 	"src/gfx/RELIXION/igrexa_11_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_12, 	   "src/gfx/RELIXION/igrexa_12.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_relixion_igrexa_12_snow, 	"src/gfx/RELIXION/igrexa_12_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_relixion_igrexa_13, 	   "src/gfx/RELIXION/igrexa_13.gimp.png") 	{ tmpl_building() }
+spriteset(ss_relixion_igrexa_13_snow, 	"src/gfx/RELIXION/igrexa_13_snow.gimp.png") 	{ tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_igrexa_01 	      {	ground	 	{ sprite: ss_relixion_igrexa_01(4) ;}	      building 	{ sprite: ss_relixion_igrexa_01; }}
+spritelayout sl_relixion_igrexa_01_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_01_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_01_snow; }}
+spritelayout sl_relixion_igrexa_02 	      {	ground	 	{ sprite: ss_relixion_igrexa_02(4) ;}	      building 	{ sprite: ss_relixion_igrexa_02; }}
+spritelayout sl_relixion_igrexa_02_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_02_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_02_snow; }}
+spritelayout sl_relixion_igrexa_03 	      {	ground	 	{ sprite: ss_relixion_igrexa_03(4) ;}	      building 	{ sprite: ss_relixion_igrexa_03; }}
+spritelayout sl_relixion_igrexa_03_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_03_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_03_snow; }}
+spritelayout sl_relixion_igrexa_04 	      {	ground	 	{ sprite: ss_relixion_igrexa_04(4) ;}	      building 	{ sprite: ss_relixion_igrexa_04; }}
+spritelayout sl_relixion_igrexa_04_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_04_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_04_snow; }}
+spritelayout sl_relixion_igrexa_05 	      {	ground	 	{ sprite: ss_relixion_igrexa_05(4) ;}	      building 	{ sprite: ss_relixion_igrexa_05; }}
+spritelayout sl_relixion_igrexa_05_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_05_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_05_snow; }}
+spritelayout sl_relixion_igrexa_06 	      {	ground	 	{ sprite: ss_relixion_igrexa_06(4) ;}	      building 	{ sprite: ss_relixion_igrexa_06; }}
+spritelayout sl_relixion_igrexa_06_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_06_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_06_snow; }}
+spritelayout sl_relixion_igrexa_07 	      {	ground	 	{ sprite: ss_relixion_igrexa_07(4) ;}	      building 	{ sprite: ss_relixion_igrexa_07; }}
+spritelayout sl_relixion_igrexa_07_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_07_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_07_snow; }}
+spritelayout sl_relixion_igrexa_08 	      {	ground	 	{ sprite: ss_relixion_igrexa_08(4) ;}	      building 	{ sprite: ss_relixion_igrexa_08; }}
+spritelayout sl_relixion_igrexa_08_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_08_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_08_snow; }}
+spritelayout sl_relixion_igrexa_09 	      {	ground	 	{ sprite: ss_relixion_igrexa_09(4) ;}	      building 	{ sprite: ss_relixion_igrexa_09; }}
+spritelayout sl_relixion_igrexa_09_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_09_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_09_snow; }}
+spritelayout sl_relixion_igrexa_10 	      {	ground	 	{ sprite: ss_relixion_igrexa_10(4) ;}	      building 	{ sprite: ss_relixion_igrexa_10; }}
+spritelayout sl_relixion_igrexa_10_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_10_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_10_snow; }}
+spritelayout sl_relixion_igrexa_11 	      {	ground	 	{ sprite: ss_relixion_igrexa_11(4) ;}	      building 	{ sprite: ss_relixion_igrexa_11; }}
+spritelayout sl_relixion_igrexa_11_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_11_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_11_snow; }}
+spritelayout sl_relixion_igrexa_12 	      {	ground	 	{ sprite: ss_relixion_igrexa_12(4) ;}	      building 	{ sprite: ss_relixion_igrexa_12; }}
+spritelayout sl_relixion_igrexa_12_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_12_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_12_snow; }}
+spritelayout sl_relixion_igrexa_13 	      {	ground	 	{ sprite: ss_relixion_igrexa_13(4) ;}	      building 	{ sprite: ss_relixion_igrexa_13; }}
+spritelayout sl_relixion_igrexa_13_snow 	{	ground	 	{ sprite: ss_relixion_igrexa_13_snow(4) ;}	building 	{ sprite: ss_relixion_igrexa_13_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_01_snow;   sl_relixion_igrexa_01;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_02_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_02_snow;   sl_relixion_igrexa_02;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_03_snow;   sl_relixion_igrexa_03;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_04_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_04_snow;   sl_relixion_igrexa_04;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_05_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_05_snow;   sl_relixion_igrexa_05;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_06_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_06_snow;   sl_relixion_igrexa_06;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_07_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_07_snow;   sl_relixion_igrexa_07;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_08_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_08_snow;   sl_relixion_igrexa_08;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_09_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_09_snow;   sl_relixion_igrexa_09;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_10_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_10_snow;   sl_relixion_igrexa_10;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_11_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_11_snow;   sl_relixion_igrexa_11;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_12_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_12_snow;   sl_relixion_igrexa_12;}
+switch(FEAT_HOUSES, SELF, sw_relixion_igrexa_13_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_igrexa_13_snow;   sl_relixion_igrexa_13;}
+
+random_switch (FEAT_HOUSES, SELF, sw_relixion_igrexa_random_sprite) {
+   1: sw_relixion_igrexa_01_snow_aware;
+   1: sw_relixion_igrexa_02_snow_aware;
+   1: sw_relixion_igrexa_03_snow_aware;
+   1: sw_relixion_igrexa_04_snow_aware;
+   1: sw_relixion_igrexa_05_snow_aware;
+   1: sw_relixion_igrexa_06_snow_aware;
+   1: sw_relixion_igrexa_07_snow_aware;
+   1: sw_relixion_igrexa_08_snow_aware;
+   1: sw_relixion_igrexa_09_snow_aware;
+   1: sw_relixion_igrexa_10_snow_aware;
+   1: sw_relixion_igrexa_11_snow_aware;
+   1: sw_relixion_igrexa_12_snow_aware;
+   1: sw_relixion_igrexa_13_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_igrexa, BUILDING_ID_RELIXION_IGREXA, HOUSE_SIZE_1X1){
+	property {
+		substitute: 13;
+		name: string(STR_RELIXION_IGREXA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 50;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8],[BEER, 2]];
+		local_authority_impact: 200;
+		removal_cost_multiplier: 150;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		default:sw_relixion_igrexa_random_sprite;
+      construction_check: sw_same_class_distance() > 10;
+ 		cargo_production: func_produce(10,0,0);
+	}
+}

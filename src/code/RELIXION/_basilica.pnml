@@ -1,0 +1,104 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_basilica_NE_01_N, 	         "src/gfx/RELIXION/basilica_NE_01_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_01_N_snow, 	   "src/gfx/RELIXION/basilica_NE_01_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_01_E, 	         "src/gfx/RELIXION/basilica_NE_01_E.gimp.png") 	            { tmpl_building_animated() }
+spriteset(ss_relixion_basilica_NE_01_E_snow, 	   "src/gfx/RELIXION/basilica_NE_01_E_SNOW.gimp.png") 	      { tmpl_building_animated() }
+spriteset(ss_relixion_basilica_NE_01_E_NEW, 	       "src/gfx/RELIXION/basilica_NE_01_E_NEW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_01_E_NEW_snow, 	 "src/gfx/RELIXION/basilica_NE_01_E_NEW_SNOW.gimp.png") 	   { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_02_N, 	         "src/gfx/RELIXION/basilica_NE_02_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_02_N_snow, 	   "src/gfx/RELIXION/basilica_NE_02_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_02_E, 	         "src/gfx/RELIXION/basilica_NE_02_E.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_basilica_NE_02_E_snow, 	   "src/gfx/RELIXION/basilica_NE_02_E_SNOW.gimp.png") 	      { tmpl_building() }
+
+spriteset(ss_relixion_basilica_NW_01_N, 	         "src/gfx/RELIXION/basilica_NW_01_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_basilica_NW_01_N_snow, 	   "src/gfx/RELIXION/basilica_NW_01_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_basilica_NW_01_W, 	         "src/gfx/RELIXION/basilica_NW_01_W.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_basilica_NW_01_W_snow, 	   "src/gfx/RELIXION/basilica_NW_01_W_SNOW.gimp.png") 	      { tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_basilica_NE_01_N 	   {	ground	{ sprite: ss_relixion_basilica_NE_01_N(4) ;}	   building 	{ sprite: ss_relixion_basilica_NE_01_N; }}
+spritelayout sl_relixion_basilica_NE_01_N_snow 	{	ground	{ sprite: ss_relixion_basilica_NE_01_N_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NE_01_N_snow; }}
+spritelayout sl_relixion_basilica_NE_01_E 	   {	ground	{ sprite: ss_relixion_basilica_NE_01_E(4) ;}	   building 	{ sprite: ss_relixion_basilica_NE_01_E; }}
+spritelayout sl_relixion_basilica_NE_01_E_snow 	{	ground	{ sprite: ss_relixion_basilica_NE_01_E_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NE_01_E_snow; }}
+spritelayout sl_relixion_basilica_NE_01_E_NEW 	   {	ground	{ sprite: ss_relixion_basilica_NE_01_E_NEW(4) ;}	   building 	{ sprite: ss_relixion_basilica_NE_01_E_NEW; }}
+spritelayout sl_relixion_basilica_NE_01_E_NEW_snow 	{	ground	{ sprite: ss_relixion_basilica_NE_01_E_NEW_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NE_01_E_NEW_snow; }}
+spritelayout sl_relixion_basilica_NE_02_N 	   {	ground	{ sprite: ss_relixion_basilica_NE_02_N(4) ;}	   building 	{ sprite: ss_relixion_basilica_NE_02_N; }}
+spritelayout sl_relixion_basilica_NE_02_N_snow 	{	ground	{ sprite: ss_relixion_basilica_NE_02_N_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NE_02_N_snow; }}
+spritelayout sl_relixion_basilica_NE_02_E 	   {	ground	{ sprite: ss_relixion_basilica_NE_02_E(4) ;}	   building 	{ sprite: ss_relixion_basilica_NE_02_E; }}
+spritelayout sl_relixion_basilica_NE_02_E_snow 	{	ground	{ sprite: ss_relixion_basilica_NE_02_E_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NE_02_E_snow; }}
+
+spritelayout sl_relixion_basilica_NW_01_N 	   {	ground	{ sprite: ss_relixion_basilica_NW_01_N(4) ;}	   building 	{ sprite: ss_relixion_basilica_NW_01_N; }}
+spritelayout sl_relixion_basilica_NW_01_N_snow 	{	ground	{ sprite: ss_relixion_basilica_NW_01_N_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NW_01_N_snow; }}
+spritelayout sl_relixion_basilica_NW_01_W 	   {	ground	{ sprite: ss_relixion_basilica_NW_01_W(4) ;}	   building 	{ sprite: ss_relixion_basilica_NW_01_W; }}
+spritelayout sl_relixion_basilica_NW_01_W_snow 	{	ground	{ sprite: ss_relixion_basilica_NW_01_W_snow(4) ;}	building 	{ sprite: ss_relixion_basilica_NW_01_W_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NE_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NE_01_N_snow;   sl_relixion_basilica_NE_01_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NE_01_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NE_01_E_snow;   sl_relixion_basilica_NE_01_E;}
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NE_01_E_NEW_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NE_01_E_NEW_snow;   sl_relixion_basilica_NE_01_E_NEW;}
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NE_02_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NE_02_N_snow;   sl_relixion_basilica_NE_02_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NE_02_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NE_02_E_snow;   sl_relixion_basilica_NE_02_E;}
+
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NW_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NW_01_N_snow;   sl_relixion_basilica_NW_01_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_basilica_NW_01_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_basilica_NW_01_W_snow;   sl_relixion_basilica_NW_01_W;}
+
+random_switch (FEAT_HOUSES, SELF, sw_relixion_basilica_NE_random_sprite_N) {
+   1: sw_relixion_basilica_NE_01_N_snow_aware;
+   1: sw_relixion_basilica_NE_01_N_snow_aware;
+   1: sw_relixion_basilica_NE_02_N_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_relixion_basilica_NE_random_sprite_E) {
+   dependent: sw_relixion_basilica_NE_random_sprite_N;
+   1: sw_relixion_basilica_NE_01_E_snow_aware;
+   1: sw_relixion_basilica_NE_01_E_NEW_snow_aware;
+   1: sw_relixion_basilica_NE_02_E_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_basilica_NE, BUILDING_ID_RELIXION_BASILICA_NE, HOUSE_SIZE_1X2){
+	property {
+		substitute: 7;
+		name: string(STR_RELIXION_BASILICA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 100;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8], [BEER, 4]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 200;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		graphics_north: sw_relixion_basilica_NE_random_sprite_N;
+		graphics_east: sw_relixion_basilica_NE_random_sprite_E;
+      construction_check: sw_population_2000() && sw_unique_house() && other_house_count_town(BUILDING_ID_RELIXION_BASILICA_NW) == 0 && sw_same_class_distance() > 10;
+ 		cargo_production: func_produce(20,0,0);
+	}
+}
+
+item(FEAT_HOUSES, relixion_basilica_NW, BUILDING_ID_RELIXION_BASILICA_NW, HOUSE_SIZE_2X1){
+	property {
+		substitute: 74;
+		name: string(STR_RELIXION_BASILICA);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 100;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8], [BEER, 4]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 200;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		graphics_north: sw_relixion_basilica_NW_01_N_snow_aware;
+		graphics_west: sw_relixion_basilica_NW_01_W_snow_aware;
+      construction_check: sw_population_2000() && sw_unique_house() && other_house_count_town(BUILDING_ID_RELIXION_BASILICA_NE) == 0 && sw_same_class_distance() > 10;
+ 		cargo_production: func_produce(20,0,0);
+	}
+}

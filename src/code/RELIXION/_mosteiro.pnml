@@ -1,0 +1,52 @@
+// Define spritesets (normal & snow)
+spriteset(ss_relixion_mosteiro_01_N, 	         "src/gfx/RELIXION/mosteiro_01_N.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_N_snow, 	   "src/gfx/RELIXION/mosteiro_01_N_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_S, 	         "src/gfx/RELIXION/mosteiro_01_S.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_S_snow, 	   "src/gfx/RELIXION/mosteiro_01_S_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_E, 	         "src/gfx/RELIXION/mosteiro_01_E.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_E_snow, 	   "src/gfx/RELIXION/mosteiro_01_E_SNOW.gimp.png") 	      { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_W, 	         "src/gfx/RELIXION/mosteiro_01_W.gimp.png") 	            { tmpl_building() }
+spriteset(ss_relixion_mosteiro_01_W_snow, 	   "src/gfx/RELIXION/mosteiro_01_W_SNOW.gimp.png") 	      { tmpl_building() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_relixion_mosteiro_01_N 	   {	ground	{ sprite: ss_relixion_mosteiro_01_N(4) ;}	      building 	{ sprite: ss_relixion_mosteiro_01_N; }}
+spritelayout sl_relixion_mosteiro_01_N_snow 	{	ground	{ sprite: ss_relixion_mosteiro_01_N_snow(4) ;}	building 	{ sprite: ss_relixion_mosteiro_01_N_snow; }}
+spritelayout sl_relixion_mosteiro_01_S 	   {	ground	{ sprite: ss_relixion_mosteiro_01_S(4) ;}	      building 	{ sprite: ss_relixion_mosteiro_01_S; }}
+spritelayout sl_relixion_mosteiro_01_S_snow 	{	ground	{ sprite: ss_relixion_mosteiro_01_S_snow(4) ;}	building 	{ sprite: ss_relixion_mosteiro_01_S_snow; }}
+spritelayout sl_relixion_mosteiro_01_E 	   {	ground	{ sprite: ss_relixion_mosteiro_01_E(4) ;}	      building 	{ sprite: ss_relixion_mosteiro_01_E; }}
+spritelayout sl_relixion_mosteiro_01_E_snow 	{	ground	{ sprite: ss_relixion_mosteiro_01_E_snow(4) ;}	building 	{ sprite: ss_relixion_mosteiro_01_E_snow; }}
+spritelayout sl_relixion_mosteiro_01_W 	   {	ground	{ sprite: ss_relixion_mosteiro_01_W(4) ;}	      building 	{ sprite: ss_relixion_mosteiro_01_W; }}
+spritelayout sl_relixion_mosteiro_01_W_snow 	{	ground	{ sprite: ss_relixion_mosteiro_01_W_snow(4) ;}	building 	{ sprite: ss_relixion_mosteiro_01_W_snow; }}
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_relixion_mosteiro_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_mosteiro_01_N_snow;   sl_relixion_mosteiro_01_N;}
+switch(FEAT_HOUSES, SELF, sw_relixion_mosteiro_01_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_mosteiro_01_S_snow;   sl_relixion_mosteiro_01_S;}
+switch(FEAT_HOUSES, SELF, sw_relixion_mosteiro_01_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_mosteiro_01_E_snow;   sl_relixion_mosteiro_01_E;}
+switch(FEAT_HOUSES, SELF, sw_relixion_mosteiro_01_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_relixion_mosteiro_01_W_snow;   sl_relixion_mosteiro_01_W;}
+
+// Define construction checks
+
+// Define Item
+item(FEAT_HOUSES, relixion_mosteiro, BUILDING_ID_RELIXION_MOSTEIRO, HOUSE_SIZE_2X2){
+	property {
+		substitute: 20;
+		name: string(STR_RELIXION_MOSTEIRO);
+		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 155;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8], [BEER, 3]];
+		local_authority_impact: 300;
+		removal_cost_multiplier: 200;
+		probability: 4;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_RELIXION;
+	}
+	graphics {
+		graphics_north: sw_relixion_mosteiro_01_N_snow_aware;
+		graphics_south: sw_relixion_mosteiro_01_S_snow_aware;
+		graphics_east:  sw_relixion_mosteiro_01_E_snow_aware;
+		graphics_west:  sw_relixion_mosteiro_01_W_snow_aware;
+      construction_check: sw_unique_house() && sw_same_type_distance() > 60;
+ 		cargo_production: func_produce(15,0,0);
+	}
+}

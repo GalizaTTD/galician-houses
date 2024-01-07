@@ -6,6 +6,9 @@ spriteset(ss_comercios_tenda_03_snow, 	"src/gfx/COMERCIOS/tenda_03_snow.gimp.png
 
 spriteset(ss_comercios_tenda_04, 	"src/gfx/COMERCIOS/tenda_04.gimp.png") 	{ tmpl_building() }
 spriteset(ss_comercios_tenda_04_snow, 	"src/gfx/COMERCIOS/tenda_04_snow.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_comercios_tenda_05, 	"src/gfx/COMERCIOS/tenda_05.gimp.png") 	{ tmpl_building() }
+spriteset(ss_comercios_tenda_05_snow, 	"src/gfx/COMERCIOS/tenda_05_snow.gimp.png") 	{ tmpl_building() }
 // Define spritelayouts (normal & snow)
 spritelayout sl_comercios_tenda_01 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_01; }}
 spritelayout sl_comercios_tenda_02 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_02; }}
@@ -16,15 +19,20 @@ spritelayout sl_comercios_tenda_03_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW 
 spritelayout sl_comercios_tenda_04 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_04; }}
 spritelayout sl_comercios_tenda_04_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_tenda_04_snow; }}
 
+spritelayout sl_comercios_tenda_05 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_comercios_tenda_05; }}
+spritelayout sl_comercios_tenda_05_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_comercios_tenda_05_snow; }}
+
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_tenda_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_tenda_03_snow;   sl_comercios_tenda_03;}
 switch(FEAT_HOUSES, SELF, sw_tenda_04_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_tenda_04_snow;   sl_comercios_tenda_04;}
+switch(FEAT_HOUSES, SELF, sw_tenda_05_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_comercios_tenda_05_snow;   sl_comercios_tenda_05;}
 
 random_switch (FEAT_HOUSES, SELF, sw_comercios_tenda_random_sprite) {
    1: sl_comercios_tenda_01;
    1: sl_comercios_tenda_02;
    1: sw_tenda_03_snow_aware;
    1: sw_tenda_04_snow_aware;
+   1: sw_tenda_05_snow_aware;
 }
 // Define construction checks
 
