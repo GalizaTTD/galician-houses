@@ -1,13 +1,22 @@
 // Define spritesets (normal & snow)
-spriteset(ss_SSPP_concello, 	"src/gfx/SSPP/concello_01.gimp.png") 	{ tmpl_building() }
-spriteset(ss_SSPP_concello_snow, 	"src/gfx/SSPP/concello_01_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_SSPP_concello_01, 	"src/gfx/SSPP/concello_01.gimp.png") 	{ tmpl_building() }
+spriteset(ss_SSPP_concello_01_snow, 	"src/gfx/SSPP/concello_01_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_SSPP_concello_02, 	"src/gfx/SSPP/concello_02.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_SSPP_concello_02_snow, 	"src/gfx/SSPP/concello_02_snow.gimp.png") 	{ tmpl_building_animated() }
 // Define spritelayouts (normal & snow)
-spritelayout sl_SSPP_concello 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_SSPP_concello; }}
-spritelayout sl_SSPP_concello_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_SSPP_concello_snow; }}
+spritelayout sl_SSPP_concello_01 	{	ground	 	{ sprite: ss_SSPP_concello_01(4) ;}	building 	{ sprite: ss_SSPP_concello_01; }}
+spritelayout sl_SSPP_concello_01_snow 	{	ground	 	{ sprite: ss_SSPP_concello_01_snow(4) ;}	building 	{ sprite: ss_SSPP_concello_01_snow; }}
+spritelayout sl_SSPP_concello_02 	{	ground	 	{ sprite: ss_SSPP_concello_02(4) ;}	building 	{ sprite: ss_SSPP_concello_02; }}
+spritelayout sl_SSPP_concello_02_snow 	{	ground	 	{ sprite: ss_SSPP_concello_02_snow(4) ;}	building 	{ sprite: ss_SSPP_concello_02_snow; }}
 
 // Define Switches
-switch(FEAT_HOUSES, SELF, sw_SSPP_concello_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_SSPP_concello_snow;   sl_SSPP_concello;}
+switch(FEAT_HOUSES, SELF, sw_SSPP_concello_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_SSPP_concello_01_snow;   sl_SSPP_concello_01;}
+switch(FEAT_HOUSES, SELF, sw_SSPP_concello_02_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_SSPP_concello_02_snow;   sl_SSPP_concello_02;}
 
+random_switch (FEAT_HOUSES, SELF, sw_SSPP_concello_random_sprite) {
+   1: sw_SSPP_concello_01_snow_aware;
+   1: sw_SSPP_concello_02_snow_aware;
+}
 // Define construction checks
 
 // Define Item
@@ -18,20 +27,20 @@ item(FEAT_HOUSES, SSPP_concello, BUILDING_ID_SSPP_CONCELLO, HOUSE_SIZE_1X1){
 		substitute: 14;
 		name: string(STR_SSPP_CONCELLO);
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 30;
+		population: 50;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
-		probability: 4;
-		years_available: [1800,1940];
-		minimum_lifetime: 10;
+		accepted_cargos: [[PASS, 8],[FOOD, 8]];
+		local_authority_impact: 200;
+		removal_cost_multiplier: 150;
+		probability: 15;
+		years_available: [0,0xFFFF];
+		minimum_lifetime: 255;
 		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_SSPP;
 	}
 	graphics {
-		default:sw_SSPP_concello_snow_aware;
-		construction_check: sw_population_500() && sw_unique_house();
- 		cargo_production: func_produce(4,0,3);
+		default:sw_SSPP_concello_random_sprite;
+		construction_check: sw_population_1000_10000() && sw_unique_house();
+ 		cargo_production: func_produce(10,5,2);
 	}
 }

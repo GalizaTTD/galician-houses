@@ -16,15 +16,15 @@
    #define BUILDING_ID_RELIXION_MOSTEIRO                 12 // 12-13-14-15
    #define BUILDING_ID_RELIXION_MESQUITA                 16
    #define BUILDING_ID_RELIXION_SINAGOGA                 17
-   // Libres 8-19
+   // Libres 18-19
 #define BUILDING_CLASS_SSPP                   20   // Concello, Policía, bombeiros, auga...
    #define BUILDING_ID_SSPP_CONCELLO                   20
-   #define BUILDING_ID_SSPP_BOMBEIROS                  21
-   #define BUILDING_ID_SSPP_COMISARIA                  22
-   #define BUILDING_ID_SSPP_TORREAUGA                  23
-   #define BUILDING_ID_SSPP_CORREOS                    24
-   #define BUILDING_ID_SSPP_PARKING                    25
-   #define BUILDING_ID_SSPP_CONCELLO_GRANDE            26 // 26-27-28-29
+   #define BUILDING_ID_SSPP_CONCELLO_GRANDE            21 // 21-22-23-24
+   #define BUILDING_ID_SSPP_BOMBEIROS                  25
+   #define BUILDING_ID_SSPP_COMISARIA                  26
+   #define BUILDING_ID_SSPP_CORREOS                    27
+   #define BUILDING_ID_SSPP_TORREAUGA                  28
+   #define BUILDING_ID_SSPP_PARKING                    29
 #define BUILDING_CLASS_EEPP                   30   // Espazos públicos: Estatuas, fontes, prazas, parques...
    #define BUILDING_ID_EEPP_PRAZA_PEQUENA              30
    #define BUILDING_ID_EEPP_PARQUE_PEQUENO             31

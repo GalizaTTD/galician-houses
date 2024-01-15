@@ -1,10 +1,42 @@
-src/gfx/SSPP/comisaria_01.gimp.png            src/xcf/SSPP/comisaria.xcf            BACKGROUND POLICIA BANDEIRAS
-src/gfx/SSPP/comisaria_01_snow.gimp.png       src/xcf/SSPP/comisaria.xcf            BACKGROUND POLICIA_SNOW BANDEIRAS
-src/gfx/SSPP/bombeiros_01.gimp.png            src/xcf/SSPP/bombeiros.xcf            BACKGROUND BOMBEIROS
-src/gfx/SSPP/bombeiros_01_snow.gimp.png       src/xcf/SSPP/bombeiros.xcf            BACKGROUND BOMBEIROS_SNOW
-src/gfx/SSPP/torreauga_01.gimp.png            src/xcf/SSPP/torreauga.xcf            BACKGROUND WATER_TOWER
-src/gfx/SSPP/torreauga_01_snow.gimp.png       src/xcf/SSPP/torreauga.xcf            BACKGROUND WATER_TOWER_SNOW
-src/gfx/SSPP/concello_01.gimp.png            src/xcf/SSPP/concello.xcf            BACKGROUND CONCELLO
-src/gfx/SSPP/concello_01_snow.gimp.png       src/xcf/SSPP/concello.xcf            BACKGROUND CONCELLO_SNOW
-src/gfx/SSPP/correos_01.gimp.png            src/xcf/SSPP/correos.xcf            BACKGROUND CORREOS
-src/gfx/SSPP/correos_01_snow.gimp.png       src/xcf/SSPP/correos.xcf            BACKGROUND CORREOS_SNOW
+src/gfx/SSPP/concello_01.gimp.png            src/xcf/SSPP/concello.xcf            BACKGROUND PEDRA 01
+src/gfx/SSPP/concello_01_snow.gimp.png       src/xcf/SSPP/concello.xcf            BACKGROUND NEVE 01_SNOW
+src/gfx/SSPP/concello_02.gimp.png            src/xcf/SSPP/concello.xcf            BACKGROUND PEDRA 02
+src/gfx/SSPP/concello_02_snow.gimp.png       src/xcf/SSPP/concello.xcf            BACKGROUND NEVE 02_SNOW
+src/gfx/SSPP/concello_grande_01_N.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 01_N
+src/gfx/SSPP/concello_grande_01_N_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 01_N
+src/gfx/SSPP/concello_grande_01_E.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 01_E
+src/gfx/SSPP/concello_grande_01_E_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 01_E
+src/gfx/SSPP/concello_grande_01_S.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 01_S
+src/gfx/SSPP/concello_grande_01_S_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 01_S
+src/gfx/SSPP/concello_grande_01_W.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 01_W
+src/gfx/SSPP/concello_grande_01_W_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 01_W
+src/gfx/SSPP/concello_grande_02_N.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA
+src/gfx/SSPP/concello_grande_02_N_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE
+src/gfx/SSPP/concello_grande_02_E.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 02_E
+src/gfx/SSPP/concello_grande_02_E_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 02_E_SNOW
+src/gfx/SSPP/concello_grande_02_S.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 02_S
+src/gfx/SSPP/concello_grande_02_S_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 02_S_SNOW
+src/gfx/SSPP/concello_grande_02_W.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 02_W
+src/gfx/SSPP/concello_grande_02_W_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 02_W_SNOW
+src/gfx/SSPP/concello_grande_03_N.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA
+src/gfx/SSPP/concello_grande_03_N_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE
+src/gfx/SSPP/concello_grande_03_E.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 03_E
+src/gfx/SSPP/concello_grande_03_E_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 03_E
+src/gfx/SSPP/concello_grande_03_S.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 03_S
+src/gfx/SSPP/concello_grande_03_S_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 03_S
+src/gfx/SSPP/concello_grande_03_W.gimp.png            src/xcf/SSPP/concello_grande.xcf          BACKGROUND PEDRA 03_W
+src/gfx/SSPP/concello_grande_03_W_SNOW.gimp.png       src/xcf/SSPP/concello_grande.xcf          BACKGROUND NEVE 03_W
+src/gfx/SSPP/bombeiros_01.gimp.png            src/xcf/SSPP/bombeiros.xcf            BACKGROUND PEDRA 01
+src/gfx/SSPP/bombeiros_01_snow.gimp.png       src/xcf/SSPP/bombeiros.xcf            BACKGROUND NEVE 01_SNOW
+src/gfx/SSPP/comisaria_01.gimp.png            src/xcf/SSPP/comisaria.xcf            BACKGROUND PEDRA POLICIA BANDEIRAS
+src/gfx/SSPP/comisaria_01_snow.gimp.png       src/xcf/SSPP/comisaria.xcf            BACKGROUND PEDRA POLICIA_SNOW BANDEIRAS
+src/gfx/SSPP/correos_01.gimp.png            src/xcf/SSPP/correos.xcf            BACKGROUND PEDRA CORREOS
+src/gfx/SSPP/correos_01_snow.gimp.png       src/xcf/SSPP/correos.xcf            BACKGROUND NEVE CORREOS_SNOW
+src/gfx/SSPP/torreauga_01.gimp.png            src/xcf/SSPP/torreauga.xcf            BACKGROUND TERRA 01
+src/gfx/SSPP/torreauga_01_snow.gimp.png       src/xcf/SSPP/torreauga.xcf            BACKGROUND NEVE 01_SNOW
+src/gfx/SSPP/torreauga_02.gimp.png            src/xcf/SSPP/torreauga.xcf            BACKGROUND TERRA 02
+src/gfx/SSPP/torreauga_02_snow.gimp.png       src/xcf/SSPP/torreauga.xcf            BACKGROUND NEVE 02_SNOW
+src/gfx/SSPP/parking_01.gimp.png            src/xcf/SSPP/parking.xcf            BACKGROUND TERRA 01
+src/gfx/SSPP/parking_01_snow.gimp.png       src/xcf/SSPP/parking.xcf            BACKGROUND NEVE 01_SNOW
+src/gfx/SSPP/parking_02.gimp.png            src/xcf/SSPP/parking.xcf            BACKGROUND PEDRA 01
+src/gfx/SSPP/parking_02_snow.gimp.png       src/xcf/SSPP/parking.xcf            BACKGROUND NEVE 01_SNOW

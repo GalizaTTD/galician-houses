@@ -17,6 +17,15 @@ STR_RELIXION_MOSTEIRO                              :Monastery
 STR_RELIXION_MESQUITA                              :Mosque
 STR_RELIXION_SINAGOGA                              :Synagogue
 
+STR_SSPP_CONCELLO                    :Town Hall
+STR_SSPP_COMISARIA                   :Police Station
+STR_SSPP_BOMBEIROS                   :Fire Station
+STR_SSPP_CORREOS                     :Post Office
+STR_SSPP_TORREAUGA                   :Water Tower
+STR_SSPP_PARKING                     :Parking
+
+
+
 STR_SANIDADE_AMBULATORIO             :Medical Clinic
 STR_SANIDADE_HOSPITAL                :Hospital
 
@@ -30,12 +39,6 @@ STR_IGREXAS_MESQUITA                 :Mesquita
 STR_EDUCACION_ESCOLA                 :School
 STR_EDUCACION_INSTITUTO              :High School
 STR_EDUCACION_UNIVERSIDADE           :College
-
-STR_SSPP_CONCELLO                    :School
-STR_SSPP_COMISARIA                   :Police Station
-STR_SSPP_BOMBEIROS                   :Fire Station
-STR_SSPP_TORREAUGA                   :Water Tower
-STR_SSPP_CORREOS                     :Post Office
 
 STR_RANHACEUS_XENERICO               :Skyscrapper
 STR_RANHACEUS_TORRES_IFER            :Ifer Towers

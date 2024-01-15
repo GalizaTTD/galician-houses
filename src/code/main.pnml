@@ -16,7 +16,7 @@ grf {
 
 // Definicións das cargas, baseado en GALIFIRS, Só fai falla engadir aquelas que se utilicen nas casas.
 cargotable {
-	PASS, MAIL, GOOD, FOOD, BEER, WSTE
+	PASS, MAIL, GOOD, FOOD, BEER, WSTE, WATR
 }
 
 // Deshabilita as casas actuais por defecto.
@@ -52,7 +52,7 @@ template tmpl_building_only_finished() {
 #include "_waste.pnml"
 
 #include "RELIXION/main.pnml"
-// #include "SSPP/main.pnml"
+#include "SSPP/main.pnml"
 // #include "EEPP/main.pnml"
 // #include "SANIDADE/main.pnml"
 // #include "EDUCACION/main.pnml"
