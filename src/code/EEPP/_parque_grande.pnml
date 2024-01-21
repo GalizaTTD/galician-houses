@@ -10,14 +10,14 @@ spriteset(ss_eepp_parque_grande_01_E_snow, 	"src/gfx/EEPP/parque_grande_01_E_sno
 spriteset(ss_eepp_parque_grande_01_W_snow, 	"src/gfx/EEPP/parque_grande_01_W_snow.gimp.png") 	{ tmpl_building_animated() }
 
 // Define spritelayouts (normal & snow)
-spritelayout sl_eepp_parque_grande_01_N 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_grande_01_N; }}
-spritelayout sl_eepp_parque_grande_01_N_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_parque_grande_01_N_snow; }}
-spritelayout sl_eepp_parque_grande_01_S 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_grande_01_S; }}
-spritelayout sl_eepp_parque_grande_01_S_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_parque_grande_01_S_snow; }}
-spritelayout sl_eepp_parque_grande_01_E 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_grande_01_E; }}
-spritelayout sl_eepp_parque_grande_01_E_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_parque_grande_01_E_snow; }}
-spritelayout sl_eepp_parque_grande_01_W 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_grande_01_W; }}
-spritelayout sl_eepp_parque_grande_01_W_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_parque_grande_01_W_snow; }}
+spritelayout sl_eepp_parque_grande_01_N 	      {	ground	 	{ sprite: ss_eepp_parque_grande_01_N(4) ;}	   building 	{ sprite: ss_eepp_parque_grande_01_N; }}
+spritelayout sl_eepp_parque_grande_01_N_snow 	{	ground	 	{ sprite: ss_eepp_parque_grande_01_N_snow(4) ;}	building 	{ sprite: ss_eepp_parque_grande_01_N_snow; }}
+spritelayout sl_eepp_parque_grande_01_S 	      {	ground	 	{ sprite: ss_eepp_parque_grande_01_S(4) ;}	   building 	{ sprite: ss_eepp_parque_grande_01_S; }}
+spritelayout sl_eepp_parque_grande_01_S_snow 	{	ground	 	{ sprite: ss_eepp_parque_grande_01_S_snow(4) ;}	building 	{ sprite: ss_eepp_parque_grande_01_S_snow; }}
+spritelayout sl_eepp_parque_grande_01_E 	      {	ground	 	{ sprite: ss_eepp_parque_grande_01_E(4) ;}	   building 	{ sprite: ss_eepp_parque_grande_01_E; }}
+spritelayout sl_eepp_parque_grande_01_E_snow 	{	ground	 	{ sprite: ss_eepp_parque_grande_01_E_snow(4) ;}	building 	{ sprite: ss_eepp_parque_grande_01_E_snow; }}
+spritelayout sl_eepp_parque_grande_01_W 	      {	ground	 	{ sprite: ss_eepp_parque_grande_01_W(4) ;}	   building 	{ sprite: ss_eepp_parque_grande_01_W; }}
+spritelayout sl_eepp_parque_grande_01_W_snow 	{	ground	 	{ sprite: ss_eepp_parque_grande_01_W_snow(4) ;}	building 	{ sprite: ss_eepp_parque_grande_01_W_snow; }}
 
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_eepp_parque_grande_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_parque_grande_01_N_snow;   sl_eepp_parque_grande_01_N;}
@@ -48,16 +48,16 @@ switch(FEAT_HOUSES, SELF, sw_eepp_parque_grande_01_W_snow_aware, terrain_type) {
 item(FEAT_HOUSES, eepp_parque_grande, BUILDING_ID_EEPP_PARQUE_GRANDE, HOUSE_SIZE_2X2){
 	property {
 		substitute: 20;
-		name: TTD_STR_TOWN_BUILDING_NAME_STADIUM_1;
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 65;
+		name: string(STR_EEPP_PARQUE);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 10;
 		mail_multiplier: 0;
 		accepted_cargos: [[PASS, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
-		probability: 4;
+		local_authority_impact: 100;
+		removal_cost_multiplier: 150;
+		probability: 1;
 		years_available: [0,0xFFFF];
-		minimum_lifetime: 10;
+		minimum_lifetime: 25;
 		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_EEPP;
 	}
@@ -66,5 +66,7 @@ item(FEAT_HOUSES, eepp_parque_grande, BUILDING_ID_EEPP_PARQUE_GRANDE, HOUSE_SIZE
 		graphics_south: sw_eepp_parque_grande_01_S_snow_aware;
 		graphics_east: sw_eepp_parque_grande_01_E_snow_aware;
 		graphics_west: sw_eepp_parque_grande_01_W_snow_aware;
+		construction_check: sw_same_class_distance() > 4;
+ 		cargo_production: func_produce(10,0,2);
 	}
 }

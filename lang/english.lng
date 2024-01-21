@@ -24,17 +24,13 @@ STR_SSPP_CORREOS                     :Post Office
 STR_SSPP_TORREAUGA                   :Water Tower
 STR_SSPP_PARKING                     :Parking
 
+STR_EEPP_PRAZA                       :Square
+STR_EEPP_PARQUE                      :Park
+
 
 
 STR_SANIDADE_AMBULATORIO             :Medical Clinic
 STR_SANIDADE_HOSPITAL                :Hospital
-
-STR_EEPP_PRAZA                       :Square
-STR_EEPP_PARQUE                      :Park
-
-STR_IGREXAS_IGREXA                   :Church
-STR_IGREXAS_CATEDRAL                 :Cathedral
-STR_IGREXAS_MESQUITA                 :Mesquita
 
 STR_EDUCACION_ESCOLA                 :School
 STR_EDUCACION_INSTITUTO              :High School

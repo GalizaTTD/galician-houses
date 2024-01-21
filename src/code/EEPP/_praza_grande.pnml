@@ -9,15 +9,53 @@ spriteset(ss_eepp_praza_grande_01_S_snow, 	"src/gfx/EEPP/praza_grande_01_S_snow.
 spriteset(ss_eepp_praza_grande_01_E_snow, 	"src/gfx/EEPP/praza_grande_01_E_snow.gimp.png") 	{ tmpl_building() }
 spriteset(ss_eepp_praza_grande_01_W_snow, 	"src/gfx/EEPP/praza_grande_01_W_snow.gimp.png") 	{ tmpl_building() }
 
+spriteset(ss_eepp_praza_grande_02_N, 	"src/gfx/EEPP/praza_grande_02_N.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_grande_02_S, 	"src/gfx/EEPP/praza_grande_02_S.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_grande_02_E, 	"src/gfx/EEPP/praza_grande_02_E.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_grande_02_W, 	"src/gfx/EEPP/praza_grande_02_W.gimp.png") 	{ tmpl_building_animated() }
+
+spriteset(ss_eepp_praza_grande_02_N_snow, 	"src/gfx/EEPP/praza_grande_02_N_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_grande_02_S_snow, 	"src/gfx/EEPP/praza_grande_02_S_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_grande_02_E_snow, 	"src/gfx/EEPP/praza_grande_02_E_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_grande_02_W_snow, 	"src/gfx/EEPP/praza_grande_02_W_snow.gimp.png") 	{ tmpl_building_animated() }
+
+spriteset(ss_eepp_praza_grande_03_N, 	"src/gfx/EEPP/praza_grande_03_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_grande_03_S, 	"src/gfx/EEPP/praza_grande_03_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_grande_03_E, 	"src/gfx/EEPP/praza_grande_03_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_grande_03_W, 	"src/gfx/EEPP/praza_grande_03_W.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_eepp_praza_grande_03_N_snow, 	"src/gfx/EEPP/praza_grande_03_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_grande_03_S_snow, 	"src/gfx/EEPP/praza_grande_03_S_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_grande_03_E_snow, 	"src/gfx/EEPP/praza_grande_03_E_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_grande_03_W_snow, 	"src/gfx/EEPP/praza_grande_03_W_snow.gimp.png") 	{ tmpl_building() }
+
 // Define spritelayouts (normal & snow)
-spritelayout sl_eepp_praza_grande_01_N 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_grande_01_N; }}
-spritelayout sl_eepp_praza_grande_01_N_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_grande_01_N_snow; }}
-spritelayout sl_eepp_praza_grande_01_S 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_grande_01_S; }}
-spritelayout sl_eepp_praza_grande_01_S_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_grande_01_S_snow; }}
-spritelayout sl_eepp_praza_grande_01_E 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_grande_01_E; }}
-spritelayout sl_eepp_praza_grande_01_E_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_grande_01_E_snow; }}
-spritelayout sl_eepp_praza_grande_01_W 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_grande_01_W; }}
-spritelayout sl_eepp_praza_grande_01_W_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_grande_01_W_snow; }}
+spritelayout sl_eepp_praza_grande_01_N 	   {	ground	 	{ sprite: ss_eepp_praza_grande_01_N(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_01_N; }}
+spritelayout sl_eepp_praza_grande_01_N_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_01_N_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_01_N_snow; }}
+spritelayout sl_eepp_praza_grande_01_S 	   {	ground	 	{ sprite: ss_eepp_praza_grande_01_S(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_01_S; }}
+spritelayout sl_eepp_praza_grande_01_S_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_01_S_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_01_S_snow; }}
+spritelayout sl_eepp_praza_grande_01_E    	{	ground	 	{ sprite: ss_eepp_praza_grande_01_E(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_01_E; }}
+spritelayout sl_eepp_praza_grande_01_E_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_01_E_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_01_E_snow; }}
+spritelayout sl_eepp_praza_grande_01_W 	   {	ground	 	{ sprite: ss_eepp_praza_grande_01_W(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_01_W; }}
+spritelayout sl_eepp_praza_grande_01_W_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_01_W_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_01_W_snow; }}
+
+spritelayout sl_eepp_praza_grande_02_N 	   {	ground	 	{ sprite: ss_eepp_praza_grande_02_N(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_02_N; }}
+spritelayout sl_eepp_praza_grande_02_N_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_02_N_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_02_N_snow; }}
+spritelayout sl_eepp_praza_grande_02_S 	   {	ground	 	{ sprite: ss_eepp_praza_grande_02_S(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_02_S; }}
+spritelayout sl_eepp_praza_grande_02_S_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_02_S_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_02_S_snow; }}
+spritelayout sl_eepp_praza_grande_02_E    	{	ground	 	{ sprite: ss_eepp_praza_grande_02_E(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_02_E; }}
+spritelayout sl_eepp_praza_grande_02_E_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_02_E_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_02_E_snow; }}
+spritelayout sl_eepp_praza_grande_02_W 	   {	ground	 	{ sprite: ss_eepp_praza_grande_02_W(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_02_W; }}
+spritelayout sl_eepp_praza_grande_02_W_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_02_W_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_02_W_snow; }}
+
+spritelayout sl_eepp_praza_grande_03_N 	   {	ground	 	{ sprite: ss_eepp_praza_grande_03_N(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_03_N; }}
+spritelayout sl_eepp_praza_grande_03_N_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_03_N_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_03_N_snow; }}
+spritelayout sl_eepp_praza_grande_03_S 	   {	ground	 	{ sprite: ss_eepp_praza_grande_03_S(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_03_S; }}
+spritelayout sl_eepp_praza_grande_03_S_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_03_S_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_03_S_snow; }}
+spritelayout sl_eepp_praza_grande_03_E    	{	ground	 	{ sprite: ss_eepp_praza_grande_03_E(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_03_E; }}
+spritelayout sl_eepp_praza_grande_03_E_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_03_E_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_03_E_snow; }}
+spritelayout sl_eepp_praza_grande_03_W 	   {	ground	 	{ sprite: ss_eepp_praza_grande_03_W(4) ;}	      building 	{ sprite: ss_eepp_praza_grande_03_W; }}
+spritelayout sl_eepp_praza_grande_03_W_snow 	{	ground	 	{ sprite: ss_eepp_praza_grande_03_W_snow(4) ;}	building 	{ sprite: ss_eepp_praza_grande_03_W_snow; }}
 
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_01_N_snow;   sl_eepp_praza_grande_01_N;}
@@ -25,21 +63,39 @@ switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_01_S_snow_aware, terrain_type) { 
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_01_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_01_E_snow;   sl_eepp_praza_grande_01_E;}
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_01_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_01_W_snow;   sl_eepp_praza_grande_01_W;}
 
-// random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_N) {
-//    1: sw_eepp_praza_grande_01_N_snow_aware;
-// }
-// random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_S) {
-//    dependent: sw_eepp_praza_grande_random_sprite_N;
-//    1: sw_eepp_praza_grande_01_S_snow_aware;
-// }
-// random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_E) {
-//    dependent: sw_eepp_praza_grande_random_sprite_N;
-//    1: sw_eepp_praza_grande_01_E_snow_aware;
-// }
-// random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_W) {
-//    dependent: sw_eepp_praza_grande_random_sprite_N;
-//    1: sw_eepp_praza_grande_01_W_snow_aware;
-// }
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_02_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_02_N_snow;   sl_eepp_praza_grande_02_N;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_02_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_02_S_snow;   sl_eepp_praza_grande_02_S;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_02_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_02_E_snow;   sl_eepp_praza_grande_02_E;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_02_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_02_W_snow;   sl_eepp_praza_grande_02_W;}
+
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_03_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_03_N_snow;   sl_eepp_praza_grande_03_N;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_03_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_03_S_snow;   sl_eepp_praza_grande_03_S;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_03_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_03_E_snow;   sl_eepp_praza_grande_03_E;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_03_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_grande_03_W_snow;   sl_eepp_praza_grande_03_W;}
+
+random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_N) {
+   1: sw_eepp_praza_grande_01_N_snow_aware;
+   1: sw_eepp_praza_grande_02_N_snow_aware;
+   1: sw_eepp_praza_grande_03_N_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_S) {
+   dependent: sw_eepp_praza_grande_random_sprite_N;
+   1: sw_eepp_praza_grande_01_S_snow_aware;
+   1: sw_eepp_praza_grande_02_S_snow_aware;
+   1: sw_eepp_praza_grande_03_S_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_E) {
+   dependent: sw_eepp_praza_grande_random_sprite_N;
+   1: sw_eepp_praza_grande_01_E_snow_aware;
+   1: sw_eepp_praza_grande_02_E_snow_aware;
+   1: sw_eepp_praza_grande_03_E_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_grande_random_sprite_W) {
+   dependent: sw_eepp_praza_grande_random_sprite_N;
+   1: sw_eepp_praza_grande_01_W_snow_aware;
+   1: sw_eepp_praza_grande_02_W_snow_aware;
+   1: sw_eepp_praza_grande_03_W_snow_aware;
+}
 // Define construction checks
 
 // Define Item
@@ -48,23 +104,25 @@ switch(FEAT_HOUSES, SELF, sw_eepp_praza_grande_01_W_snow_aware, terrain_type) { 
 item(FEAT_HOUSES, eepp_praza_grande, BUILDING_ID_EEPP_PRAZA_GRANDE, HOUSE_SIZE_2X2){
 	property {
 		substitute: 20;
-		name: TTD_STR_TOWN_BUILDING_NAME_STADIUM_1;
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 65;
+		name: string(STR_EEPP_PRAZA);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 20;
 		mail_multiplier: 0;
 		accepted_cargos: [[PASS, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
-		probability: 4;
+		local_authority_impact: 100;
+		removal_cost_multiplier: 150;
+		probability: 1;
 		years_available: [0,0xFFFF];
-		minimum_lifetime: 10;
+		minimum_lifetime: 25;
 		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_EEPP;
 	}
 	graphics {
-		graphics_north: sw_eepp_praza_grande_01_N_snow_aware;
-		graphics_south: sw_eepp_praza_grande_01_S_snow_aware;
-		graphics_east: sw_eepp_praza_grande_01_E_snow_aware;
-		graphics_west: sw_eepp_praza_grande_01_W_snow_aware;
+		graphics_north: sw_eepp_praza_grande_random_sprite_N;
+		graphics_south: sw_eepp_praza_grande_random_sprite_S;
+		graphics_east: sw_eepp_praza_grande_random_sprite_E;
+		graphics_west: sw_eepp_praza_grande_random_sprite_W;
+		construction_check: sw_same_class_distance() > 4;
+ 		cargo_production: func_produce(10,0,2);
 	}
 }

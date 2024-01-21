@@ -26,7 +26,7 @@ item(FEAT_HOUSES, SSPP_torreauga, BUILDING_ID_SSPP_TORREAUGA, HOUSE_SIZE_1X1){
 	property {
 		substitute: 14;
 		name: string(STR_SSPP_TORREAUGA);
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 10;
 		mail_multiplier: 0;
 		accepted_cargos: [[WATR, 8]];

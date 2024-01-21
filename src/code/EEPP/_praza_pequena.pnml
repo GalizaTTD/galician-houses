@@ -13,21 +13,29 @@ spriteset(ss_eepp_praza_pequena_06, 	"src/gfx/EEPP/praza_pequena_06.gimp.png") 	
 spriteset(ss_eepp_praza_pequena_06_snow, 	"src/gfx/EEPP/praza_pequena_06_snow.gimp.png") 	{ tmpl_building() }
 spriteset(ss_eepp_praza_pequena_07, 	"src/gfx/EEPP/praza_pequena_07.gimp.png") 	{ tmpl_building() }
 spriteset(ss_eepp_praza_pequena_07_snow, 	"src/gfx/EEPP/praza_pequena_07_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_pequena_08, 	"src/gfx/EEPP/praza_pequena_08.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_pequena_08_snow, 	"src/gfx/EEPP/praza_pequena_08_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_praza_pequena_09, 	"src/gfx/EEPP/praza_pequena_09.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_praza_pequena_09_snow, 	"src/gfx/EEPP/praza_pequena_09_snow.gimp.png") 	{ tmpl_building_animated() }
 // Define spritelayouts (normal & snow)
-spritelayout sl_eepp_praza_pequena_01 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_pequena_01; }}
-spritelayout sl_eepp_praza_pequena_01_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_01_snow; }}
-spritelayout sl_eepp_praza_pequena_02 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_pequena_02; }}
-spritelayout sl_eepp_praza_pequena_02_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_02_snow; }}
-spritelayout sl_eepp_praza_pequena_03 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_pequena_03; }}
-spritelayout sl_eepp_praza_pequena_03_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_03_snow; }}
-spritelayout sl_eepp_praza_pequena_04 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_pequena_04; }}
-spritelayout sl_eepp_praza_pequena_04_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_04_snow; }}
-spritelayout sl_eepp_praza_pequena_05 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_pequena_05; }}
-spritelayout sl_eepp_praza_pequena_05_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_05_snow; }}
-spritelayout sl_eepp_praza_pequena_06 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_praza_pequena_06; }}
-spritelayout sl_eepp_praza_pequena_06_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_06_snow; }}
-spritelayout sl_eepp_praza_pequena_07 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_eepp_praza_pequena_07; }}
-spritelayout sl_eepp_praza_pequena_07_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_praza_pequena_07_snow; }}
+spritelayout sl_eepp_praza_pequena_01 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_01(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_01; }}
+spritelayout sl_eepp_praza_pequena_01_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_01_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_01_snow; }}
+spritelayout sl_eepp_praza_pequena_02 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_02(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_02; }}
+spritelayout sl_eepp_praza_pequena_02_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_02_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_02_snow; }}
+spritelayout sl_eepp_praza_pequena_03 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_03(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_03; }}
+spritelayout sl_eepp_praza_pequena_03_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_03_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_03_snow; }}
+spritelayout sl_eepp_praza_pequena_04 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_04(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_04; }}
+spritelayout sl_eepp_praza_pequena_04_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_04_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_04_snow; }}
+spritelayout sl_eepp_praza_pequena_05 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_05(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_05; }}
+spritelayout sl_eepp_praza_pequena_05_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_05_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_05_snow; }}
+spritelayout sl_eepp_praza_pequena_06 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_06(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_06; }}
+spritelayout sl_eepp_praza_pequena_06_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_06_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_06_snow; }}
+spritelayout sl_eepp_praza_pequena_07 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_07(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_07; }}
+spritelayout sl_eepp_praza_pequena_07_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_07_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_07_snow; }}
+spritelayout sl_eepp_praza_pequena_08 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_08(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_08; }}
+spritelayout sl_eepp_praza_pequena_08_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_08_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_08_snow; }}
+spritelayout sl_eepp_praza_pequena_09 	      {	ground	 	{ sprite: ss_eepp_praza_pequena_09(4) ;}	      building 	{ sprite: ss_eepp_praza_pequena_09; }}
+spritelayout sl_eepp_praza_pequena_09_snow 	{	ground	 	{ sprite: ss_eepp_praza_pequena_09_snow(4) ;}	building 	{ sprite: ss_eepp_praza_pequena_09_snow; }}
 
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_pequena_01_snow;   sl_eepp_praza_pequena_01;}
@@ -37,6 +45,8 @@ switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_04_snow_aware, terrain_type) {  
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_05_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_pequena_05_snow;   sl_eepp_praza_pequena_05;}
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_06_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_pequena_06_snow;   sl_eepp_praza_pequena_06;}
 switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_07_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_pequena_07_snow;   sl_eepp_praza_pequena_07;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_08_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_pequena_08_snow;   sl_eepp_praza_pequena_08;}
+switch(FEAT_HOUSES, SELF, sw_eepp_praza_pequena_09_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_praza_pequena_09_snow;   sl_eepp_praza_pequena_09;}
 
 random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_pequena_random_sprite) {
    1: sw_eepp_praza_pequena_01_snow_aware;
@@ -46,6 +56,8 @@ random_switch (FEAT_HOUSES, SELF, sw_eepp_praza_pequena_random_sprite) {
    1: sw_eepp_praza_pequena_05_snow_aware;
    1: sw_eepp_praza_pequena_06_snow_aware;
    1: sw_eepp_praza_pequena_07_snow_aware;
+   1: sw_eepp_praza_pequena_08_snow_aware;
+   1: sw_eepp_praza_pequena_09_snow_aware;
 }
 // Define construction checks
 
@@ -56,19 +68,21 @@ item(FEAT_HOUSES, eepp_praza_pequena, BUILDING_ID_EEPP_PRAZA_PEQUENA, HOUSE_SIZE
 	property {
 		substitute: 09;
 		name: string(STR_EEPP_PRAZA);
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 30;
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 5;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
-		probability: 4;
+		accepted_cargos: [[PASS, 4]];
+		local_authority_impact: 50;
+		removal_cost_multiplier: 100;
+		probability: 1;
 		years_available: [0,0xFFFF];
-		minimum_lifetime: 10;
+		minimum_lifetime: 25;
 		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_EEPP;
 	}
 	graphics {
 		default:sw_eepp_praza_pequena_random_sprite;
+		construction_check: sw_same_class_distance() > 4;
+ 		cargo_production: func_produce(5,0,1);
 	}
 }

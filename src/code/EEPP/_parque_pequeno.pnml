@@ -1,16 +1,34 @@
 // Define spritesets (normal & snow)
 spriteset(ss_eepp_parque_pequeno_01, 	"src/gfx/EEPP/parque_pequeno_01.gimp.png") 	{ tmpl_building_animated() }
 spriteset(ss_eepp_parque_pequeno_01_snow, 	"src/gfx/EEPP/parque_pequeno_01_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_pequeno_02, 	"src/gfx/EEPP/parque_pequeno_02.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_pequeno_02_snow, 	"src/gfx/EEPP/parque_pequeno_02_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_pequeno_03, 	"src/gfx/EEPP/parque_pequeno_03.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_pequeno_03_snow, 	"src/gfx/EEPP/parque_pequeno_03_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_eepp_parque_pequeno_04, 	"src/gfx/EEPP/parque_pequeno_04.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_eepp_parque_pequeno_04_snow, 	"src/gfx/EEPP/parque_pequeno_04_snow.gimp.png") 	{ tmpl_building_animated() }
 // Define spritelayouts (normal & snow)
-spritelayout sl_eepp_parque_pequeno_01 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_eepp_parque_pequeno_01; }}
-spritelayout sl_eepp_parque_pequeno_01_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_eepp_parque_pequeno_01_snow; }}
+spritelayout sl_eepp_parque_pequeno_01 	   {	ground	 	{ sprite: ss_eepp_parque_pequeno_01(4) ;}	      building 	{ sprite: ss_eepp_parque_pequeno_01; }}
+spritelayout sl_eepp_parque_pequeno_01_snow 	{	ground	 	{ sprite: ss_eepp_parque_pequeno_01_snow(4) ;}	building 	{ sprite: ss_eepp_parque_pequeno_01_snow; }}
+spritelayout sl_eepp_parque_pequeno_02 	   {	ground	 	{ sprite: ss_eepp_parque_pequeno_02(4) ;}	      building 	{ sprite: ss_eepp_parque_pequeno_02; }}
+spritelayout sl_eepp_parque_pequeno_02_snow 	{	ground	 	{ sprite: ss_eepp_parque_pequeno_02_snow(4) ;}	building 	{ sprite: ss_eepp_parque_pequeno_02_snow; }}
+spritelayout sl_eepp_parque_pequeno_03 	   {	ground	 	{ sprite: ss_eepp_parque_pequeno_03(4) ;}	      building 	{ sprite: ss_eepp_parque_pequeno_03; }}
+spritelayout sl_eepp_parque_pequeno_03_snow 	{	ground	 	{ sprite: ss_eepp_parque_pequeno_03_snow(4) ;}	building 	{ sprite: ss_eepp_parque_pequeno_03_snow; }}
+spritelayout sl_eepp_parque_pequeno_04 	   {	ground	 	{ sprite: ss_eepp_parque_pequeno_04(4) ;}	      building 	{ sprite: ss_eepp_parque_pequeno_04; }}
+spritelayout sl_eepp_parque_pequeno_04_snow 	{	ground	 	{ sprite: ss_eepp_parque_pequeno_04_snow(4) ;}	building 	{ sprite: ss_eepp_parque_pequeno_04_snow; }}
 
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_parque_pequeno_01_snow;   sl_eepp_parque_pequeno_01;}
+switch(FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_02_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_parque_pequeno_02_snow;   sl_eepp_parque_pequeno_02;}
+switch(FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_parque_pequeno_03_snow;   sl_eepp_parque_pequeno_03;}
+switch(FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_04_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_eepp_parque_pequeno_04_snow;   sl_eepp_parque_pequeno_04;}
 
-// random_switch (FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_random_sprite) {
-//    1: sw_eepp_parque_pequeno_01_snow_aware;
-// }
+random_switch (FEAT_HOUSES, SELF, sw_eepp_parque_pequeno_random_sprite) {
+   1: sw_eepp_parque_pequeno_01_snow_aware;
+   2: sw_eepp_parque_pequeno_02_snow_aware;
+   2: sw_eepp_parque_pequeno_03_snow_aware;
+   2: sw_eepp_parque_pequeno_04_snow_aware;
+}
 // Define construction checks
 
 // Define Item
@@ -20,19 +38,21 @@ item(FEAT_HOUSES, eepp_parque_pequeno, BUILDING_ID_EEPP_PARQUE_PEQUENO, HOUSE_SI
 	property {
 		substitute: 10;
 		name: string(STR_EEPP_PARQUE);
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 30;
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 5;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
-		probability: 4;
+		accepted_cargos: [[PASS, 4]];
+		local_authority_impact: 50;
+		removal_cost_multiplier: 100;
+		probability: 1;
 		years_available: [0,0xFFFF];
-		minimum_lifetime: 10;
+		minimum_lifetime: 25;
 		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_EEPP;
 	}
 	graphics {
-		default:sw_eepp_parque_pequeno_01_snow_aware;
+		default:sw_eepp_parque_pequeno_random_sprite;
+		construction_check: sw_same_class_distance() > 4;
+ 		cargo_production: func_produce(5,0,1);
 	}
 }
