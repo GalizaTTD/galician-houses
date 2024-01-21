@@ -46,7 +46,7 @@ item(FEAT_HOUSES, relixion_mosteiro, BUILDING_ID_RELIXION_MOSTEIRO, HOUSE_SIZE_2
 		graphics_south: sw_relixion_mosteiro_01_S_snow_aware;
 		graphics_east:  sw_relixion_mosteiro_01_E_snow_aware;
 		graphics_west:  sw_relixion_mosteiro_01_W_snow_aware;
-      construction_check: sw_unique_house() && sw_same_type_distance() > 60;
+      construction_check: sw_population_1000_10000() && sw_unique_house() && sw_same_type_distance() > 60;
  		cargo_production: func_produce(15,0,0);
 	}
 }

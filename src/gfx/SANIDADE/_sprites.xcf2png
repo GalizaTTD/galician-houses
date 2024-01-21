@@ -1,7 +1,7 @@
-src/gfx/SANIDADE/ambulatorio_pequeno.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND AMBULATORIO_PEQUENO
-src/gfx/SANIDADE/ambulatorio_pequeno_snow.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND AMBULATORIO_PEQUENO_SNOW
-src/gfx/SANIDADE/ambulatorio_grande.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND AMBULATORIO_GRANDE
-src/gfx/SANIDADE/ambulatorio_grande_snow.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND AMBULATORIO_GRANDE_SNOW
+src/gfx/SANIDADE/ambulatorio_pequeno.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND PEDRA AMBULATORIO_PEQUENO
+src/gfx/SANIDADE/ambulatorio_pequeno_snow.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND PEDRA AMBULATORIO_PEQUENO_SNOW
+src/gfx/SANIDADE/ambulatorio_grande.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND PEDRA AMBULATORIO_GRANDE
+src/gfx/SANIDADE/ambulatorio_grande_snow.gimp.png            src/xcf/SANIDADE/ambulatorio.xcf            BACKGROUND PEDRA AMBULATORIO_GRANDE_SNOW
 src/gfx/SANIDADE/hospital_old_N.gimp.png            src/xcf/SANIDADE/hospital.xcf            BACKGROUND OLD_N
 src/gfx/SANIDADE/hospital_old_S.gimp.png            src/xcf/SANIDADE/hospital.xcf            BACKGROUND OLD_S
 src/gfx/SANIDADE/hospital_old_E.gimp.png            src/xcf/SANIDADE/hospital.xcf            BACKGROUND OLD_E

@@ -10,15 +10,15 @@ spriteset(ss_sanidade_hospital_new_S_SNOW, 	"src/gfx/SANIDADE/hospital_new_S_sno
 spriteset(ss_sanidade_hospital_new_E_SNOW, 	"src/gfx/SANIDADE/hospital_new_E_snow.gimp.png") 	{ tmpl_building_animated() }
 spriteset(ss_sanidade_hospital_new_W_SNOW, 	"src/gfx/SANIDADE/hospital_new_W_snow.gimp.png") 	{ tmpl_building_animated() }
 // Define spritelayouts (normal & snow)
-spritelayout sl_sanidade_hospital_new_N 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_new_N; }}
-spritelayout sl_sanidade_hospital_new_S 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_new_S; }}
-spritelayout sl_sanidade_hospital_new_E 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_new_E; }}
-spritelayout sl_sanidade_hospital_new_W 	{	ground	 	{ sprite: GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_sanidade_hospital_new_W; }}
+spritelayout sl_sanidade_hospital_new_N 	{	ground	 	{ sprite: ss_sanidade_hospital_new_N(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_N; }}
+spritelayout sl_sanidade_hospital_new_S 	{	ground	 	{ sprite: ss_sanidade_hospital_new_S(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_S; }}
+spritelayout sl_sanidade_hospital_new_E 	{	ground	 	{ sprite: ss_sanidade_hospital_new_E(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_E; }}
+spritelayout sl_sanidade_hospital_new_W 	{	ground	 	{ sprite: ss_sanidade_hospital_new_W(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_W; }}
 
-spritelayout sl_sanidade_hospital_new_N_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_new_N_SNOW; }}
-spritelayout sl_sanidade_hospital_new_S_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_new_S_SNOW; }}
-spritelayout sl_sanidade_hospital_new_E_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_new_E_SNOW; }}
-spritelayout sl_sanidade_hospital_new_W_SNOW 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_sanidade_hospital_new_W_SNOW; }}
+spritelayout sl_sanidade_hospital_new_N_SNOW 	{	ground	 	{ sprite: ss_sanidade_hospital_new_N_SNOW(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_N_SNOW; }}
+spritelayout sl_sanidade_hospital_new_S_SNOW 	{	ground	 	{ sprite: ss_sanidade_hospital_new_S_SNOW(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_S_SNOW; }}
+spritelayout sl_sanidade_hospital_new_E_SNOW 	{	ground	 	{ sprite: ss_sanidade_hospital_new_E_SNOW(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_E_SNOW; }}
+spritelayout sl_sanidade_hospital_new_W_SNOW 	{	ground	 	{ sprite: ss_sanidade_hospital_new_W_SNOW(4) ;}	building 	{ sprite: ss_sanidade_hospital_new_W_SNOW; }}
 
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_sanidade_hospital_new_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_sanidade_hospital_new_N_SNOW;   sl_sanidade_hospital_new_N;}
@@ -35,15 +35,15 @@ item(FEAT_HOUSES, sanidade_hospital_new, BUILDING_ID_SANIDADE_HOSPITAL_NEW, HOUS
 	property {
 		substitute: 40;
 		name: string(STR_SANIDADE_HOSPITAL);
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 150;
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 255;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 200;
+		removal_cost_multiplier: 150;
 		probability: 4;
-		years_available: [1800,0xFFFF];
-		minimum_lifetime: 20;
+		years_available: [1980,0xFFFF];
+		minimum_lifetime: 70;
 		availability_mask: [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_SANIDADE;
 	}
@@ -52,7 +52,7 @@ item(FEAT_HOUSES, sanidade_hospital_new, BUILDING_ID_SANIDADE_HOSPITAL_NEW, HOUS
 		graphics_east: sw_sanidade_hospital_new_E_snow_aware;
 		graphics_west: sw_sanidade_hospital_new_W_snow_aware;
 		graphics_south: sw_sanidade_hospital_new_S_snow_aware;
-		construction_check: sw_population_5000() && sw_unique_house();
- 		cargo_production: func_produce(19,0,9);
+		construction_check: sw_same_type_distance() > 10 && ((sw_get_population() / 15000) > sw_get_same_house_count_town());
+ 		cargo_production: func_produce(30,8,8);
 	}
 }
