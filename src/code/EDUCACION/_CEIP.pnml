@@ -1,0 +1,84 @@
+// Define spritesets (normal & snow)
+spriteset(ss_educacion_CEIP_01, 	"src/gfx/EDUCACION/CEIP_01.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_educacion_CEIP_01_snow, 	"src/gfx/EDUCACION/CEIP_01_snow.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_educacion_CEIP_02, 	"src/gfx/EDUCACION/CEIP_02.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CEIP_02_snow, 	"src/gfx/EDUCACION/CEIP_02_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CEIP_03, 	"src/gfx/EDUCACION/CEIP_03.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CEIP_03_snow, 	"src/gfx/EDUCACION/CEIP_03_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CEIP_04, 	"src/gfx/EDUCACION/CEIP_04.gimp.png") 	{ tmpl_building_animated() }
+spriteset(ss_educacion_CEIP_04_snow, 	"src/gfx/EDUCACION/CEIP_04_snow.gimp.png") 	{ tmpl_building_animated() }
+// Define spritelayouts (normal & snow)
+spritelayout sl_educacion_CEIP_01 	   {	ground	 	{ sprite: ss_educacion_CEIP_01(4) ;}	      building 	{ sprite: ss_educacion_CEIP_01; }}
+spritelayout sl_educacion_CEIP_01_snow 	{	ground	 	{ sprite: ss_educacion_CEIP_01_snow(4) ;}	building 	{ sprite: ss_educacion_CEIP_01_snow; }}
+spritelayout sl_educacion_CEIP_02 	   {	ground	 	{ sprite: ss_educacion_CEIP_02(4) ;}	      building 	{ sprite: ss_educacion_CEIP_02; }}
+spritelayout sl_educacion_CEIP_02_snow 	{	ground	 	{ sprite: ss_educacion_CEIP_02_snow(4) ;}	building 	{ sprite: ss_educacion_CEIP_02_snow; }}
+spritelayout sl_educacion_CEIP_03 	   {	ground	 	{ sprite: ss_educacion_CEIP_03(4) ;}	      building 	{ sprite: ss_educacion_CEIP_03; }}
+spritelayout sl_educacion_CEIP_03_snow 	{	ground	 	{ sprite: ss_educacion_CEIP_03_snow(4) ;}	building 	{ sprite: ss_educacion_CEIP_03_snow; }}
+spritelayout sl_educacion_CEIP_04 	   {	ground	 	{ sprite: ss_educacion_CEIP_04(4) ;}	      building 	{ sprite: ss_educacion_CEIP_04; }}
+spritelayout sl_educacion_CEIP_04_snow 	{	ground	 	{ sprite: ss_educacion_CEIP_04_snow(4) ;}	building 	{ sprite: ss_educacion_CEIP_04_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_educacion_CEIP_01_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CEIP_01_snow;   sl_educacion_CEIP_01;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CEIP_02_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CEIP_02_snow;   sl_educacion_CEIP_02;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CEIP_03_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CEIP_03_snow;   sl_educacion_CEIP_03;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CEIP_04_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CEIP_04_snow;   sl_educacion_CEIP_04;}
+
+random_switch (FEAT_HOUSES, SELF, sw_educacion_CEIP_random_sprite_old) {
+   1: sw_educacion_CEIP_01_snow_aware;
+   2: sw_educacion_CEIP_02_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_educacion_CEIP_random_sprite_new) {
+   2: sw_educacion_CEIP_03_snow_aware;
+   2: sw_educacion_CEIP_04_snow_aware;
+}
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, educacion_CEIP_OLD, BUILDING_ID_EDUCACION_CEIP_OLD, HOUSE_SIZE_1X1){
+	property {
+		substitute: 10;
+		name: string(STR_EDUCACION_CEIP);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 75;
+		removal_cost_multiplier: 75;
+		probability: 2;
+		years_available: [0,1970];
+		minimum_lifetime: 25;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_EDUCACION;
+	}
+	graphics {
+		default:sw_educacion_CEIP_random_sprite_old;
+		construction_check: sw_road_SW() && sw_road_SE() && sw_population_1000() && sw_same_type_distance() > 10 && ((sw_get_population() / 2000) > sw_get_same_class_count_town());
+ 		cargo_production: func_produce(5,2,1);
+	}
+}
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, educacion_CEIP_NEW, BUILDING_ID_EDUCACION_CEIP_NEW, HOUSE_SIZE_1X1){
+	property {
+		substitute: 10;
+		name: string(STR_EDUCACION_CEIP);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 30;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 75;
+		removal_cost_multiplier: 75;
+		probability: 1;
+		years_available: [1970,0xFFFF];
+		minimum_lifetime: 25;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_EDUCACION;
+	}
+	graphics {
+		default:sw_educacion_CEIP_random_sprite_new;
+		construction_check: sw_road_SW() && sw_road_SE() && sw_population_1000() && sw_same_type_distance() > 10 && ((sw_get_population() / 2000) > sw_get_same_class_count_town());
+ 		cargo_production: func_produce(5,2,1);
+	}
+}

@@ -1,28 +1,28 @@
-src/gfx/EDUCACION/escola_01_N.gimp.png            src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_N
-src/gfx/EDUCACION/escola_01_N_snow.gimp.png       src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_N_SNOW
-src/gfx/EDUCACION/escola_01_S.gimp.png            src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_S
-src/gfx/EDUCACION/escola_01_S_snow.gimp.png       src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_S_SNOW
-src/gfx/EDUCACION/escola_01_E.gimp.png            src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_E
-src/gfx/EDUCACION/escola_01_E_snow.gimp.png       src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_E_SNOW
-src/gfx/EDUCACION/escola_01_W.gimp.png            src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_W
-src/gfx/EDUCACION/escola_01_W_snow.gimp.png       src/xcf/EDUCACION/escola.xcf            BACKGROUND 01_W_SNOW
-src/gfx/EDUCACION/instituto_01_N.gimp.png            src/xcf/EDUCACION/instituto.xcf            BACKGROUND 01_N
-src/gfx/EDUCACION/instituto_01_N_snow.gimp.png       src/xcf/EDUCACION/instituto.xcf            BACKGROUND 01_N_SNOW
-src/gfx/EDUCACION/instituto_01_E.gimp.png            src/xcf/EDUCACION/instituto.xcf            BACKGROUND 01_E
-src/gfx/EDUCACION/instituto_01_E_snow.gimp.png       src/xcf/EDUCACION/instituto.xcf            BACKGROUND 01_E_SNOW
-src/gfx/EDUCACION/universidade_01_SW_N.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_N
-src/gfx/EDUCACION/universidade_01_SW_N_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_N_SNOW
-src/gfx/EDUCACION/universidade_01_SW_S.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_S
-src/gfx/EDUCACION/universidade_01_SW_S_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_S_SNOW
-src/gfx/EDUCACION/universidade_01_SW_E.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_E
-src/gfx/EDUCACION/universidade_01_SW_E_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_E_SNOW
-src/gfx/EDUCACION/universidade_01_SW_W.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_W
-src/gfx/EDUCACION/universidade_01_SW_W_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SW_W_SNOW
-src/gfx/EDUCACION/universidade_01_SE_N.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_N
-src/gfx/EDUCACION/universidade_01_SE_N_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_N_SNOW
-src/gfx/EDUCACION/universidade_01_SE_S.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_S
-src/gfx/EDUCACION/universidade_01_SE_S_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_S_SNOW
-src/gfx/EDUCACION/universidade_01_SE_E.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_E
-src/gfx/EDUCACION/universidade_01_SE_E_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_E_SNOW
-src/gfx/EDUCACION/universidade_01_SE_W.gimp.png            src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_W
-src/gfx/EDUCACION/universidade_01_SE_W_snow.gimp.png       src/xcf/EDUCACION/universidade.xcf            BACKGROUND 01_SE_W_SNOW
+src/gfx/EDUCACION/CEIP_01.gimp.png            src/xcf/EDUCACION/CEIP.xcf            BACKGROUND HERBA 01
+src/gfx/EDUCACION/CEIP_01_snow.gimp.png       src/xcf/EDUCACION/CEIP.xcf            BACKGROUND NEVE 01_SNOW
+src/gfx/EDUCACION/CEIP_02.gimp.png            src/xcf/EDUCACION/CEIP.xcf            BACKGROUND HERBA 02
+src/gfx/EDUCACION/CEIP_02_snow.gimp.png       src/xcf/EDUCACION/CEIP.xcf            BACKGROUND NEVE 02_SNOW
+src/gfx/EDUCACION/CEIP_03.gimp.png            src/xcf/EDUCACION/CEIP.xcf            BACKGROUND HERBA 03
+src/gfx/EDUCACION/CEIP_03_snow.gimp.png       src/xcf/EDUCACION/CEIP.xcf            BACKGROUND NEVE 03_SNOW
+src/gfx/EDUCACION/CEIP_04.gimp.png            src/xcf/EDUCACION/CEIP.xcf            BACKGROUND PEDRA 04
+src/gfx/EDUCACION/CEIP_04_snow.gimp.png       src/xcf/EDUCACION/CEIP.xcf            BACKGROUND NEVE 04_SNOW
+src/gfx/EDUCACION/CPI_01_N.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 01_N
+src/gfx/EDUCACION/CPI_01_N_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 01_N_SNOW
+src/gfx/EDUCACION/CPI_01_S.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 01_S
+src/gfx/EDUCACION/CPI_01_S_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 01_S_SNOW
+src/gfx/EDUCACION/CPI_01_E.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 01_E
+src/gfx/EDUCACION/CPI_01_E_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 01_E_SNOW
+src/gfx/EDUCACION/CPI_01_W.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 01_W
+src/gfx/EDUCACION/CPI_01_W_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 01_W_SNOW
+src/gfx/EDUCACION/CPI_02_N.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 02_N
+src/gfx/EDUCACION/CPI_02_N_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 02_N_SNOW
+src/gfx/EDUCACION/CPI_02_S.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 02_S
+src/gfx/EDUCACION/CPI_02_S_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 02_S_SNOW
+src/gfx/EDUCACION/CPI_02_E.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 02_E
+src/gfx/EDUCACION/CPI_02_E_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 02_E_SNOW
+src/gfx/EDUCACION/CPI_02_W.gimp.png            src/xcf/EDUCACION/CPI.xcf            BACKGROUND HERBA 02_W
+src/gfx/EDUCACION/CPI_02_W_snow.gimp.png       src/xcf/EDUCACION/CPI.xcf            BACKGROUND NEVE 02_W_SNOW
+src/gfx/EDUCACION/IES_01_N.gimp.png            src/xcf/EDUCACION/IES.xcf            BACKGROUND 01_N
+src/gfx/EDUCACION/IES_01_N_snow.gimp.png       src/xcf/EDUCACION/IES.xcf            BACKGROUND 01_N_SNOW
+src/gfx/EDUCACION/IES_01_E.gimp.png            src/xcf/EDUCACION/IES.xcf            BACKGROUND 01_E
+src/gfx/EDUCACION/IES_01_E_snow.gimp.png       src/xcf/EDUCACION/IES.xcf            BACKGROUND 01_E_SNOW

@@ -1,3 +1,3 @@
-#include "_escola.pnml"
-#include "_instituto.pnml"
-#include "_universidade.pnml"
+#include "_CEIP.pnml"
+#include "_CPI.pnml"
+#include "_IES.pnml"

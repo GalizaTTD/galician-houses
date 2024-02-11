@@ -4,7 +4,9 @@
 switch(FEAT_HOUSES, SELF, sw_unique_house, same_house_count_town == 0) {return;}
 switch(FEAT_HOUSES, SELF, sw_unique_class, same_class_count_town == 0) {return;}
 switch(FEAT_HOUSES, SELF, sw_unique_worldwide, same_house_count_map == 0) {return;}
+// Get Houses by ID / Class in town
 switch(FEAT_HOUSES, SELF, sw_get_same_house_count_town, same_house_count_map) {return same_house_count_map;}
+switch(FEAT_HOUSES, SELF, sw_get_same_class_count_town, same_class_count_map) {return same_class_count_map;}
 // Poboación
 switch (FEAT_HOUSES, PARENT, sw_get_population, population) {return population;}
 switch (FEAT_HOUSES, PARENT, sw_population_500, population >= 500) {return;}

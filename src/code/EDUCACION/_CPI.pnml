@@ -1,0 +1,99 @@
+// Define spritesets (normal & snow)
+spriteset(ss_educacion_CPI_01_N, 	"src/gfx/EDUCACION/CPI_01_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_S, 	"src/gfx/EDUCACION/CPI_01_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_E, 	"src/gfx/EDUCACION/CPI_01_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_W, 	"src/gfx/EDUCACION/CPI_01_W.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_N_snow, 	"src/gfx/EDUCACION/CPI_01_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_S_snow, 	"src/gfx/EDUCACION/CPI_01_S_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_E_snow, 	"src/gfx/EDUCACION/CPI_01_E_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_01_W_snow, 	"src/gfx/EDUCACION/CPI_01_W_snow.gimp.png") 	{ tmpl_building() }
+
+spriteset(ss_educacion_CPI_02_N, 	"src/gfx/EDUCACION/CPI_02_N.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_S, 	"src/gfx/EDUCACION/CPI_02_S.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_E, 	"src/gfx/EDUCACION/CPI_02_E.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_W, 	"src/gfx/EDUCACION/CPI_02_W.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_N_snow, 	"src/gfx/EDUCACION/CPI_02_N_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_S_snow, 	"src/gfx/EDUCACION/CPI_02_S_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_E_snow, 	"src/gfx/EDUCACION/CPI_02_E_snow.gimp.png") 	{ tmpl_building() }
+spriteset(ss_educacion_CPI_02_W_snow, 	"src/gfx/EDUCACION/CPI_02_W_snow.gimp.png") 	{ tmpl_building() }
+
+// Define spritelayouts (normal & snow)
+spritelayout sl_educacion_CPI_01_N 	      {	ground	 	{ sprite: ss_educacion_CPI_01_N(4) ;}	building 	{ sprite: ss_educacion_CPI_01_N; }}
+spritelayout sl_educacion_CPI_01_S 	      {	ground	 	{ sprite: ss_educacion_CPI_01_S(4) ;}	building 	{ sprite: ss_educacion_CPI_01_S; }}
+spritelayout sl_educacion_CPI_01_E 	      {	ground	 	{ sprite: ss_educacion_CPI_01_E(4) ;}	building 	{ sprite: ss_educacion_CPI_01_E; }}
+spritelayout sl_educacion_CPI_01_W 	      {	ground	 	{ sprite: ss_educacion_CPI_01_W(4) ;}	building 	{ sprite: ss_educacion_CPI_01_W; }}
+spritelayout sl_educacion_CPI_01_N_snow 	{	ground	 	{ sprite: ss_educacion_CPI_01_N_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_01_N_snow; }}
+spritelayout sl_educacion_CPI_01_S_snow 	{	ground	 	{ sprite: ss_educacion_CPI_01_S_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_01_S_snow; }}
+spritelayout sl_educacion_CPI_01_E_snow 	{	ground	 	{ sprite: ss_educacion_CPI_01_E_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_01_E_snow; }}
+spritelayout sl_educacion_CPI_01_W_snow 	{	ground	 	{ sprite: ss_educacion_CPI_01_W_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_01_W_snow; }}
+
+spritelayout sl_educacion_CPI_02_N 	      {	ground	 	{ sprite: ss_educacion_CPI_02_N(4) ;}	building 	{ sprite: ss_educacion_CPI_02_N; }}
+spritelayout sl_educacion_CPI_02_S 	      {	ground	 	{ sprite: ss_educacion_CPI_02_S(4) ;}	building 	{ sprite: ss_educacion_CPI_02_S; }}
+spritelayout sl_educacion_CPI_02_E 	      {	ground	 	{ sprite: ss_educacion_CPI_02_E(4) ;}	building 	{ sprite: ss_educacion_CPI_02_E; }}
+spritelayout sl_educacion_CPI_02_W 	      {	ground	 	{ sprite: ss_educacion_CPI_02_W(4) ;}	building 	{ sprite: ss_educacion_CPI_02_W; }}
+spritelayout sl_educacion_CPI_02_N_snow 	{	ground	 	{ sprite: ss_educacion_CPI_02_N_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_02_N_snow; }}
+spritelayout sl_educacion_CPI_02_S_snow 	{	ground	 	{ sprite: ss_educacion_CPI_02_S_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_02_S_snow; }}
+spritelayout sl_educacion_CPI_02_E_snow 	{	ground	 	{ sprite: ss_educacion_CPI_02_E_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_02_E_snow; }}
+spritelayout sl_educacion_CPI_02_W_snow 	{	ground	 	{ sprite: ss_educacion_CPI_02_W_snow(4) ;}	building 	{ sprite: ss_educacion_CPI_02_W_snow; }}
+
+// Define Switches
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_01_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_01_N_snow;   sl_educacion_CPI_01_N;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_01_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_01_S_snow;   sl_educacion_CPI_01_S;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_01_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_01_E_snow;   sl_educacion_CPI_01_E;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_01_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_01_W_snow;   sl_educacion_CPI_01_W;}
+
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_02_N_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_02_N_snow;   sl_educacion_CPI_02_N;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_02_S_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_02_S_snow;   sl_educacion_CPI_02_S;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_02_E_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_02_E_snow;   sl_educacion_CPI_02_E;}
+switch(FEAT_HOUSES, SELF, sw_educacion_CPI_02_W_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_educacion_CPI_02_W_snow;   sl_educacion_CPI_02_W;}
+
+random_switch (FEAT_HOUSES, SELF, sw_educacion_CPI_random_sprite_N) {
+   1: sw_educacion_CPI_02_N_snow_aware;
+   1: sw_educacion_CPI_01_N_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_educacion_CPI_random_sprite_E) {
+   dependent: sw_educacion_CPI_random_sprite_N;
+   1: sw_educacion_CPI_02_E_snow_aware;
+   1: sw_educacion_CPI_01_E_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_educacion_CPI_random_sprite_W) {
+   dependent: sw_educacion_CPI_random_sprite_N;
+   1: sw_educacion_CPI_02_W_snow_aware;
+   1: sw_educacion_CPI_01_W_snow_aware;
+}
+random_switch (FEAT_HOUSES, SELF, sw_educacion_CPI_random_sprite_S) {
+   dependent: sw_educacion_CPI_random_sprite_N;
+   1: sw_educacion_CPI_02_S_snow_aware;
+   1: sw_educacion_CPI_01_S_snow_aware;
+}
+
+// Define construction checks
+
+// Define Item
+
+/* Old stadium requires a population of at least 500. Substitute shopping centre to avoid inheriting stadium flag. */
+item(FEAT_HOUSES, educacion_CPI, BUILDING_ID_EDUCACION_CPI, HOUSE_SIZE_2X2){
+	property {
+		substitute: 40;
+		name: string(STR_EDUCACION_CPI);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 150;
+		mail_multiplier: 0;
+		accepted_cargos: [[PASS, 8]];
+		local_authority_impact: 200;
+		removal_cost_multiplier: 150;
+		probability: 2;
+		years_available: [1970,0xFFFF];
+		minimum_lifetime: 40;
+		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+      building_class: BUILDING_CLASS_EDUCACION;
+	}
+	graphics {
+		graphics_north: sw_educacion_CPI_random_sprite_N;
+		graphics_south: sw_educacion_CPI_random_sprite_S;
+		graphics_east: sw_educacion_CPI_random_sprite_E;
+		graphics_west: sw_educacion_CPI_random_sprite_W;
+		construction_check: sw_population_2000() && sw_same_type_distance() > 10 && ((sw_get_population() / 2000) > sw_get_same_class_count_town());
+ 		cargo_production: func_produce(20,8,4);
+	}
+}

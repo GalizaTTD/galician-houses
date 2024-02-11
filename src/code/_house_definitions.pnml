@@ -36,11 +36,11 @@
    #define BUILDING_ID_SANIDADE_HOSPITAL_OLD           42 // 42-43-44-45
    #define BUILDING_ID_SANIDADE_HOSPITAL_NEW           46 // 46-47-48-49
 #define BUILDING_CLASS_EDUCACION              50   // Colexios, universidades, etc..
-   #define BUILDING_ID_EDUCACION_ESCOLA_PEQUENA        50
-   #define BUILDING_ID_EDUCACION_ESCOLA_GRANDE         51 // 51-52-53-54
-   #define BUILDING_ID_EDUCACION_INSTITUTO             55 // 55-56
-   #define BUILDING_ID_EDUCACION_BIBLIOTECA_PEQUENA    57
-   #define BUILDING_ID_EDUCACION_BIBLIOTECA_GRANDE     59 // 58-59
+   #define BUILDING_ID_EDUCACION_CEIP_OLD              50
+   #define BUILDING_ID_EDUCACION_CEIP_NEW              51
+   #define BUILDING_ID_EDUCACION_CPI                   52 // 52-53-54-55
+   #define BUILDING_ID_EDUCACION_IES                   56 // 56-57
+   // Libres 58-59
 #define BUILDING_CLASS_RANHACEUS              60   // Rañaceos e torres de oficinas. Non debería haber moitas, e terían que estar ou nun barrio ou a certa distancia de outras.
    #define BUILDING_ID_RANHACEUS_TORRE_HERCON          60
    #define BUILDING_ID_RANHACEUS_TORRE_TREBOL          61

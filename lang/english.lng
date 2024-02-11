@@ -27,14 +27,15 @@ STR_SSPP_PARKING                     :Parking
 STR_EEPP_PRAZA                       :Square
 STR_EEPP_PARQUE                      :Park
 
+STR_EDUCACION_CEIP                   :School
+STR_EDUCACION_CPI                    :School & High School
+STR_EDUCACION_IES                    :High School
+
 
 
 STR_SANIDADE_AMBULATORIO             :Medical Clinic
 STR_SANIDADE_HOSPITAL                :Hospital
 
-STR_EDUCACION_ESCOLA                 :School
-STR_EDUCACION_INSTITUTO              :High School
-STR_EDUCACION_UNIVERSIDADE           :College
 
 STR_RANHACEUS_XENERICO               :Skyscrapper
 STR_RANHACEUS_TORRES_IFER            :Ifer Towers
