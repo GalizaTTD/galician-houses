@@ -17,23 +17,23 @@ spriteset(ss_deporte_basket_NS_02_W, 	"src/gfx/DEPORTES/basket_NS_02_W.gimp.png"
 spriteset(ss_deporte_basket_NS_01_S, 	"src/gfx/DEPORTES/basket_NS_01_S.gimp.png") 	{ tmpl_building() }
 spriteset(ss_deporte_basket_NS_02_S, 	"src/gfx/DEPORTES/basket_NS_02_S.gimp.png") 	{ tmpl_building() }
 // Define spritelayouts (normal & snow)
-spritelayout sl_deporte_basket_WE_01_N 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_01_N; }}
-spritelayout sl_deporte_basket_WE_02_N 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_02_N; }}
-spritelayout sl_deporte_basket_WE_01_E 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_01_E; }}
-spritelayout sl_deporte_basket_WE_02_E 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_02_E; }}
-spritelayout sl_deporte_basket_WE_01_W 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_01_W; }}
-spritelayout sl_deporte_basket_WE_02_W 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_02_W; }}
-spritelayout sl_deporte_basket_WE_01_S 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_01_S; }}
-spritelayout sl_deporte_basket_WE_02_S 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_WE_02_S; }}
+spritelayout sl_deporte_basket_WE_01_N 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_N(4) ;}	building 	{ sprite: ss_deporte_basket_WE_01_N; }}
+spritelayout sl_deporte_basket_WE_02_N 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_N(4) ;}	building 	{ sprite: ss_deporte_basket_WE_02_N; }}
+spritelayout sl_deporte_basket_WE_01_E 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_E(4) ;}	building 	{ sprite: ss_deporte_basket_WE_01_E; }}
+spritelayout sl_deporte_basket_WE_02_E 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_E(4) ;}	building 	{ sprite: ss_deporte_basket_WE_02_E; }}
+spritelayout sl_deporte_basket_WE_01_W 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_W(4) ;}	building 	{ sprite: ss_deporte_basket_WE_01_W; }}
+spritelayout sl_deporte_basket_WE_02_W 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_W(4) ;}	building 	{ sprite: ss_deporte_basket_WE_02_W; }}
+spritelayout sl_deporte_basket_WE_01_S 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_S(4) ;}	building 	{ sprite: ss_deporte_basket_WE_01_S; }}
+spritelayout sl_deporte_basket_WE_02_S 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_S(4) ;}	building 	{ sprite: ss_deporte_basket_WE_02_S; }}
 
-spritelayout sl_deporte_basket_NS_01_N 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_01_N; }}
-spritelayout sl_deporte_basket_NS_02_N 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_02_N; }}
-spritelayout sl_deporte_basket_NS_01_E 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_01_E; }}
-spritelayout sl_deporte_basket_NS_02_E 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_02_E; }}
-spritelayout sl_deporte_basket_NS_01_W 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_01_W; }}
-spritelayout sl_deporte_basket_NS_02_W 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_02_W; }}
-spritelayout sl_deporte_basket_NS_01_S 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_01_S; }}
-spritelayout sl_deporte_basket_NS_02_S 	{	ground	 	{ sprite: terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : GROUNDSPRITE_CONCRETE ;}	building 	{ sprite: ss_deporte_basket_NS_02_S; }}
+spritelayout sl_deporte_basket_NS_01_N 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_N(4) ;}	building 	{ sprite: ss_deporte_basket_NS_01_N; }}
+spritelayout sl_deporte_basket_NS_02_N 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_N(4) ;}	building 	{ sprite: ss_deporte_basket_NS_02_N; }}
+spritelayout sl_deporte_basket_NS_01_E 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_E(4) ;}	building 	{ sprite: ss_deporte_basket_NS_01_E; }}
+spritelayout sl_deporte_basket_NS_02_E 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_E(4) ;}	building 	{ sprite: ss_deporte_basket_NS_02_E; }}
+spritelayout sl_deporte_basket_NS_01_W 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_W(4) ;}	building 	{ sprite: ss_deporte_basket_NS_01_W; }}
+spritelayout sl_deporte_basket_NS_02_W 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_W(4) ;}	building 	{ sprite: ss_deporte_basket_NS_02_W; }}
+spritelayout sl_deporte_basket_NS_01_S 	{	ground	 	{ sprite: ss_deporte_basket_WE_01_S(4) ;}	building 	{ sprite: ss_deporte_basket_NS_01_S; }}
+spritelayout sl_deporte_basket_NS_02_S 	{	ground	 	{ sprite: ss_deporte_basket_WE_02_S(4) ;}	building 	{ sprite: ss_deporte_basket_NS_02_S; }}
 
 // Define Switches
 random_switch (FEAT_HOUSES, SELF, sw_deporte_basket_random_sprite_N) {

@@ -30,7 +30,7 @@ item(FEAT_HOUSES, educacion_IES, BUILDING_ID_EDUCACION_IES, HOUSE_SIZE_1X2){
 	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 60;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8]];
+		accepted_cargos: [[PASS, 8],[MAIL, 3]];
 		local_authority_impact: 100;
 		removal_cost_multiplier: 100;
 		probability: 2;

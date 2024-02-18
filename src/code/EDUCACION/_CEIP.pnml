@@ -67,7 +67,7 @@ item(FEAT_HOUSES, educacion_CEIP_NEW, BUILDING_ID_EDUCACION_CEIP_NEW, HOUSE_SIZE
 	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 30;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8]];
+		accepted_cargos: [[PASS, 8],[MAIL, 3]];
 		local_authority_impact: 75;
 		removal_cost_multiplier: 75;
 		probability: 1;

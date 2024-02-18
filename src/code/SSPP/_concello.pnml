@@ -29,7 +29,7 @@ item(FEAT_HOUSES, SSPP_concello, BUILDING_ID_SSPP_CONCELLO, HOUSE_SIZE_1X1){
 		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 50;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8],[FOOD, 8]];
+		accepted_cargos: [[PASS, 8],[MAIL, 8]];
 		local_authority_impact: 200;
 		removal_cost_multiplier: 150;
 		probability: 15;

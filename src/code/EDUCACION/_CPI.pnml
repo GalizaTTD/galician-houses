@@ -79,7 +79,7 @@ item(FEAT_HOUSES, educacion_CPI, BUILDING_ID_EDUCACION_CPI, HOUSE_SIZE_2X2){
 	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
 		population: 150;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8]];
+		accepted_cargos: [[PASS, 8],[MAIL, 3]];
 		local_authority_impact: 200;
 		removal_cost_multiplier: 150;
 		probability: 2;

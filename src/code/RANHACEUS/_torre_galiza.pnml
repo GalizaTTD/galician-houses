@@ -2,8 +2,8 @@
 spriteset(ss_ranhaceus_torre_galiza, 	"src/gfx/RANHACEUS/torre_galiza.gimp.png") 	{ tmpl_building_animated() }
 spriteset(ss_ranhaceus_torre_galiza_snow, 	"src/gfx/RANHACEUS/torre_galiza_snow.gimp.png") 	{ tmpl_building_animated() }
 // Define spritelayouts (normal & snow)
-spritelayout sl_ranhaceus_torre_galiza 	{	ground	 	{ sprite: GROUNDSPRITE_NORMAL ;}	building 	{ sprite: ss_ranhaceus_torre_galiza; }}
-spritelayout sl_ranhaceus_torre_galiza_snow 	{	ground	 	{ sprite: GROUNDSPRITE_SNOW ;}	building 	{ sprite: ss_ranhaceus_torre_galiza_snow; }}
+spritelayout sl_ranhaceus_torre_galiza 	{	ground	 	{ sprite: ss_ranhaceus_torre_galiza(4) ;}	building 	{ sprite: ss_ranhaceus_torre_galiza; }}
+spritelayout sl_ranhaceus_torre_galiza_snow 	{	ground	 	{ sprite: ss_ranhaceus_torre_galiza_snow(4) ;}	building 	{ sprite: ss_ranhaceus_torre_galiza_snow; }}
 
 // Define Switches
 switch(FEAT_HOUSES, SELF, sw_ranhaceus_torre_galiza_snow_aware, terrain_type) {   TILETYPE_SNOW: sl_ranhaceus_torre_galiza_snow;   sl_ranhaceus_torre_galiza;}
@@ -16,22 +16,22 @@ switch(FEAT_HOUSES, SELF, sw_ranhaceus_torre_galiza_snow_aware, terrain_type) { 
 item(FEAT_HOUSES, ranhaceus_torre_galiza, BUILDING_ID_RANHACEUS_TORRE_GALIZA, HOUSE_SIZE_1X1){
 	property {
 		substitute: 28;
-		name: string(STR_RANHACEUS_XENERICO);
-		building_flags: bitmask(HOUSE_FLAG_PROTECTED);
-		population: 30;
+		name: string(STR_RANHACEUS_TORRE_GALIZA);
+	//	building_flags: bitmask(HOUSE_FLAG_PROTECTED);
+		population: 255;
 		mail_multiplier: 0;
-		accepted_cargos: [[PASS, 8],[FOOD, 8],[BEER, 8]];
-		local_authority_impact: 300;
-		removal_cost_multiplier: 250;
+		accepted_cargos: [[PASS, 8],[MAIL, 8],[GOOD, 8]];
+		local_authority_impact: 200;
+		removal_cost_multiplier: 150;
 		probability: 4;
-		years_available: [1800,1940];
-		minimum_lifetime: 10;
+		years_available: [1971,0xFFFF];
+		minimum_lifetime: 65;
 		availability_mask: [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
       building_class: BUILDING_CLASS_RANHACEUS;
 	}
 	graphics {
 		default:sw_ranhaceus_torre_galiza_snow_aware;
-		construction_check: sw_population_500() && sw_unique_house();
- 		cargo_production: func_produce(4,0,3);
+		construction_check: sw_population_30000() && sw_unique_worldwide();
+ 		cargo_production: func_produce(20,8,4);
 	}
 }

@@ -56,7 +56,7 @@ template tmpl_building_only_finished() {
 #include "EEPP/main.pnml"
 #include "SANIDADE/main.pnml"
 #include "EDUCACION/main.pnml"
-// #include "RANHACEUS/main.pnml"
+#include "RANHACEUS/main.pnml"
 // #include "DEPORTES/main.pnml"
 // #include "HISTORICOS/main.pnml"
 // #include "COMERCIOS/main.pnml"

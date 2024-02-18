@@ -2,3 +2,4 @@
 #include "_campo_futbol_old.pnml"
 #include "_campo_futbol_new.pnml"
 #include "_estadio_futbol.pnml"
+#include "_pavillon_municipal.pnml"

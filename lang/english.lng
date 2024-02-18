@@ -27,17 +27,22 @@ STR_SSPP_PARKING                     :Parking
 STR_EEPP_PRAZA                       :Square
 STR_EEPP_PARQUE                      :Park
 
+STR_SANIDADE_AMBULATORIO             :Medical Clinic
+STR_SANIDADE_HOSPITAL                :Hospital
+
 STR_EDUCACION_CEIP                   :School
 STR_EDUCACION_CPI                    :School & High School
 STR_EDUCACION_IES                    :High School
 
-
-
-STR_SANIDADE_AMBULATORIO             :Medical Clinic
-STR_SANIDADE_HOSPITAL                :Hospital
-
-
 STR_RANHACEUS_XENERICO               :Skyscrapper
+STR_RANHACEUS_TORRE_HERCON           :Hercon Tower
+STR_RANHACEUS_TORRE_TREBOL           :Clover Tower
+STR_RANHACEUS_TORRE_GALIZA           :Galiza Tower
+STR_RANHACEUS_TORRE_SAEZ             :Saez Towers
+STR_RANHACEUS_ATORRE                 :The Tower
+STR_RANHACEUS_CIDADE_XUSTIZA         :Justice City
+STR_RANHACEUS_TORRE_GOLPE            :Strike Tower
+STR_RANHACEUS_TORRE_DORADA           :Golden Tower
 STR_RANHACEUS_TORRES_IFER            :Ifer Towers
 
 STR_HISTORICOS_XENERICO              :Historical Building
