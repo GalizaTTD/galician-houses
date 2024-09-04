@@ -1,0 +1,78 @@
+
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1df2aae8-e89c-40b6-8831-5bfc637be948/Untitled.png)
+
+### Ligazóns de información
+
+- https://newgrf-specs.tt-wiki.net/wiki/PalettesAndCoordinates#Palettes - Información da paleta coas cores reservadas. A que utilizamos é a DOS (Non Windows poop )
+- Mostras en github: https://github.com/OpenTTD/OpenGFX/tree/master/sprites/png/houses
+    
+    https://github.com/OpenTTD/OpenGFX/blob/master/sprites/png/houses/buildings.png
+    
+
+### Ferramentas
+
+- http://bundles.openttdcoop.org/pixeltool/push/LATEST/ - Permite crear as imaxes tendo frontal, lateral e superior. Para que o ancho dos sprites sexa de 64px, hai que poñer **width** 16 e **depth** 16.
+- https://github.com/2TallTyler/airship_mast
+- https://github.com/frosch123/TTDViewer/ Este programiña en JAVA permite ver os sprites no xogo (simplemente che anima as cores e así.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87d0de9b-60ad-4a4a-b49e-a16dc7d63d3a/Untitled.png)
+
+### Notas código
+
+Pack de casas de Fridaemon: https://github.com/reldred/re_fabs
+
+Pack de casas NA: https://github.com/reldred/re_nabs
+
+Pack de casas con funcións avanzadas:
+
+https://github.com/2TallTyler/itl_houses
+
+---
+
+Cando os edificios poñen que teñeen 2/8 comida, queren dicir que necesitas catro e fagan 8/8 para que unha estación acepte ese recurso. As casas de 2TallTyler teñen todas 8/8 de aceptación para quitar esa complexidade que non aporta nada.
+
+https://newgrf-specs.tt-wiki.net/wiki/NML:Houses
+
+### Outras cousas
+
+GoRender + MagickaVoxel:
+
+https://github.com/mattkimber/gorender
+
+### Ideas e suxerencias de Mastodon / Twitter
+
+- [ ]  Supermercados tipo Gadis
+- [ ]  Facultade de belas artes Pontevedra
+- [ ]  Casas de Indianos tipicas da Mariña
+- [ ]  Casas de outras zonas? Asturias, Bierzo, Zamora/Castela, Portugal? https://www.diariodelviajero.com/espana/pueblo-asturias-que-da-nombre-al-jabon-querido-espana
+- [ ]  Faros do país, especialmente Ortegal e Bares (https://mastodon.gal/@galchwyn@mastodon.uy/109971548304690687)
+- [ ]  Non ten que ser exactamente esta, que está na vila de Lavadores, pero estes edificios unifamiliares bonitos construídos en solares pequeniños parécenme unha cousa galeguísima (https://mastodon.gal/@fracofavor/109971614441250865 )
+- [ ]  Arquitectura tradicional da montaña ourensá surleste (Riós) https://twitter.com/dosiveiga/status/1650999188891607040
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/377a684d-f362-4db3-a724-3823624edd66/a8a1b471-8b35-4175-8f9f-346f99fb4ca1/Untitled.png)
+
+1. That's a mixture of HotHut and Hale Tropic Base Replacement
+2. ***December 29, 2023 4:28 PM*December 29, 2023 4:28 PM*December 29, 2023 4:28 PM***
+    
+    and a little something which I modified myself but you can also find those graphics in https://github.com/reldred/pineapple_houses/
+
+
+
+!https://media.discordapp.net/attachments/739493624705712188/1114488673879203941/image.png?width=550&height=309
+
+- Casas antigas dispoñibles antes, con menos poboación para que os vehículos pequenos podan xestionalas. Tamén poden aceptar recursos coma carbón ou madeira coma combustíbel.
+- A idade mínima adoita ser 1-2 anos.
+- Os grupos de casa, só en bitmask(TOWNZONE_INNER_SUBURB,TOWNZONE_CENTRE).
+- Os apartamentos, só en sitios onde hai unha estación cerca que recibiu pasaxeiros neste mes ou no anterior.
+- Os apartamentos pequenos non se poden construír a 1 cadro de distancia das oficinas modernas, a non ser que non haxa transporte de pasaxeiros nese cadro (intúo que para evitar que se mezclen casas e oficinas).
+- As oficinas deben construírse a menos de 2 cadros de distancia de outras da mesma clase. Se é a primeira na vila non é necesario.
+- Os clústers de oficinas, novos e vellos, requiren servizo de pasaxeiros.
+- As oficinas precisan dunha determinada poboación para aparecer.
+- Unha oficina require que haxa unha estrada no cadro do sur-leste.
+- Un edificio único en todo o mapa. E só pode aparecer nunha cidade que supere 30.000 de poboación.
+- Os edificios históricos pódense preservar nunha cidade cunha Igrexa histórica (utilízase coma check aleatorio para decidir a actitude da vila de cara a preservación da cidade) e ten outro edificio histórico a menos de 2 cadros. En caso contrario, hai unha aleatoriedade de 1/8 para preservar.
+- Hai un callback "protection" no que se pode definir ata que ano preservamos determinada estrutura.
+- Comprobar se está en terreo chan e que non haxa outra estrutura da mesma clase a dous cadros de distancia.
+- Algunhas como as prazas, estatuas e demáis teñen protección fixa sempre que haxa estruturas históricas preto.
+- Pódense facer animacións de edificos que se activen se reciben carga (i.e. sesións de cine)
